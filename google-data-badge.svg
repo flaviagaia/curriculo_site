@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 240" role="img" aria-labelledby="title desc">
+  <title id="title">Certificado Profissional de Análise de Dados do Google</title>
+  <desc id="desc">Badge do certificado profissional de análise de dados do Google com fundo branco recortado.</desc>
+  <g transform="translate(35 18)" fill="none" fill-rule="evenodd">
+    <path d="M95 20 165 52 165 132 95 196 25 132 25 52Z" fill="#FFF7E1"/>
+    <path d="M95 20 165 52 95 82 25 52Z" fill="#EFEFEF"/>
+    <path d="M25 52 58 65 58 157 25 132Z" fill="#EA4335"/>
+    <path d="M58 65 95 82 95 196 58 157Z" fill="#FBBC05"/>
+    <path d="M95 82 132 65 132 157 95 196Z" fill="#FDD663"/>
+    <path d="M132 65 165 52 165 132 132 157Z" fill="#FBBC05"/>
+    <rect x="5" y="58" width="180" height="64" rx="3" fill="#F6F4F1" stroke="#D0CAC2"/>
+    <rect x="25" y="122" width="140" height="30" rx="2" fill="#D93025"/>
+    <text x="95" y="46" text-anchor="middle" fill="#5F6368" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700">Google           coursera</text>
+    <rect x="20" y="44" width="28" height="4" fill="#FBBC05"/>
+    <rect x="48" y="44" width="28" height="4" fill="#4285F4"/>
+    <rect x="76" y="44" width="28" height="4" fill="#34A853"/>
+    <rect x="104" y="44" width="28" height="4" fill="#FBBC05"/>
+    <text x="95" y="80" text-anchor="middle" fill="#4A4038" font-family="Avenir Next, Montserrat, Poppins, sans-serif" font-size="13" font-weight="700">Certificado Profissional</text>
+    <text x="95" y="97" text-anchor="middle" fill="#4A4038" font-family="Avenir Next, Montserrat, Poppins, sans-serif" font-size="13" font-weight="700">de Análise de Dados</text>
+    <text x="95" y="113" text-anchor="middle" fill="#4A4038" font-family="Avenir Next, Montserrat, Poppins, sans-serif" font-size="11" font-weight="600">do Google</text>
+    <text x="95" y="141" text-anchor="middle" fill="#FFFFFF" font-family="Avenir Next, Montserrat, Poppins, sans-serif" font-size="11" font-weight="700">Certificado de Conclusão</text>
+  </g>
+</svg>

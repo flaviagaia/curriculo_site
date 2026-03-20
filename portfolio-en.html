@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Portfolio | Flávia Gaia</title>
+    <meta
+      name="description"
+      content="Detailed technical portfolio of Flávia Gaia for interviews, recruiters and career review."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page-portfolio">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index-en.html">
+          <span class="brand-mark"></span>
+          <span>Flávia Gaia</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="header-actions">
+          <nav id="site-nav" class="site-nav">
+            <a href="./index-en.html">Home</a>
+            <a href="./portfolio-en.html">Portfolio</a>
+            <a href="#frentes">Tracks</a>
+            <a href="#entrevistas">Interviews</a>
+          </nav>
+          <div class="lang-switch" aria-label="Language switcher">
+            <a class="lang-link" href="./portfolio.html">PT</a>
+            <a class="lang-link is-active" href="./portfolio-en.html">EN</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="portfolio-hero reveal">
+          <div class="portfolio-intro">
+            <p class="eyebrow">Detailed Portfolio</p>
+            <h1>An expanded view of my technical background</h1>
+            <p class="lead">
+              This page works as a memory map for interviews: it organizes my
+              real experience, certifications, technical repertoire and talking
+              points so I can answer with clarity, depth and context.
+            </p>
+          </div>
+
+          <div class="portfolio-statboard">
+            <div>
+              <strong>LLMs</strong>
+              <span>RAG, agents, LangChain, CrewAI, LangGraph and MLflow</span>
+            </div>
+            <div>
+              <strong>Experience</strong>
+              <span>6 years in data, AI, analytics and automation</span>
+            </div>
+            <div>
+              <strong>Academic Background</strong>
+              <span>UnB, USP, IESB and strong Data Engineering tracks</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="frentes" class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Frentes principais</p>
+            <h2>Casos reais para lembrar o que fiz</h2>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card">
+              <span class="card-index">FNDE</span>
+              <h3>Estruturação de ecossistema de dados em Azure e Databricks</h3>
+              <p>
+                Atuação na coordenação e estruturação de ambiente analítico com
+                Arquitetura Medallion, pipelines escaláveis, rotinas de
+                qualidade e governança, além da consolidação de um ecossistema
+                de ciência de dados voltado à padronização e à colaboração.
+              </p>
+              <ul>
+                <li>Desafio: sair do dado fragmentado para uma base confiável e reutilizável.</li>
+                <li>Stack: Azure, Databricks, Python, Jupyter, CI/CD, governança de dados.</li>
+                <li>Gancho de entrevista: arquitetura, fundação analítica e visão sistêmica.</li>
+              </ul>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">BBTS</span>
+              <h3>Calendário inteligente de pagamentos com contratos em PDF</h3>
+              <p>
+                Criação de sistema automatizado para extrair cláusulas
+                financeiras de contratos, gerar calendário de pagamentos e
+                apoiar auditoria com LLMs, LangChain, CrewAI e Databricks.
+              </p>
+              <ul>
+                <li>Desafio: transformar documento não estruturado em fluxo operacional confiável.</li>
+                <li>Stack: LangChain, CrewAI, Databricks Workflows, Delta Lake, LLMs.</li>
+                <li>Gancho de entrevista: IA aplicada a auditoria, extração e automação de decisão.</li>
+              </ul>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">Compass UOL</span>
+              <h3>RAG e agentes para conformidade normativa na Petrobras</h3>
+              <p>
+                Construção de soluções com LLMs para extração de informações
+                técnicas em PDFs, RAG de normativos, validação humana em
+                Streamlit e versionamento de prompts e métricas com MLflow.
+              </p>
+              <ul>
+                <li>Desafio: melhorar recuperação de contexto e confiabilidade das respostas.</li>
+                <li>Stack: Python, LLMs, RAG, Streamlit, MLflow, CrewAI, FAISS.</li>
+                <li>Gancho de entrevista: avaliação de prompts, retrieval e LLMOps.</li>
+              </ul>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">EVCOMX</span>
+              <h3>Evolução de regex para LLMs em extração técnica</h3>
+              <p>
+                Evolução de pipelines de extração a partir de regex para uma
+                abordagem com LLMs, prompts few-shot, interface de validação e
+                Human-in-the-Loop para melhoria contínua.
+              </p>
+              <ul>
+                <li>Desafio: sair de regras rígidas para extração mais robusta e adaptável.</li>
+                <li>Stack: Python, regex, LangChain, Streamlit, CrewAI, avaliação iterativa.</li>
+                <li>Gancho de entrevista: transição entre heurística, NLP e IA generativa.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Base da carreira</p>
+            <h2>Onde construí repertório antes da senioridade atual</h2>
+          </div>
+
+          <div class="experience-grid">
+            <article class="experience-card">
+              <span class="card-index">MDS</span>
+              <h3>Análise de bases governamentais massivas</h3>
+              <p>
+                Trabalho com bases como Bolsa Família, BPC e Cadastro Único em
+                ambiente de Big Data, com processamento distribuído, SQL,
+                scripts em Python e dashboards analíticos.
+              </p>
+            </article>
+            <article class="experience-card">
+              <span class="card-index">Presidência</span>
+              <h3>NLP, scraping e monitoramento automatizado</h3>
+              <p>
+                Coleta automatizada de notícias via web scraping, uso de spaCy
+                para NER e sumarização em português, além de visualização em
+                Power BI e aplicações de CNN para COVID-19 em raio X.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section timeline-section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Sinais de profundidade</p>
+            <h2>Temas que já estudei, publiquei ou desenvolvi</h2>
+          </div>
+
+          <div class="timeline">
+            <article>
+              <span>IA aplicada</span>
+              <h3>RAG, agentes, LangChain, CrewAI, LangGraph, AutoGen e n8n</h3>
+              <p>
+                Seu material profissional mostra domínio consistente na
+                construção de arquiteturas de recuperação, agentes com
+                ferramentas, avaliação de fluxo e aplicação produtiva de LLMs.
+              </p>
+            </article>
+            <article>
+              <span>Machine Learning</span>
+              <h3>Scikit-Learn, PyTorch, TensorFlow, classificação e deep learning</h3>
+              <p>
+                Há base prática em modelagem, redes neurais, classificação,
+                detecção de fake news, CNNs e fundamentos sólidos de avaliação.
+              </p>
+            </article>
+            <article>
+              <span>Grafos</span>
+              <h3>PyTorch Geometric, GCN, GAT, GraphSAGE e GIN</h3>
+              <p>
+                Conteúdo aprofundado sobre redes neurais de grafos, bibliotecas e
+                caminhos de implementação dentro do ecossistema Python.
+              </p>
+            </article>
+            <article>
+              <span>Big Data</span>
+              <h3>Spark, Airflow, BigQuery, Snowflake e processamento distribuído</h3>
+              <p>
+                Seus certificados de 2025 e materiais de trabalho reforçam
+                maturidade em engenharia de dados, orquestração e plataformas
+                modernas de analytics.
+              </p>
+            </article>
+            <article>
+              <span>Pesquisa e academia</span>
+              <h3>NER em textos jurídicos e Ciência dos Dados na UnB</h3>
+              <p>
+                A linha de pesquisa em Ciência dos Dados e as disciplinas já
+                cursadas na UnB adicionam profundidade conceitual em mineração
+                de dados, bancos massivos e gestão de projetos.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="entrevistas" class="section interview-section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Guia para entrevistas</p>
+            <h2>Blocos de memória para responder com mais contexto</h2>
+          </div>
+
+          <div class="interview-grid">
+            <article class="interview-card">
+              <h3>Como me apresentar em 60 segundos</h3>
+              <p>
+                Sou uma Cientista de Dados Sênior com 6 anos de experiência,
+                focada em IA aplicada, LLMs, RAG e arquitetura de dados. Atuo
+                conectando modelagem, automação, governança e engenharia para
+                transformar problemas complexos em soluções utilizáveis.
+              </p>
+            </article>
+
+            <article class="interview-card">
+              <h3>Quando perguntarem sobre diferencial</h3>
+              <p>
+                Meu diferencial é um perfil híbrido: consigo discutir IA
+                generativa, retrieval, agentes e prompt engineering sem perder
+                a base de dados, o desenho de pipeline, a governança e a visão
+                de implantação.
+              </p>
+            </article>
+
+            <article class="interview-card">
+              <h3>Quando perguntarem sobre projetos com IA</h3>
+              <p>
+                Vale puxar os casos de contratos em PDF, conformidade normativa,
+                extração técnica e auditoria com IA, mostrando como desenhei
+                fluxos com LLMs, RAG, agentes e validação humana.
+              </p>
+            </article>
+
+            <article class="interview-card">
+              <h3>Quando perguntarem sobre dados em escala</h3>
+              <p>
+                Posso citar a estruturação de ambientes em Azure e Databricks,
+                uso de Arquitetura Medallion, Delta Lake, além das formações em
+                Spark, Airflow, Snowflake e BigQuery.
+              </p>
+            </article>
+
+            <article class="interview-card">
+              <h3>Quando perguntarem sobre comunicação</h3>
+              <p>
+                Tenho histórico consistente de escrita técnica, 103 publicações,
+                46 artigos e experiência em traduzir decisões técnicas para
+                times, stakeholders e contextos de negócio.
+              </p>
+            </article>
+
+            <article class="interview-card">
+              <h3>Quando perguntarem sobre aprendizado contínuo</h3>
+              <p>
+                Posso ancorar essa resposta no mestrado em andamento, no MBA já
+                concluído, nas certificações recentes de engenharia de dados e
+                nas trilhas de Databricks e IA generativa.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Formação validada</p>
+            <h2>Credenciais e marcos acadêmicos</h2>
+          </div>
+
+          <div class="credentials-grid">
+            <article class="credential-card">
+              <strong>UnB</strong>
+              <p>Mestrado em Computação Aplicada, linha de pesquisa em Ciência dos Dados, vínculo ativo desde março de 2024.</p>
+            </article>
+            <article class="credential-card">
+              <strong>USP</strong>
+              <p>MBA em Inteligência Artificial e Big Data concluído em 30 de setembro de 2023, com 420 horas e 100% de frequência.</p>
+            </article>
+            <article class="credential-card">
+              <strong>IESB</strong>
+              <p>Bacharelado em Ciência de Dados e Inteligência Artificial concluído em 15 de julho de 2023, carga horária integralizada de 3340 horas.</p>
+            </article>
+            <article class="credential-card">
+              <strong>Pesquisa</strong>
+              <p>Estudo em reconhecimento de entidades nomeadas em textos jurídicos e base curricular em bancos de dados massivos, mineração e ML.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">TCCs e monografias</p>
+            <h2>Experiência acadêmica que vale citar em entrevistas</h2>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card">
+              <span class="card-index">Graduação</span>
+              <h3>Aplicação de técnicas de reconhecimento de entidades nomeadas em textos jurídicos</h3>
+              <p>
+                TCC do IESB orientado a NLP jurídico em português do Brasil,
+                comparando dois modelos spaCy ajustados ao domínio legal e
+                entregando também um protótipo acessível ao usuário.
+              </p>
+              <ul>
+                <li>Problema: documentos jurídicos são extensos, complexos e difíceis de estruturar manualmente.</li>
+                <li>Metodologia: ajuste fino dos modelos pt_core_news_sm e pt_core_news_lg com o corpus LeNER-Br.</li>
+                <li>Resultados: F1-score de 81,42% no modelo small e 83,76% no modelo large; destaque para TEMPO e LEGISLAÇÃO.</li>
+                <li>Entrega: aplicativo web em Streamlit publicado no Hugging Face para comparação dos modelos e uso prático.</li>
+                <li>Como contar: mostra domínio de NLP, spaCy, avaliação de modelos e capacidade de transformar pesquisa em produto.</li>
+              </ul>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">MBA</span>
+              <h3>Aplicação de CNNs na classificação de imagens de raio X para COVID-19</h3>
+              <p>
+                Monografia da USP focada no desenvolvimento e validação de um
+                modelo de deep learning para apoio ao diagnóstico da COVID-19 a
+                partir de imagens de tórax.
+              </p>
+              <ul>
+                <li>Problema: acelerar e apoiar a identificação de casos em contexto de alta demanda diagnóstica.</li>
+                <li>Metodologia: construção de base com 2.089 imagens, aumento de dados, grid search e CNN em Python/TensorFlow.</li>
+                <li>Resultados: 98,40% de acurácia no conjunto de teste e 96,88% de validação com configuração otimizada.</li>
+                <li>Entrega: código público no GitHub e comparação com trabalhos correlatos da literatura.</li>
+                <li>Como contar: reforça base em deep learning, visão experimental, métricas e aplicação em saúde.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section publications-section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Certificações e repertório</p>
+            <h2>Assuntos e trilhas que reforçam minha autoridade técnica</h2>
+          </div>
+
+          <div class="publication-list">
+            <article>
+              <strong>AWS AI Practitioner e Azure AI Fundamentals</strong>
+              <p>Base formal em conceitos de IA generativa, serviços gerenciados e arquitetura de soluções.</p>
+            </article>
+            <article>
+              <strong>Arquiteto de Dados 4.0</strong>
+              <p>Formação de 360 horas concluída em 5 de setembro de 2025, cobrindo Modern Data Stack, Spark, Airflow e Snowflake.</p>
+            </article>
+            <article>
+              <strong>Databricks</strong>
+              <p>Trilhas recentes em Data Preparation for Machine Learning e Building Retrieval Agents on Databricks, concluídas em março de 2026.</p>
+            </article>
+            <article>
+              <strong>Airflow, Spark, Snowflake e BigQuery</strong>
+              <p>Certificações concluídas em 2025 reforçando engenharia de dados, orquestração e plataformas analíticas modernas.</p>
+            </article>
+            <article>
+              <strong>LangGraph, ChatGPT e formação contínua em IA</strong>
+              <p>Inclui certificação em Introduction to LangGraph, palestra acadêmica na USP e trilhas complementares de IA e ciência de dados.</p>
+            </article>
+            <article>
+              <strong>Produção técnica pública</strong>
+              <p>103 publicações, 46 artigos, 40 repositórios públicos e conteúdo recorrente sobre IA, dados e bibliotecas Python.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Leitura ampliada dos certificados</p>
+            <h2>O que esse acervo de certificados comunica sobre meu perfil</h2>
+          </div>
+
+          <div class="interview-grid">
+            <article class="interview-card">
+              <h3>Profundidade em engenharia de dados</h3>
+              <p>
+                Os certificados de 2025 mostram um esforço estruturado em
+                plataforma de dados, pipelines, cloud analytics e arquitetura
+                moderna, indo além de conhecimento superficial de ferramenta.
+              </p>
+            </article>
+            <article class="interview-card">
+              <h3>Atualização prática em ecossistemas modernos</h3>
+              <p>
+                As trilhas de Databricks e LangGraph reforçam acompanhamento
+                contínuo do que está mais relevante hoje em machine learning,
+                retrieval e construção de agentes.
+              </p>
+            </article>
+            <article class="interview-card">
+              <h3>Base ampla construída ao longo do tempo</h3>
+              <p>
+                Os certificados complementares indicam formação progressiva em
+                Python, NLP, Power BI, probabilidade, RStudio, Pentaho e Data
+                Science, consolidando uma base versátil.
+              </p>
+            </article>
+            <article class="interview-card">
+              <h3>Governança e responsabilidade</h3>
+              <p>
+                O conjunto Petrobras adiciona sinais importantes de atuação em
+                contexto corporativo regulado, com foco em LGPD, segurança da
+                informação, ética, direitos humanos e prevenção a riscos.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section contact-panel reveal">
+          <p class="eyebrow">Encerramento</p>
+          <h2>Este portfólio pode evoluir para uma versão ainda mais personalizada</h2>
+          <p>
+            A estrutura já está pronta para substituir o Linktree. O próximo
+            passo mais valioso é inserir casos reais da sua trajetória com nome
+            da empresa, objetivo, stack, impacto e aprendizados.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./index.html">Voltar para a home</a>
+            <a class="button button-secondary" href="./Cientistadedados_FlaviaGaia.pdf" target="_blank" rel="noreferrer">
+              Revisar currículo
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

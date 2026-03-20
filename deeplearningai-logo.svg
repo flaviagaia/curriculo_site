@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" role="img" aria-labelledby="title desc">
+  <title id="title">DeepLearning.AI</title>
+  <desc id="desc">Logo da DeepLearning.AI com fundo branco recortado.</desc>
+  <g transform="translate(34 22)" fill="#FF5A73">
+    <circle cx="86" cy="54" r="28"/>
+    <circle cx="86" cy="54" r="18" fill="#FFFFFF"/>
+    <circle cx="86" cy="54" r="10" fill="#FF5A73"/>
+    <circle cx="86" cy="54" r="4.5" fill="#FFFFFF"/>
+    <circle cx="86" cy="18" r="13"/>
+    <circle cx="86" cy="18" r="7" fill="#FFFFFF"/>
+    <path d="M86 2c29.8 0 54 24.2 54 54s-24.2 54-54 54c-24.6 0-45.3-16.5-51.6-39h17.3c5.6 13 18.4 22 34.3 22 21 0 38-17 38-38S107 17 86 17V2Z"/>
+    <path d="M86 24c17.7 0 32 14.3 32 32S103.7 88 86 88c-13.1 0-24.5-7.9-29.4-19.2h14.2A18.2 18.2 0 0 0 86 76c11 0 20-9 20-20s-9-20-20-20V24Z"/>
+  </g>
+  <text x="120" y="168" text-anchor="middle" fill="#FF5A73" font-family="Avenir Next, Montserrat, Poppins, sans-serif" font-size="24" font-weight="600">DeepLearning.AI</text>
+</svg>
