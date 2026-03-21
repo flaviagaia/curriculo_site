@@ -215,6 +215,30 @@
                 </a>
               </div>
             </article>
+
+            <article class="case-card">
+              <span class="card-index">Projeto próprio</span>
+              <h3>Fake News Detection com PyTorch e GRU</h3>
+              <p>
+                Desenvolvimento de um notebook para classificação binária de
+                notícias falsas versus confiáveis, estruturado como desafio de
+                machine learning com foco em pipeline textual, rede neural e
+                geração de arquivo de submissão.
+              </p>
+              <ul>
+                <li>Problema: identificar automaticamente notícias falsas a partir de título, conteúdo e tags, com avaliação orientada por F1-score.</li>
+                <li>Pré-processamento: tratamento de nulos, unificação de múltiplas colunas textuais em uma feature única e construção manual de vocabulário com até 10 mil tokens.</li>
+                <li>Arquitetura: embedding em PyTorch, camada recorrente `GRU`, saída sigmoide para classificação binária e treinamento com `BCELoss` e `Adam`.</li>
+                <li>Pipeline: split treino-validação, `DataLoader`, encoding com `PAD` e `UNK`, inferência em lote no conjunto de teste e geração de `submissions.csv`.</li>
+                <li>Stack: Python, pandas, PyTorch, scikit-learn, train_test_split, f1_score e notebook em Colab.</li>
+                <li>Gancho de entrevista: NLP clássico com deep learning, diferenças entre bag-of-words e embeddings, escolha de GRU para sequência textual e limitações de datasets pequenos.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/fakenews" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
           </div>
         </section>
 
