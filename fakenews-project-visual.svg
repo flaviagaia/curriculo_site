@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Fake News Detection Project Visual</title>
+  <desc id="desc">Capa visual do projeto de detecção de fake news com PyTorch, GRU e F1-score.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4efe8"/>
+      <stop offset="100%" stop-color="#e7ddd0"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#231d1a"/>
+      <stop offset="100%" stop-color="#171312"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
+
+  <rect x="48" y="48" width="1104" height="664" rx="28" fill="url(#panel)"/>
+
+  <text x="92" y="128" fill="#f6efe7" font-family="Avenir Next, Inter, sans-serif" font-size="26" font-weight="700" letter-spacing="3">PYTORCH NOTEBOOK</text>
+  <text x="92" y="208" fill="#ffffff" font-family="Avenir Next, Inter, sans-serif" font-size="62" font-weight="800">Fake News Detection</text>
+  <text x="92" y="262" fill="#d7cbc0" font-family="Avenir Next, Inter, sans-serif" font-size="28" font-weight="500">Classificação binária de notícias falsas com Embedding + GRU + F1-score</text>
+
+  <g transform="translate(92 320)">
+    <rect width="660" height="304" rx="24" fill="#f7f1ea"/>
+    <rect x="0" y="0" width="660" height="52" rx="24" fill="#ece2d6"/>
+    <circle cx="28" cy="26" r="7" fill="#f16464"/>
+    <circle cx="52" cy="26" r="7" fill="#f7c948"/>
+    <circle cx="76" cy="26" r="7" fill="#54c27a"/>
+    <text x="104" y="33" fill="#5b4c41" font-family="Menlo, monospace" font-size="20">fakenews.ipynb</text>
+
+    <text x="30" y="98" fill="#1d1816" font-family="Menlo, monospace" font-size="21">train['text'] = title + content + tags</text>
+    <text x="30" y="138" fill="#1d1816" font-family="Menlo, monospace" font-size="21">vocab = top_10000_words + PAD + UNK</text>
+    <text x="30" y="178" fill="#1d1816" font-family="Menlo, monospace" font-size="21">model = Embedding -&gt; GRU -&gt; Linear -&gt; Sigmoid</text>
+    <text x="30" y="218" fill="#1d1816" font-family="Menlo, monospace" font-size="21">loss = BCELoss | optimizer = Adam</text>
+    <text x="30" y="258" fill="#1d1816" font-family="Menlo, monospace" font-size="21">metric = F1-score</text>
+  </g>
+
+  <g transform="translate(790 320)">
+    <rect width="270" height="146" rx="24" fill="#2d6ef8"/>
+    <text x="32" y="54" fill="#ffffff" font-family="Avenir Next, Inter, sans-serif" font-size="24" font-weight="700">Objetivo</text>
+    <text x="32" y="90" fill="#dce7ff" font-family="Avenir Next, Inter, sans-serif" font-size="20">Predizer 1 = fake</text>
+    <text x="32" y="120" fill="#dce7ff" font-family="Avenir Next, Inter, sans-serif" font-size="20">0 = reliable</text>
+
+    <rect y="170" width="270" height="146" rx="24" fill="#ff5c73"/>
+    <text x="32" y="224" fill="#ffffff" font-family="Avenir Next, Inter, sans-serif" font-size="24" font-weight="700">Camadas</text>
+    <text x="32" y="260" fill="#ffe4ea" font-family="Avenir Next, Inter, sans-serif" font-size="20">Embedding</text>
+    <text x="32" y="288" fill="#ffe4ea" font-family="Avenir Next, Inter, sans-serif" font-size="20">GRU</text>
+
+    <rect y="340" width="270" height="146" rx="24" fill="#1f8f63"/>
+    <text x="32" y="394" fill="#ffffff" font-family="Avenir Next, Inter, sans-serif" font-size="24" font-weight="700">Saída</text>
+    <text x="32" y="430" fill="#dbffef" font-family="Avenir Next, Inter, sans-serif" font-size="20">submissions.csv</text>
+    <text x="32" y="458" fill="#dbffef" font-family="Avenir Next, Inter, sans-serif" font-size="20">pipeline em lote</text>
+  </g>
+</svg>
