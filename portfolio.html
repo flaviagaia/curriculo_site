@@ -140,20 +140,80 @@
 
             <article class="case-card">
               <span class="card-index">Projeto próprio</span>
+              <img class="project-proof" src="./search-performance-interface.jpg" alt="Interface do projeto Search Performance Assistant" />
               <h3>Search Performance Assistant para avaliação de retrieval</h3>
               <p>
-                Desenvolvimento de uma aplicação em Python para demonstrar busca
-                semântica com TF-IDF, indexação vetorial, fallback sem FAISS e
-                avaliação de qualidade com múltiplas estratégias de Recall@K.
+                Desenvolvimento de uma aplicação em Python para estudar e
+                demonstrar recuperação de documentos com TF-IDF, indexação
+                vetorial, fallback sem FAISS e uma camada de assistant baseada
+                em evidências recuperadas.
               </p>
               <ul>
-                <li>Problema: mostrar de forma prática como medir recuperação de documentos e explicar trade-offs de um pipeline de busca.</li>
-                <li>Arquitetura: separação entre ingestão, vetorização, indexação, retrieval, camada de assistant, interface desktop e testes automatizados.</li>
+                <li>Problema: avaliar retrieval de forma prática e explicável, mostrando como uma consulta recupera os documentos certos e como medir essa qualidade.</li>
+                <li>Arquitetura: `SearchAssistant` para ingestão, retrieval e resposta; `TfidfEncoder` para vetorização; `SearchIndex` para indexação vetorial; `RecallEvaluator` para avaliação e `app.py` para demonstração visual.</li>
                 <li>Stack: Python, scikit-learn, TF-IDF, FAISS, similaridade de cosseno, Tkinter e unittest.</li>
-                <li>Diferencial técnico: fallback para busca por similaridade quando FAISS não está disponível, mantendo a demo executável em ambiente local simples.</li>
-                <li>Métrica: avaliação com Semantic Recall@K, ID Recall@K e Hybrid Recall@K para comparar recuperação por conteúdo e por identificador esperado.</li>
-                <li>Gancho de entrevista: arquitetura de busca, vetorização, avaliação de retrieval, tratamento de dependência opcional e desenho de solução explicável.</li>
+                <li>Diferencial técnico: uso de FAISS com normalização L2 quando a biblioteca está disponível e fallback com cosine similarity quando não está, mantendo a aplicação portátil.</li>
+                <li>Métricas: Semantic Recall@K, ID Recall@K e Hybrid Recall@K para comparar recuperação por similaridade textual, por IDs esperados e por visão combinada.</li>
+                <li>Caso de teste: o pipeline automatizado valida recuperação dos documentos `D2` e `D3` com `semantic_recall = 1.0`, `id_recall = 1.0` e `hybrid_recall = 1.0`.</li>
+                <li>Perguntas de entrevista que esse projeto sustenta: quando usar TF-IDF antes de embeddings densos, como desenhar fallback para dependência opcional, como avaliar retrieval e como explicar ranking de busca de forma rastreável.</li>
               </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/search-performance-assistant" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">Projeto próprio</span>
+              <img class="project-proof" src="./release-notes-interface.jpg" alt="Interface do projeto Release Notes Generation Assistant" />
+              <h3>Release Notes Generation Assistant com retrieval e avaliação automática</h3>
+              <p>
+                Desenvolvimento de uma aplicação em Python para geração
+                assistida de release notes a partir de contexto de release e
+                pull requests, combinando recuperação por similaridade,
+                heurísticas temáticas, geração baseada em regras e métricas de
+                avaliação.
+              </p>
+              <ul>
+                <li>Problema: transformar contexto de release e PRs em notas curtas, coerentes e rastreáveis, com critérios objetivos para validar a saída.</li>
+                <li>Arquitetura: pipeline modular com carregamento e validação de JSON, vetorização TF-IDF, retriever com cosine similarity e topic boosting, geração textual e camada de avaliação.</li>
+                <li>Stack: Python, scikit-learn, TF-IDF, similaridade de cosseno, Tkinter, JSON e unittest.</li>
+                <li>Diferencial técnico: uso de score híbrido no retriever, somando similaridade vetorial com reforço por grupos temáticos como acesso, busca e estabilidade.</li>
+                <li>Métricas: Recall@K para verificar recuperação dos PRs esperados e Exact Match para comparar a frase final gerada com a saída gold.</li>
+                <li>Teste automatizado: pipeline validado com caso em que a recuperação retorna os PRs `[1, 2, 4]` e alcança `Recall@K = 1.00` e `Exact Match = 1.00`.</li>
+                <li>Gancho de entrevista: desenho de pipeline de NLP aplicado a produto, retrieval explicável, heurística supervisionada por domínio e avaliação reproduzível.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/release-notes-generation-assistant" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">Projeto próprio</span>
+              <img class="project-proof" src="./curriculo-site-interface.png" alt="Interface do projeto Curriculo Site" />
+              <h3>Curriculo Site publicado com Codex e vibe coding</h3>
+              <p>
+                Desenvolvimento do site pessoal e portfólio profissional para
+                substituir o Linktree, com home para recrutadores, página de
+                projetos técnicos, versão em inglês e publicação em domínio
+                próprio.
+              </p>
+              <ul>
+                <li>Problema: transformar uma presença fragmentada em um site autoral, mais forte para recrutadores e mais útil como apoio em entrevistas técnicas.</li>
+                <li>Abordagem: construção iterativa com Codex, usando uma dinâmica de vibe coding para acelerar design, conteúdo, ajustes de UX, revisão textual e publicação.</li>
+                <li>Stack: HTML, CSS, JavaScript, GitHub, Vercel, domínio customizado e organização manual de conteúdo técnico.</li>
+                <li>Diferencial técnico: fluxo rápido de prototipação e refinamento orientado por prompts, com várias rodadas de ajuste em layout, navegação, bilinguismo, responsividade e curadoria de conteúdo.</li>
+                <li>Entrega: site estático publicado, com integração a domínio próprio, navegação PT/EN, portfólio de projetos e links para currículo, TCCs e perfis técnicos.</li>
+                <li>Gancho de entrevista: como usei IA assistiva para acelerar desenvolvimento front-end, estruturar conteúdo e reduzir tempo entre ideia, execução e publicação.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/curriculo_site" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
             </article>
           </div>
         </section>
