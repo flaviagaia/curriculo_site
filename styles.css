@@ -235,6 +235,121 @@ a {
   font-size: 0.88rem;
 }
 
+.logo-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(19, 17, 16, 1) 0%, rgba(19, 17, 16, 0) 8%, rgba(19, 17, 16, 0) 92%, rgba(19, 17, 16, 1) 100%);
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  animation: marquee-scroll 34s linear infinite;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 62px;
+  padding: 14px 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  box-shadow: var(--shadow);
+  color: var(--text);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.logo-pill-image {
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.logo-pill-image img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.logo-pill-brand {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.brand-langflow {
+  color: #b8f48c;
+}
+
+.brand-flowise {
+  color: #76e6c7;
+}
+
+.brand-autogen {
+  color: #8bc6ff;
+}
+
+.brand-codex {
+  color: #f3e7d6;
+}
+
+.brand-llama {
+  color: #ffb780;
+}
+
+.brand-kiro {
+  color: #b592ff;
+}
+
+.brand-antigravity {
+  color: #ffd36d;
+}
+
+.brand-databricks {
+  color: #ff6b57;
+  text-transform: lowercase;
+}
+
+.brand-spark {
+  color: #ffa155;
+}
+
+.brand-oracle {
+  color: #ff5f5f;
+  text-transform: uppercase;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-track {
+    animation: none;
+  }
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--accent);
@@ -789,6 +904,16 @@ h3 {
 
   .lang-switch {
     margin-left: 12px;
+  }
+
+  .logo-pill {
+    padding: 12px 15px;
+    min-height: 56px;
+    font-size: 0.88rem;
+  }
+
+  .logo-pill-image img {
+    height: 24px;
   }
 
   h1 {
