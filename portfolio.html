@@ -78,18 +78,35 @@
 
           <div class="case-grid">
             <article class="case-card">
+              <div class="proof-grid">
+                <img
+                  class="project-proof"
+                  src="fnde-dashboard-gemini.png"
+                  alt="Interface fictícia do dashboard de auditoria de notas fiscais no FNDE"
+                />
+                <img
+                  class="project-proof"
+                  src="fnde-dashboard-gemini-2.png"
+                  alt="Segunda interface fictícia do dashboard de auditoria de notas fiscais no FNDE"
+                />
+              </div>
               <span class="card-index">FNDE · Fundo Nacional do Desenvolvimento da Educação · G4F</span>
-              <h3>Estruturação de ecossistema de dados em Azure e Databricks</h3>
+              <h3>Auditoria de notas fiscais com PySpark, Databricks, Genie e Power BI</h3>
               <p>
-                Atuação na coordenação e estruturação de ambiente analítico com
-                Arquitetura Medallion, pipelines escaláveis, rotinas de
-                qualidade e governança, além da consolidação de um ecossistema
-                de ciência de dados voltado à padronização e à colaboração.
+                No FNDE, estruturei tabelas e consultas em PySpark dentro de
+                notebooks no Databricks para investigar erros em transações
+                bancárias que impactavam a análise de notas fiscais. Depois,
+                usei o Genie para acelerar a passagem desse insumo analítico
+                para um dashboard no Power BI, com atualização automatizada e
+                apoio direto à gestão e à auditoria.
               </p>
               <ul>
-                <li>Desafio: sair do dado fragmentado para uma base confiável e reutilizável.</li>
-                <li>Stack: Azure, Databricks, Python, Jupyter, CI/CD, governança de dados.</li>
-                <li>Gancho de entrevista: arquitetura, fundação analítica e visão sistêmica.</li>
+                <li>Desafio: transformar dados de big data em uma visão auditável, com muitas regras, filtros e comparações entre transações e notas fiscais.</li>
+                <li>Estrutura da solução: o dashboard foi organizado em várias abas, cada uma explicando uma inconsistência diferente e o quanto ela afetava a análise.</li>
+                <li>Stack: PySpark, notebooks Databricks, modelagem de tabelas analíticas, Genie e Power BI.</li>
+                <li>Ponto importante: não era um papel de BI puro, mas foi necessário levar o dado estruturado até a camada de consumo para apoiar a gestão.</li>
+                <li>Automação: o Genie também ajudou na criação do job para atualizar e publicar o dashboard automaticamente.</li>
+                <li>Gancho de entrevista: engenharia analítica em big data, qualidade de dados, auditoria e integração entre camada técnica e visualização executiva.</li>
               </ul>
             </article>
 
