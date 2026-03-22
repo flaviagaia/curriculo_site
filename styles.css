@@ -275,22 +275,15 @@ a {
   white-space: nowrap;
 }
 
-.logo-pill-image {
-  padding: 12px 18px;
-  background: rgba(255, 255, 255, 0.035);
-}
-
-.logo-pill-image img {
-  height: 30px;
-  width: auto;
-  display: block;
-}
-
 .logo-pill-brand {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.08rem;
   font-weight: 700;
   letter-spacing: -0.03em;
+}
+
+.brand-langchain {
+  color: #c7fff3;
 }
 
 .brand-langflow {
@@ -323,7 +316,6 @@ a {
 
 .brand-databricks {
   color: #ff6b57;
-  text-transform: lowercase;
 }
 
 .brand-spark {
@@ -910,10 +902,6 @@ h3 {
     padding: 12px 15px;
     min-height: 56px;
     font-size: 0.88rem;
-  }
-
-  .logo-pill-image img {
-    height: 24px;
   }
 
   h1 {
