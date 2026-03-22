@@ -434,6 +434,20 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.page-portfolio .case-grid {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.page-portfolio .case-card {
+  padding: 34px 36px;
+}
+
+.page-portfolio .project-proof {
+  aspect-ratio: 16 / 8;
+  margin-bottom: 26px;
+}
+
 .dark-panel {
   padding: 42px;
   border: 1px solid var(--line);
@@ -681,6 +695,12 @@ h3 {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.page-portfolio .reveal,
+.page-portfolio .reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 @media (max-width: 1080px) {
