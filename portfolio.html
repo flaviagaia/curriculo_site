@@ -111,6 +111,32 @@
             </article>
 
             <article class="case-card">
+              <span class="card-index">FNDE · case complementar</span>
+              <h3>Auditoria de transações bancárias com Random Forest</h3>
+              <p>
+                Projeto de machine learning criado como exemplo técnico muito
+                próximo do tipo de problema que enfrentei no FNDE: priorização
+                de inconsistências e sinais de risco em dados transacionais para
+                apoiar auditoria, análise e tomada de decisão.
+              </p>
+              <ul>
+                <li>Objetivo: classificar transações suspeitas em um cenário de auditoria bancária usando uma base pública sintética, preservando a lógica do problema sem expor dados reais.</li>
+                <li>Pipeline: leitura em `Parquet`, parsing temporal, criação de atributos derivados, preprocessamento com `ColumnTransformer`, imputação, `OneHotEncoder` e treino com `RandomForestClassifier`.</li>
+                <li>Features: valor da transação, tipo, local, dispositivo, faixa horária, transação internacional e atributos derivados como `day_of_week`, `month`, `sender_prefix` e `receiver_prefix`.</li>
+                <li>Métricas: `F1-score = 0.9620`, `ROC-AUC = 0.9996` e `PR-AUC = 0.9967` no split atual da base sintética.</li>
+                <li>Interpretação: uso de `feature importance` para ranquear sinais relevantes de auditoria, como valor, tipo de transação, local e dispositivo.</li>
+                <li>Conexão com o FNDE: o projeto ajuda a explicar como estruturo raciocínio analítico para auditoria de transações, conciliação, priorização de inconsistências e apoio a investigações mais profundas.</li>
+                <li>Stack: Python, pandas, scikit-learn, matplotlib, pyarrow, joblib e unittest.</li>
+                <li>Gancho de entrevista: classificação supervisionada em base tabular, tratamento de base desbalanceada, explicabilidade com feature importance e adaptação de case sintético para cenário real.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/bank-transaction-audit-random-forest" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
               <span class="card-index">BBTS · Banco do Brasil Tecnologias e Serviços</span>
               <h3>Calendário inteligente de pagamentos com contratos em PDF</h3>
               <p>
@@ -359,6 +385,68 @@
                   Ver no GitHub
                 </a>
               </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Machine Learning</p>
+            <h2>Frente dedicada a modelos tradicionais, dados tabulares e avaliação técnica</h2>
+          </div>
+
+          <div class="summary-panel">
+            <article class="summary-card">
+              <span class="card-index">Repositório</span>
+              <h3>Machine Learning</h3>
+              <p>
+                Repositório que reúne estudos e projetos práticos com foco em
+                machine learning clássico, especialmente para problemas
+                tabulares, classificação, regressão e apoio à decisão em
+                cenários de negócio.
+              </p>
+              <p>
+                O diferencial aqui é mostrar não só treino de modelo, mas
+                também preparação de dados, feature engineering, escolha de
+                métricas, interpretação e estrutura reprodutível.
+              </p>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning" target="_blank" rel="noreferrer">
+                  Ver repositório
+                </a>
+              </div>
+            </article>
+
+            <article class="summary-card">
+              <span class="card-index">Abordagem</span>
+              <h3>Como organizo esses projetos</h3>
+              <p>
+                Os cases dessa trilha seguem uma lógica consistente: entender o
+                problema, definir alvo, preparar a base, criar features úteis,
+                escolher métricas coerentes e explicar os resultados de forma
+                técnica e prática.
+              </p>
+              <p>
+                Essa organização me ajuda a mostrar domínio em pipelines
+                supervisionados e não supervisionados, com clareza para
+                recrutadores e profundidade para entrevistas técnicas.
+              </p>
+            </article>
+
+            <article class="summary-card">
+              <span class="card-index">Exemplos</span>
+              <h3>Projetos já representados aqui</h3>
+              <p>
+                Nesta página, os exemplos mais conectados a essa trilha são:
+                regressão linear para série temporal de óbitos por Covid-19,
+                auditoria de transações com Random Forest e classificação de
+                fake news com rede neural.
+              </p>
+              <p>
+                Juntos, eles mostram repertório em regressão, classificação,
+                dados públicos, bases tabulares, avaliação supervisionada e
+                leitura crítica de métricas.
+              </p>
             </article>
           </div>
         </section>
