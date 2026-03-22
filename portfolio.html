@@ -156,6 +156,34 @@
             </article>
 
             <article class="case-card">
+              <span class="card-index">Presidência da República</span>
+              <h3>Baseline de regressão linear para óbitos por Covid-19 no Brasil</h3>
+              <p>
+                Projeto desenvolvido a partir de dados abertos oficiais para
+                modelar a tendência de óbitos por Covid-19 no Brasil com um
+                baseline clássico, interpretável e reproduzível. A proposta foi
+                transformar microdados governamentais em uma série temporal
+                diária e avaliar a capacidade preditiva de um modelo linear com
+                engenharia de atributos temporais.
+              </p>
+              <ul>
+                <li>Contexto: experiência alinhada ao meu estágio na Presidência, conectando análise de dados públicos, temas de saúde e modelagem quantitativa aplicada.</li>
+                <li>Fonte de dados: microdados oficiais do SIVEP-Gripe / SRAG, publicados no Portal de Dados Abertos do SUS.</li>
+                <li>Pipeline: filtragem de casos de Covid-19 com evolução para óbito, agregação nacional por dia, reindexação completa do calendário de 2024 e construção da série alvo com média móvel de 7 dias.</li>
+                <li>Features: lags de curto prazo, médias móveis, desvio padrão móvel, tendência recente e variáveis de calendário como dia da semana, semana do ano e mês.</li>
+                <li>Modelagem: `LinearRegression` com divisão temporal treino-teste, preservando a ordem cronológica da série.</li>
+                <li>Métricas: `R² = 0.9420`, `MAE = 0.4576` e `RMSE = 0.5639`, mostrando um baseline forte para tendência epidemiológica suavizada.</li>
+                <li>Stack: Python, pandas, numpy, scikit-learn, matplotlib, joblib, unittest e reconstrução da base a partir da fonte oficial.</li>
+                <li>Gancho de entrevista: como transformar microdados públicos em série temporal utilizável, quando usar regressão linear como baseline e como avaliar modelos simples com boa interpretabilidade.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/covid-brazil-deaths-linear-regression" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
               <span class="card-index">Projeto próprio</span>
               <img class="project-proof" src="./search-performance-interface.jpg" alt="Interface do projeto Search Performance Assistant" />
               <h3>Search Performance Assistant para avaliação de retrieval</h3>

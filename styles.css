@@ -314,6 +314,14 @@ a {
   color: #ffd36d;
 }
 
+.brand-azure {
+  color: #8bc4ff;
+}
+
+.brand-aws {
+  color: #ffcf74;
+}
+
 .brand-databricks {
   color: #ff6b57;
 }
@@ -324,7 +332,6 @@ a {
 
 .brand-oracle {
   color: #ff5f5f;
-  text-transform: uppercase;
 }
 
 @keyframes marquee-scroll {
