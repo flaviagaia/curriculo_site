@@ -243,6 +243,31 @@
 
             <article class="case-card">
               <span class="card-index">Projeto próprio</span>
+              <img class="project-proof" src="./mcp-docs-assistant-visual.svg" alt="Capa visual do projeto MCP Docs Assistant" />
+              <h3>MCP Docs Assistant com FastMCP e busca BM25 em documentação local</h3>
+              <p>
+                Desenvolvimento de um servidor MCP read-only para consulta de
+                documentação local em markdown, expondo recursos, ferramentas e
+                prompts para clientes compatíveis com Model Context Protocol.
+              </p>
+              <ul>
+                <li>Problema: tornar políticas, runbooks e padrões internos consultáveis de forma estruturada e segura, sem depender de acesso direto a arquivos brutos.</li>
+                <li>Arquitetura: `DocumentStore` para leitura dos markdowns com frontmatter, indexação com `BM25Okapi` e servidor `FastMCP` expondo `resource`, `tools` e `prompt` por `stdio`.</li>
+                <li>Stack: Python, FastMCP, Model Context Protocol, rank-bm25, python-frontmatter, markdown e unittest.</li>
+                <li>Diferencial técnico: abordagem read-only, com superfície pequena e controlada, útil para cenários de conhecimento interno em que segurança e rastreabilidade importam.</li>
+                <li>Ferramentas expostas: `list_docs()`, `search_docs(query, top_k)` e `get_doc(doc_id)`, além do recurso `docs://catalog` para catálogo textual da base.</li>
+                <li>Teste automatizado: valida listagem, recuperação de documento por id e busca BM25 com retorno correto para consultas sobre revisão de acessos.</li>
+                <li>Gancho de entrevista: como estruturar um servidor MCP, quando usar BM25 para documentação interna e como transformar conhecimento estático em interface consumível por agentes.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-docs-assistant" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">Projeto próprio</span>
               <h3>RAG NLP SQL com LangChain, OpenAI e SQLite</h3>
               <p>
                 Desenvolvimento de uma aplicação em Python para responder
