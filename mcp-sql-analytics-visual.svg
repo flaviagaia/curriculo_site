@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">MCP SQL Analytics Server</title>
+  <desc id="desc">Capa visual do projeto MCP SQL Analytics Server com ferramentas SQL e analytics.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#efe7da"/>
+      <stop offset="100%" stop-color="#dbcdb8"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#231c18"/>
+      <stop offset="100%" stop-color="#15110f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
+  <rect x="48" y="48" width="1104" height="664" rx="30" fill="url(#panel)"/>
+
+  <text x="92" y="124" fill="#e7d7c5" font-family="Avenir Next, Inter, sans-serif" font-size="24" font-weight="700" letter-spacing="3">MODEL CONTEXT PROTOCOL</text>
+  <text x="92" y="206" fill="#ffffff" font-family="Avenir Next, Inter, sans-serif" font-size="60" font-weight="800">MCP SQL Analytics Server</text>
+  <text x="92" y="260" fill="#cdbba9" font-family="Avenir Next, Inter, sans-serif" font-size="28">Ferramentas estruturadas para explorar analytics e banco SQL por MCP</text>
+
+  <g transform="translate(92 320)">
+    <rect width="500" height="310" rx="26" fill="#f7f1e8"/>
+    <text x="28" y="48" fill="#594b3f" font-family="Menlo, monospace" font-size="22">available_tools</text>
+    <text x="28" y="100" fill="#171312" font-family="Menlo, monospace" font-size="26">list_tables()</text>
+    <text x="28" y="146" fill="#171312" font-family="Menlo, monospace" font-size="26">describe_table(table_name)</text>
+    <text x="28" y="192" fill="#171312" font-family="Menlo, monospace" font-size="26">run_query(sql)</text>
+    <text x="28" y="238" fill="#171312" font-family="Menlo, monospace" font-size="26">analytics_summary()</text>
+    <text x="28" y="284" fill="#5f5246" font-family="Menlo, monospace" font-size="20">structured access to SQL analytics</text>
+  </g>
+
+  <g transform="translate(640 320)">
+    <rect width="468" height="144" rx="24" fill="#244b49"/>
+    <text x="28" y="52" fill="#ffffff" font-family="Avenir Next, Inter, sans-serif" font-size="24" font-weight="700">Contexto</text>
+    <text x="28" y="90" fill="#d8efeb" font-family="Avenir Next, Inter, sans-serif" font-size="22">Cliente MCP → tools SQL → resposta baseada em dados</text>
+
+    <rect y="168" width="468" height="144" rx="24" fill="#d45a49"/>
+    <text x="28" y="220" fill="#ffffff" font-family="Avenir Next, Inter, sans-serif" font-size="24" font-weight="700">Foco</text>
+    <text x="28" y="258" fill="#ffe5df" font-family="Avenir Next, Inter, sans-serif" font-size="22">analytics, schema inspection e consulta controlada</text>
+
+    <rect y="336" width="468" height="144" rx="24" fill="#c5922e"/>
+    <text x="28" y="388" fill="#ffffff" font-family="Avenir Next, Inter, sans-serif" font-size="24" font-weight="700">Stack</text>
+    <text x="28" y="426" fill="#fff1c9" font-family="Avenir Next, Inter, sans-serif" font-size="22">Python, MCP, SQL, analytics e camada read-only</text>
+  </g>
+</svg>

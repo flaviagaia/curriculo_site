@@ -268,6 +268,31 @@
 
             <article class="case-card">
               <span class="card-index">Projeto próprio</span>
+              <img class="project-proof" src="./mcp-sql-analytics-visual.svg" alt="Capa visual do projeto MCP SQL Analytics Server" />
+              <h3>MCP SQL Analytics Server para exploração estruturada de dados</h3>
+              <p>
+                Desenvolvimento de um servidor MCP voltado a analytics em SQL,
+                desenhado para expor ferramentas estruturadas de exploração de
+                tabelas, schema e consultas para clientes compatíveis com Model
+                Context Protocol.
+              </p>
+              <ul>
+                <li>Problema: permitir que assistentes e agentes consultem dados analíticos de forma controlada, sem depender de acesso irrestrito ao banco ou de manipulação manual do schema.</li>
+                <li>Arquitetura: servidor MCP com foco em ferramentas para inspeção e consulta analítica, organizado para expor operações úteis de SQL analytics em formato consumível por clientes MCP.</li>
+                <li>Stack: Python, MCP, SQL analytics e organização modular orientada a tools.</li>
+                <li>Diferencial técnico: estrutura pensada para uso por agentes, com interface mais segura e previsível do que dar ao modelo acesso bruto ao banco ou ao shell.</li>
+                <li>Aplicação prática: útil para cenários de exploração de tabelas, entendimento de schema, consultas orientadas a negócio e integração futura com fluxos NL2SQL.</li>
+                <li>Gancho de entrevista: como desenhar tools de analytics para agentes, como limitar superfície de acesso a dados e como estruturar operações MCP para exploração analítica com mais governança.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-sql-analytics-server" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">Projeto próprio</span>
               <h3>RAG NLP SQL com LangChain, OpenAI e SQLite</h3>
               <p>
                 Desenvolvimento de uma aplicação em Python para responder
