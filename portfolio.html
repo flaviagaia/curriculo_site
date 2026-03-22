@@ -240,6 +240,31 @@
                 </a>
               </div>
             </article>
+
+            <article class="case-card">
+              <span class="card-index">Projeto próprio</span>
+              <h3>RAG NLP SQL com LangChain, OpenAI e SQLite</h3>
+              <p>
+                Desenvolvimento de uma aplicação em Python para responder
+                perguntas em linguagem natural sobre uma base SQL, combinando
+                recuperação de contexto semântico do schema com geração e
+                execução de SQL por agent.
+              </p>
+              <ul>
+                <li>Problema: permitir consulta analítica em banco relacional sem exigir que o usuário escreva SQL manualmente.</li>
+                <li>Arquitetura: banco `SQLite` de exemplo, documentos semânticos sobre schema e regras de negócio, `BM25Retriever` para recuperar contexto e `create_sql_agent` do LangChain para gerar e executar consultas.</li>
+                <li>Stack: Python, LangChain, langchain-openai, langchain-community, SQLAlchemy, SQLite, Streamlit e BM25Retriever.</li>
+                <li>Diferencial técnico: separação clara entre dados estruturados e contexto de negócio, usando RAG não para documentos externos, mas para orientar melhor a geração de SQL.</li>
+                <li>Modo de uso: projeto com `modo demo` funcionando mesmo sem chave OpenAI e `modo completo` com geração dinâmica de SQL quando a API está configurada.</li>
+                <li>Segurança e adaptabilidade: o app não sobrescreve automaticamente bancos definidos pelo usuário e foi desenhado para troca simples da base e dos documentos de contexto.</li>
+                <li>Gancho de entrevista: como aplicar RAG fora do cenário clássico de PDFs, como reduzir ambiguidade na geração de SQL e como desenhar uma interface NL2SQL mais confiável.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/RAG_NLP_SQL" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
           </div>
         </section>
 
