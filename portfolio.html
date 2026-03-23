@@ -505,6 +505,78 @@
 
         <section class="section reveal">
           <div class="section-heading">
+            <p class="eyebrow">BBTS · Reprodução Técnica</p>
+            <h2>Leitura de contratos, calendário de pagamentos e escalonamento com IA</h2>
+          </div>
+
+          <div class="proof-grid">
+            <img
+              class="project-proof"
+              src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario1.jpg"
+              alt="Tela de calendário e monitoramento do projeto de pagamentos"
+            />
+            <img
+              class="project-proof"
+              src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario2.jpg"
+              alt="Tela de alertas e auditoria do projeto de pagamentos"
+            />
+          </div>
+
+          <div class="summary-panel">
+            <article class="summary-card">
+              <span class="card-index">Repositório</span>
+              <h3>Contract Payment Calendar with AI Monitoring</h3>
+              <p>
+                Projeto de portfólio que simula um cenário real de leitura de
+                contratos em PDF com layouts diferentes, extração de cláusulas
+                financeiras, montagem do calendário esperado de pagamentos e
+                monitoramento de divergências.
+              </p>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/calendario_pagamentos" target="_blank" rel="noreferrer">
+                  Ver repositório
+                </a>
+              </div>
+            </article>
+
+            <article class="summary-card">
+              <span class="card-index">Ligação com a BBTS</span>
+              <h3>Reprodução semelhante ao que fiz no contexto real</h3>
+              <p>
+                Esse case foi estruturado para reproduzir de forma publicável um
+                tipo de fluxo muito parecido com o que desenvolvi na BBTS:
+                entender contratos em PDF, extrair regras de pagamento,
+                construir calendário financeiro e identificar casos que exigem
+                atenção gerencial ou auditoria.
+              </p>
+              <p>
+                Ele traduz para um ambiente reprodutível a mesma lógica de
+                automação e conciliação que sustenta processos financeiros mais
+                sensíveis.
+              </p>
+            </article>
+
+            <article class="summary-card">
+              <span class="card-index">Arquitetura</span>
+              <h3>Bronze, silver, gold e camada de agentes</h3>
+              <p>
+                O pipeline foi desenhado em camadas inspiradas em arquitetura
+                `bronze / silver / gold`, com geração e leitura de PDFs,
+                extração rule-based com `regex`, normalização das regras,
+                construção do calendário e comparação entre previsto e realizado.
+              </p>
+              <p>
+                Na etapa final, agentes inspirados em `CrewAI` classificam se o
+                caso vira alerta gerencial, revisão de justificativa ou
+                escalonamento para auditoria, com fallback determinístico para a
+                demo rodar ponta a ponta.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
             <p class="eyebrow">Machine Learning</p>
             <h2>Frente dedicada a modelos tradicionais, dados tabulares e avaliação técnica</h2>
           </div>
