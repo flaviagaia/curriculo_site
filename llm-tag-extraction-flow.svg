@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo do LLM Tag Extraction Lab</title>
+  <desc id="desc">Diagrama resumido do pipeline de benchmark, extração de tags e validação humana do projeto.</desc>
+  <rect width="1200" height="700" rx="36" fill="#171311"/>
+  <rect x="36" y="36" width="1128" height="628" rx="28" fill="#1f1a18" stroke="rgba(255,255,255,0.12)"/>
+  <text x="76" y="106" fill="#f5efe8" font-family="Space Grotesk, Arial, sans-serif" font-size="42" font-weight="700">Fluxo tecnico do projeto</text>
+
+  <rect x="84" y="174" width="220" height="96" rx="22" fill="#26211f" stroke="rgba(255,255,255,0.08)"/>
+  <text x="112" y="214" fill="#e2d3c2" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="700">Base publica</text>
+  <text x="112" y="246" fill="#f5efe8" font-family="Manrope, Arial, sans-serif" font-size="22">Stack Exchange</text>
+
+  <rect x="346" y="174" width="220" height="96" rx="22" fill="#26211f" stroke="rgba(255,255,255,0.08)"/>
+  <text x="374" y="214" fill="#e2d3c2" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="700">Preparacao</text>
+  <text x="374" y="246" fill="#f5efe8" font-family="Manrope, Arial, sans-serif" font-size="22">limpeza + ruido</text>
+
+  <rect x="608" y="174" width="220" height="96" rx="22" fill="#26211f" stroke="rgba(255,255,255,0.08)"/>
+  <text x="636" y="214" fill="#e2d3c2" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="700">Benchmark</text>
+  <text x="636" y="246" fill="#f5efe8" font-family="Manrope, Arial, sans-serif" font-size="22">dataset controlado</text>
+
+  <rect x="870" y="174" width="246" height="96" rx="22" fill="#26211f" stroke="rgba(255,255,255,0.08)"/>
+  <text x="898" y="214" fill="#e2d3c2" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="700">Comparacao</text>
+  <text x="898" y="246" fill="#f5efe8" font-family="Manrope, Arial, sans-serif" font-size="22">regex, fuzzy, LangChain</text>
+
+  <rect x="112" y="380" width="250" height="154" rx="24" fill="#231d1b" stroke="rgba(255,255,255,0.08)"/>
+  <text x="144" y="428" fill="#f1e3cf" font-family="Space Grotesk, Arial, sans-serif" font-size="30" font-weight="700">Regex</text>
+  <text x="144" y="464" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="19">Baseline deterministico</text>
+  <text x="144" y="496" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="19">rapido, explicavel, rigido</text>
+
+  <rect x="474" y="380" width="250" height="154" rx="24" fill="#231d1b" stroke="rgba(255,255,255,0.08)"/>
+  <text x="506" y="428" fill="#8fe5c8" font-family="Space Grotesk, Arial, sans-serif" font-size="30" font-weight="700">Fuzzy</text>
+  <text x="506" y="464" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="19">recupera ruido ortografico</text>
+  <text x="506" y="496" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="19">ainda limitado ao lexico</text>
+
+  <rect x="836" y="380" width="280" height="154" rx="24" fill="#231d1b" stroke="#d9c6a9" stroke-width="2"/>
+  <text x="868" y="428" fill="#f1e3cf" font-family="Space Grotesk, Arial, sans-serif" font-size="30" font-weight="700">LangChain few-shot</text>
+  <text x="868" y="464" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="19">TF-IDF + cosine similarity</text>
+  <text x="868" y="496" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="19">contexto + validacao humana</text>
+
+  <rect x="360" y="574" width="478" height="58" rx="18" fill="#26211f" stroke="rgba(255,255,255,0.08)"/>
+  <text x="392" y="611" fill="#f5efe8" font-family="Manrope, Arial, sans-serif" font-size="22">Feedback operacional + camada de revisao estilo CrewAI</text>
+
+  <path d="M304 222H346" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M566 222H608" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M828 222H870" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M718 270V330" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M718 330H237" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M718 330H599" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M718 330H976" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M237 330V380" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M599 330V380" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M976 330V380" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M237 534V603H360" stroke="#8e8378" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M599 534V603" stroke="#8e8378" stroke-width="4" stroke-linecap="round"/>
+  <path d="M976 534V603H838" stroke="#8e8378" stroke-width="4" stroke-linecap="round" fill="none"/>
+</svg>

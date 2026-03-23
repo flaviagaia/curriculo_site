@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Benchmark de extração de tags com LLM</title>
+  <desc id="desc">Painel resumindo os resultados de regex, fuzzy matching e LangChain few-shot no projeto LLM Tag Extraction Lab.</desc>
+  <rect width="1200" height="700" rx="36" fill="#171311"/>
+  <rect x="36" y="36" width="1128" height="628" rx="28" fill="#1f1a18" stroke="rgba(255,255,255,0.12)"/>
+  <text x="76" y="110" fill="#f5efe8" font-family="Space Grotesk, Arial, sans-serif" font-size="44" font-weight="700">LLM Tag Extraction Lab</text>
+  <text x="76" y="154" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="24">Comparacao entre regex, fuzzy matching e LangChain few-shot em benchmark com ruido ortografico</text>
+
+  <rect x="76" y="202" width="1048" height="110" rx="22" fill="#24201f" stroke="rgba(255,255,255,0.08)"/>
+  <text x="112" y="250" fill="#e2d3c2" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="700">Benchmark atual</text>
+  <text x="112" y="286" fill="#f5efe8" font-family="Space Grotesk, Arial, sans-serif" font-size="52" font-weight="700">300</text>
+  <text x="214" y="286" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="22">exemplos avaliados</text>
+
+  <rect x="76" y="346" width="326" height="248" rx="24" fill="#231d1b" stroke="rgba(255,255,255,0.08)"/>
+  <text x="108" y="392" fill="#d4c3af" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="700">Regex / dictionary</text>
+  <text x="108" y="452" fill="#f5efe8" font-family="Space Grotesk, Arial, sans-serif" font-size="58" font-weight="700">0.4628</text>
+  <text x="108" y="486" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="22">F1-score</text>
+  <text x="108" y="532" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="20">Precision: 0.4788</text>
+  <text x="108" y="564" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="20">Recall: 0.5361</text>
+  <text x="108" y="596" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="20">Exact match: 0.1250</text>
+
+  <rect x="437" y="346" width="326" height="248" rx="24" fill="#231d1b" stroke="rgba(255,255,255,0.08)"/>
+  <text x="469" y="392" fill="#8fe5c8" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="700">Fuzzy matching</text>
+  <text x="469" y="452" fill="#f5efe8" font-family="Space Grotesk, Arial, sans-serif" font-size="58" font-weight="700">0.7465</text>
+  <text x="469" y="486" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="22">F1-score</text>
+  <text x="469" y="532" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="20">Precision: 0.6754</text>
+  <text x="469" y="564" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="20">Recall: 0.9347</text>
+  <text x="469" y="596" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="20">Exact match: 0.3750</text>
+
+  <rect x="798" y="346" width="326" height="248" rx="24" fill="#231d1b" stroke="#d9c6a9" stroke-width="2"/>
+  <text x="830" y="392" fill="#f1e3cf" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="700">LangChain few-shot</text>
+  <text x="830" y="452" fill="#f5efe8" font-family="Space Grotesk, Arial, sans-serif" font-size="58" font-weight="700">0.9639</text>
+  <text x="830" y="486" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="22">F1-score</text>
+  <text x="830" y="532" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="20">Precision: 0.9569</text>
+  <text x="830" y="564" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="20">Recall: 0.9778</text>
+  <text x="830" y="596" fill="#b9afa7" font-family="Manrope, Arial, sans-serif" font-size="20">Exact match: 0.9083</text>
+</svg>

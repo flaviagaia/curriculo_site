@@ -72,8 +72,8 @@
 
         <section id="frentes" class="section reveal">
           <div class="section-heading">
-            <p class="eyebrow">Projetos principais</p>
-            <h2>Casos reais para mostrar o que desenvolvi na prática</h2>
+            <p class="eyebrow">Experiência profissional</p>
+            <h2>Projetos organizados pela minha trajetória, do trabalho mais recente ao início da carreira</h2>
           </div>
 
           <div class="case-grid">
@@ -137,6 +137,32 @@
             </article>
 
             <article class="case-card">
+              <span class="card-index">FNDE · caso complementar</span>
+              <h3>RAG NLP SQL com LangChain, OpenAI e SQLite</h3>
+              <p>
+                Desenvolvimento de uma aplicação em Python para responder
+                perguntas em linguagem natural sobre uma base SQL, combinando
+                recuperação de contexto semântico do schema com geração e
+                execução de SQL por agent. Usei esse tipo de raciocínio como
+                apoio ao contexto de dados e exploração analítica no FNDE.
+              </p>
+              <ul>
+                <li>Problema: permitir consulta analítica em banco relacional sem exigir que o usuário escreva SQL manualmente.</li>
+                <li>Arquitetura: banco `SQLite` de exemplo, documentos semânticos sobre schema e regras de negócio, `BM25Retriever` para recuperar contexto e `create_sql_agent` do LangChain para gerar e executar consultas.</li>
+                <li>Stack: Python, LangChain, langchain-openai, langchain-community, SQLAlchemy, SQLite, Streamlit e BM25Retriever.</li>
+                <li>Diferencial técnico: separação clara entre dados estruturados e contexto de negócio, usando RAG não para documentos externos, mas para orientar melhor a geração de SQL.</li>
+                <li>Modo de uso: projeto com `modo demo` funcionando mesmo sem chave OpenAI e `modo completo` com geração dinâmica de SQL quando a API está configurada.</li>
+                <li>Segurança e adaptabilidade: o app não sobrescreve automaticamente bancos definidos pelo usuário e foi desenhado para troca simples da base e dos documentos de contexto.</li>
+                <li>Gancho de entrevista: como aplicar RAG fora do cenário clássico de PDFs, como reduzir ambiguidade na geração de SQL e como desenhar uma interface NL2SQL mais confiável.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/RAG_NLP_SQL" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
               <span class="card-index">BBTS · Banco do Brasil Tecnologias e Serviços</span>
               <h3>Leitura de contratos, calendário de pagamentos e escalonamento com IA</h3>
               <p>
@@ -181,6 +207,44 @@
                 <li>Stack: Python, regex, LangChain, Streamlit, CrewAI, avaliação iterativa.</li>
                 <li>Gancho de entrevista: transição entre heurística, NLP e IA generativa.</li>
               </ul>
+            </article>
+
+            <article class="case-card">
+              <div class="proof-grid">
+                <img
+                  class="project-proof"
+                  src="./llm-tag-extraction-metrics.svg"
+                  alt="Painel com as métricas do benchmark do projeto LLM Tag Extraction Lab"
+                />
+                <img
+                  class="project-proof"
+                  src="./llm-tag-extraction-flow.svg"
+                  alt="Diagrama do fluxo técnico do projeto LLM Tag Extraction Lab"
+                />
+              </div>
+              <span class="card-index">EVCOMX - Petrobras · reprodução técnica</span>
+              <h3>LLM Tag Extraction Lab para extração técnica com validação humana</h3>
+              <p>
+                Projeto em Python criado para reproduzir um tipo de problema que
+                desenvolvi na EVCOMX para a Petrobras: extrair tags técnicas a
+                partir de textos ruidosos, comparando uma baseline rígida com
+                abordagens mais robustas baseadas em fuzzy matching, LangChain,
+                few-shot prompting e revisão humana.
+              </p>
+              <ul>
+                <li>Problema de negócio: textos técnicos chegam com abreviações, ruído ortográfico e variações de nomenclatura, mas o sistema ainda precisa recuperar a tag canônica correta.</li>
+                <li>Abordagens comparadas: `regex / dictionary`, `RapidFuzz` para recuperação lexical e `LangChain few-shot` com `TF-IDF + cosine similarity` e caminho opcional com LLM externo.</li>
+                <li>Benchmark: `300` exemplos avaliados, com ganho claro na passagem de regras rígidas para abordagem contextual.</li>
+                <li>Resultados: `regex` com `F1 = 0.4628`, `fuzzy` com `F1 = 0.7465` e `langchain_llm` com `F1 = 0.9639` e `exact match = 0.9083`.</li>
+                <li>Human-in-the-loop: dashboard em `Streamlit` com feedback `thumbs up/down`, salvando revisão operacional e preparando uma camada de agentes estilo `CrewAI`.</li>
+                <li>Stack: Python, pandas, scikit-learn, RapidFuzz, BeautifulSoup, LangChain, Streamlit, Plotly e CrewAI opcional.</li>
+                <li>Gancho de entrevista: como evoluir de regex para LLMs com segurança, quando fuzzy matching já resolve boa parte do problema e como desenhar validação humana para melhoria contínua.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/llm-tag-extraction-lab" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
             </article>
 
             <article class="case-card">
@@ -290,6 +354,11 @@
         </section>
 
         <section id="frentes-continuacao" class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Projetos autorais</p>
+            <h2>Projetos independentes que desenvolvi para explorar arquitetura, IA aplicada e produto</h2>
+          </div>
+
           <div class="case-grid">
 
             <article class="case-card">
@@ -445,29 +514,36 @@
               </div>
             </article>
 
-            <article class="case-card">
-              <span class="card-index">Projeto próprio</span>
-              <h3>RAG NLP SQL com LangChain, OpenAI e SQLite</h3>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Laboratórios e reproduções</p>
+            <h2>Repositórios temáticos que aprofundam partes do que já fiz no trabalho</h2>
+          </div>
+
+          <div class="summary-panel">
+            <article class="summary-card">
+              <span class="card-index">Como ler</span>
+              <h3>Casos de aprofundamento técnico</h3>
               <p>
-                Desenvolvimento de uma aplicação em Python para responder
-                perguntas em linguagem natural sobre uma base SQL, combinando
-                recuperação de contexto semântico do schema com geração e
-                execução de SQL por agent.
+                Esta parte reúne laboratórios e reproduções que não substituem
+                minha experiência profissional, mas ajudam a mostrar com mais
+                clareza como penso pipelines, avaliação, auditoria e
+                experimentação técnica.
               </p>
-              <ul>
-                <li>Problema: permitir consulta analítica em banco relacional sem exigir que o usuário escreva SQL manualmente.</li>
-                <li>Arquitetura: banco `SQLite` de exemplo, documentos semânticos sobre schema e regras de negócio, `BM25Retriever` para recuperar contexto e `create_sql_agent` do LangChain para gerar e executar consultas.</li>
-                <li>Stack: Python, LangChain, langchain-openai, langchain-community, SQLAlchemy, SQLite, Streamlit e BM25Retriever.</li>
-                <li>Diferencial técnico: separação clara entre dados estruturados e contexto de negócio, usando RAG não para documentos externos, mas para orientar melhor a geração de SQL.</li>
-                <li>Modo de uso: projeto com `modo demo` funcionando mesmo sem chave OpenAI e `modo completo` com geração dinâmica de SQL quando a API está configurada.</li>
-                <li>Segurança e adaptabilidade: o app não sobrescreve automaticamente bancos definidos pelo usuário e foi desenhado para troca simples da base e dos documentos de contexto.</li>
-                <li>Gancho de entrevista: como aplicar RAG fora do cenário clássico de PDFs, como reduzir ambiguidade na geração de SQL e como desenhar uma interface NL2SQL mais confiável.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/RAG_NLP_SQL" target="_blank" rel="noreferrer">
-                  Ver no GitHub
-                </a>
-              </div>
+            </article>
+
+            <article class="summary-card">
+              <span class="card-index">O que aparece aqui</span>
+              <h3>ML, outliers e reproduções do contexto real</h3>
+              <p>
+                Aqui entram trilhas como `Machine Learning`,
+                `Outlier Detection` e a reprodução pública do fluxo de leitura
+                contratual e calendário de pagamentos ligado ao contexto da
+                BBTS.
+              </p>
             </article>
           </div>
         </section>
@@ -512,8 +588,8 @@
             </article>
 
             <article class="summary-card">
-              <span class="card-index">Conexão com FNDE</span>
-              <h3>Como esse laboratório reforça minha experiência</h3>
+              <span class="card-index">FNDE</span>
+              <h3>Laboratório conectado ao que fiz no FNDE</h3>
               <p>
                 O pipeline trabalha com amostra reproduzível de `200.000`
                 registros, `RobustScaler`, detecção estatística e consenso entre
@@ -521,10 +597,10 @@
                 de anomalia.
               </p>
               <p>
-                Isso conversa diretamente com cenários de auditoria, qualidade de
-                dados e investigação de transações, em que nem todo outlier é
-                erro, mas todo sinal relevante precisa ser contextualizado e
-                explicado.
+                Essa lógica foi aplicada no meu contexto do FNDE em análises de
+                inconsistências e outliers: nem todo valor extremo é erro, mas
+                todo sinal relevante precisa ser contextualizado, explicado e
+                priorizado para revisão.
               </p>
             </article>
           </div>
@@ -660,59 +736,6 @@
                 dados públicos, bases tabulares, avaliação supervisionada e
                 leitura crítica de métricas.
               </p>
-            </article>
-          </div>
-        </section>
-
-        <section id="academicos" class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Projetos acadêmicos</p>
-            <h2>Projetos de pesquisa e aplicação</h2>
-          </div>
-
-          <div class="case-grid">
-            <article class="case-card">
-              <span class="card-index">Graduação</span>
-              <h3>Aplicação de técnicas de reconhecimento de entidades nomeadas em textos jurídicos</h3>
-              <p>
-                TCC do IESB orientado a NLP jurídico em português do Brasil,
-                comparando dois modelos spaCy ajustados ao domínio legal e
-                entregando também um protótipo acessível ao usuário.
-              </p>
-              <ul>
-                <li>Problema: documentos jurídicos são extensos, complexos e difíceis de estruturar manualmente.</li>
-                <li>Metodologia: ajuste fino dos modelos pt_core_news_sm e pt_core_news_lg com o corpus LeNER-Br.</li>
-                <li>Resultados: F1-score de 81,42% no modelo small e 83,76% no modelo large; destaque para TEMPO e LEGISLAÇÃO.</li>
-                <li>Entrega: aplicativo web em Streamlit publicado no Hugging Face para comparação dos modelos e uso prático.</li>
-                <li>Detalhe técnico importante: comparação entre modelos small e large, avaliação por F1-score e publicação de protótipo acessível ao usuário final.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="./2022_1___IESB___TCC_II___Flavia.pdf" target="_blank" rel="noreferrer">
-                  Ler TCC completo
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <span class="card-index">MBA</span>
-              <h3>Aplicação de CNNs na classificação de imagens de raio X para COVID-19</h3>
-              <p>
-                Monografia da USP focada no desenvolvimento e validação de um
-                modelo de deep learning para apoio ao diagnóstico da COVID-19 a
-                partir de imagens de tórax.
-              </p>
-              <ul>
-                <li>Problema: acelerar e apoiar a identificação de casos em contexto de alta demanda diagnóstica.</li>
-                <li>Metodologia: construção de base com 2.089 imagens, aumento de dados, grid search e CNN em Python/TensorFlow.</li>
-                <li>Resultados: 98,40% de acurácia no conjunto de teste e 96,88% de validação com configuração otimizada.</li>
-                <li>Entrega: código público no GitHub e comparação com trabalhos correlatos da literatura.</li>
-                <li>Detalhe técnico importante: uso de data augmentation, grid search, validação experimental e comparação com literatura correlata.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="./TCC_MBA_FLAVIA.pdf" target="_blank" rel="noreferrer">
-                  Ler monografia completa
-                </a>
-              </div>
             </article>
           </div>
         </section>
