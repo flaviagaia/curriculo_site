@@ -163,6 +163,43 @@
             </article>
 
             <article class="case-card">
+              <span class="card-index">FNDE · caso complementar</span>
+              <h3>Outlier Detection Lab para inconsistências e anomalias</h3>
+              <p>
+                Laboratório de detecção de outliers e anomalias em bases
+                grandes, usado aqui como reprodução técnica muito próxima do
+                tipo de análise que fiz no FNDE: identificar extremos,
+                combinações improváveis e sinais que merecem revisão manual em
+                contexto de auditoria.
+              </p>
+              <ul>
+                <li>Problema: diferenciar ruído operacional de sinais realmente relevantes em bases volumosas e confusas.</li>
+                <li>Case principal: `NYC TLC Trip Outliers`, comparando `IQR`, `Modified Z-score`, `Isolation Forest` e `Local Outlier Factor` em dados operacionais de corridas.</li>
+                <li>Pipeline: amostra reproduzível de `200.000` registros, escala robusta, detecção estatística e consenso entre detectores para reduzir falsos positivos.</li>
+                <li>Conexão com o FNDE: mesma lógica de analisar inconsistências, contextualizar extremos e priorizar investigação antes de concluir que há erro.</li>
+                <li>Stack: Python, pandas, scikit-learn, análise estatística robusta e machine learning não supervisionado.</li>
+                <li>Gancho de entrevista: como combinar métodos estatísticos e modelos não supervisionados para auditoria, priorização e revisão humana.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/outlier-detection-lab" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <div class="proof-grid">
+                <img
+                  class="project-proof"
+                  src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario1.jpg"
+                  alt="Tela de calendário e monitoramento do projeto de pagamentos"
+                />
+                <img
+                  class="project-proof"
+                  src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario2.jpg"
+                  alt="Tela de alertas e auditoria do projeto de pagamentos"
+                />
+              </div>
               <span class="card-index">BBTS · Banco do Brasil Tecnologias e Serviços</span>
               <h3>Leitura de contratos, calendário de pagamentos e escalonamento com IA</h3>
               <p>
@@ -179,6 +216,11 @@
                 <li>Stack: Python, regex, processamento de PDFs, arquitetura analítica, automação orientada a auditoria e camada de agentes para classificação e escalonamento.</li>
                 <li>Gancho de entrevista: extração contratual, conciliação financeira, automação de fluxo operacional e uso de IA para priorização e escalonamento.</li>
               </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/calendario_pagamentos" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
             </article>
 
             <article class="case-card">
@@ -253,7 +295,7 @@
               <span class="card-index">MDS · Ministério do Desenvolvimento Social, Família e Combate à Fome</span>
               <img
                 class="project-proof"
-                src="https://raw.githubusercontent.com/flaviagaia/perfil-cadastral-CadUnico/main/assets/streamlit_dashboard.png"
+                src="./mds-cadunico-dashboard.png"
                 alt="Dashboard do projeto de perfil cadastral com CadÚnico amostral"
               />
               <h3>Perfil cadastral com CadÚnico amostral</h3>
@@ -283,7 +325,7 @@
               <span class="card-index">MDS · Ministério do Desenvolvimento Social, Família e Combate à Fome</span>
               <img
                 class="project-proof"
-                src="https://raw.githubusercontent.com/flaviagaia/bolsa_familia_vs_BPC/main/assets/streamlit_dashboard.png"
+                src="./mds-bolsa-vs-bpc-visual.svg"
                 alt="Dashboard comparando Bolsa Família e BPC por território"
               />
               <h3>Bolsa Família vs BPC por território</h3>
@@ -313,7 +355,7 @@
               <span class="card-index">MDS · Ministério do Desenvolvimento Social, Família e Combate à Fome</span>
               <img
                 class="project-proof"
-                src="https://raw.githubusercontent.com/flaviagaia/mapa-de-judicializacao-e-concentracao-do-BPC/main/assets/streamlit_dashboard.png"
+                src="./mds-bpc-judicializacao-dashboard.png"
                 alt="Dashboard do mapa de judicialização e concentração do BPC"
               />
               <h3>Mapa de judicialização e concentração do BPC</h3>
@@ -342,7 +384,7 @@
               <span class="card-index">MDS · Ministério do Desenvolvimento Social, Família e Combate à Fome</span>
               <img
                 class="project-proof"
-                src="https://raw.githubusercontent.com/flaviagaia/bolsa-familia-territorial-analytics/main/assets/streamlit_dashboard.png"
+                src="./mds-bolsa-territorial-dashboard.png"
                 alt="Dashboard de evolução territorial do Bolsa Família"
               />
               <h3>Painel de evolução territorial do Bolsa Família</h3>
@@ -637,137 +679,6 @@
 
           </div>
         </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Outlier Detection</p>
-            <h2>Laboratório de análise de outliers e anomalias em bases grandes e confusas</h2>
-          </div>
-
-          <div class="summary-panel">
-            <article class="summary-card">
-              <span class="card-index">Repositório</span>
-              <h3>Outlier Detection Lab</h3>
-              <p>
-                Repositório voltado a projetos de detecção de outliers e
-                anomalias em dados tabulares, combinando estatística robusta,
-                machine learning não supervisionado e análise exploratória para
-                apoiar auditoria e revisão manual.
-              </p>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/outlier-detection-lab" target="_blank" rel="noreferrer">
-                  Ver repositório
-                </a>
-              </div>
-            </article>
-
-            <article class="summary-card">
-              <span class="card-index">Projeto</span>
-              <h3>NYC TLC Trip Outliers</h3>
-              <p>
-                Case construído sobre a base oficial de corridas da `NYC TLC`
-                para comparar `IQR`, `Modified Z-score`, `Isolation Forest` e
-                `Local Outlier Factor` em um volume alto de dados operacionais.
-              </p>
-              <p>
-                A lógica é muito parecida com a análise de outliers e
-                inconsistências que fiz no FNDE: olhar para extremos,
-                combinações improváveis, consenso entre métodos e priorização
-                de revisão manual.
-              </p>
-            </article>
-
-            <article class="summary-card">
-              <span class="card-index">FNDE</span>
-              <h3>Laboratório conectado ao que fiz no FNDE</h3>
-              <p>
-                O pipeline trabalha com amostra reproduzível de `200.000`
-                registros, `RobustScaler`, detecção estatística e consenso entre
-                detectores para reduzir ruído e destacar sinais mais consistentes
-                de anomalia.
-              </p>
-              <p>
-                Essa lógica foi aplicada no meu contexto do FNDE em análises de
-                inconsistências e outliers: nem todo valor extremo é erro, mas
-                todo sinal relevante precisa ser contextualizado, explicado e
-                priorizado para revisão.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">BBTS · Reprodução Técnica</p>
-            <h2>Leitura de contratos, calendário de pagamentos e escalonamento com IA</h2>
-          </div>
-
-          <div class="proof-grid">
-            <img
-              class="project-proof"
-              src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario1.jpg"
-              alt="Tela de calendário e monitoramento do projeto de pagamentos"
-            />
-            <img
-              class="project-proof"
-              src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario2.jpg"
-              alt="Tela de alertas e auditoria do projeto de pagamentos"
-            />
-          </div>
-
-          <div class="summary-panel">
-            <article class="summary-card">
-              <span class="card-index">Repositório</span>
-              <h3>Contract Payment Calendar with AI Monitoring</h3>
-              <p>
-                Projeto de portfólio que simula um cenário real de leitura de
-                contratos em PDF com layouts diferentes, extração de cláusulas
-                financeiras, montagem do calendário esperado de pagamentos e
-                monitoramento de divergências.
-              </p>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/calendario_pagamentos" target="_blank" rel="noreferrer">
-                  Ver repositório
-                </a>
-              </div>
-            </article>
-
-            <article class="summary-card">
-              <span class="card-index">Ligação com a BBTS</span>
-              <h3>Reprodução semelhante ao que fiz no contexto real</h3>
-              <p>
-                Esse case foi estruturado para reproduzir de forma publicável um
-                tipo de fluxo muito parecido com o que desenvolvi na BBTS:
-                entender contratos em PDF, extrair regras de pagamento,
-                construir calendário financeiro e identificar casos que exigem
-                atenção gerencial ou auditoria.
-              </p>
-              <p>
-                Ele traduz para um ambiente reprodutível a mesma lógica de
-                automação e conciliação que sustenta processos financeiros mais
-                sensíveis.
-              </p>
-            </article>
-
-            <article class="summary-card">
-              <span class="card-index">Arquitetura</span>
-              <h3>Bronze, silver, gold e camada de agentes</h3>
-              <p>
-                O pipeline foi desenhado em camadas inspiradas em arquitetura
-                `bronze / silver / gold`, com geração e leitura de PDFs,
-                extração rule-based com `regex`, normalização das regras,
-                construção do calendário e comparação entre previsto e realizado.
-              </p>
-              <p>
-                Na etapa final, agentes inspirados em `CrewAI` classificam se o
-                caso vira alerta gerencial, revisão de justificativa ou
-                escalonamento para auditoria, com fallback determinístico para a
-                demo rodar ponta a ponta.
-              </p>
-            </article>
-          </div>
-        </section>
-
 
       </main>
     </div>
