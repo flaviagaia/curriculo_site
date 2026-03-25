@@ -6,7 +6,7 @@
     <title>Portfólio Técnico | Flávia Gaia</title>
     <meta
       name="description"
-      content="Portfólio técnico de Flávia Gaia com projetos, entregas e trajetória profissional."
+      content="Portfólio técnico de Flávia Gaia com projetos, entregas e soluções aplicadas."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -70,8 +70,8 @@
 
         <section id="frentes" class="section reveal">
           <div class="section-heading">
-            <p class="eyebrow">Experiência profissional</p>
-            <h2>Projetos organizados pela minha trajetória, do trabalho mais recente ao início da carreira</h2>
+            <p class="eyebrow">Portfólio</p>
+            <h2>Projetos organizados por temas e tipos de solução</h2>
           </div>
 
           <div class="case-grid">
@@ -80,25 +80,25 @@
                 <img
                   class="project-proof"
                   src="fnde-dashboard-gemini.png"
-                  alt="Interface fictícia do dashboard de auditoria de notas fiscais no FNDE"
+                  alt="Interface fictícia do dashboard de auditoria de notas fiscais"
                 />
                 <img
                   class="project-proof"
                   src="fnde-dashboard-gemini-2.png"
-                  alt="Segunda interface fictícia do dashboard de auditoria de notas fiscais no FNDE"
+                  alt="Segunda interface fictícia do dashboard de auditoria de notas fiscais"
                 />
               </div>
               <h3>Auditoria de notas fiscais com PySpark, Databricks, Genie e Power BI</h3>
               <p>
-                No FNDE, estruturei tabelas e consultas em PySpark dentro de
+                Estruturação de tabelas e consultas em PySpark dentro de
                 notebooks no Databricks para investigar erros em transações
-                bancárias que impactavam a análise de notas fiscais. Depois,
-                usei o Genie para acelerar a passagem desse insumo analítico
-                para um dashboard no Power BI, com atualização automatizada e
-                apoio direto à gestão e à auditoria.
+                bancárias que impactavam a análise de notas fiscais. Em
+                seguida, uso de Genie para acelerar a passagem desse insumo
+                analítico para um dashboard no Power BI, com atualização
+                automatizada e apoio à leitura operacional.
               </p>
               <ul>
-                <li>Contexto: apoio à gestão e à auditoria em um cenário de grande volume de dados, múltiplos filtros e necessidade de leitura confiável das inconsistências.</li>
+                <li>Contexto: cenário de grande volume de dados, múltiplos filtros e necessidade de leitura confiável das inconsistências.</li>
                 <li>Entrega: estruturação de tabelas analíticas, consultas em PySpark e um dashboard com visões separadas por tipo de inconsistência.</li>
                 <li>Stack: PySpark, notebooks Databricks, modelagem de tabelas analíticas, Genie e Power BI.</li>
                 <li>Destaque técnico: engenharia analítica em big data, qualidade de dados, automação de atualização e integração entre camada técnica e visualização executiva.</li>
@@ -108,13 +108,12 @@
             <article class="case-card">
               <h3>Auditoria de transações bancárias com Random Forest</h3>
               <p>
-                Projeto de machine learning criado como exemplo técnico muito
-                próximo do tipo de problema que enfrentei no FNDE: priorização
-                de inconsistências e sinais de risco em dados transacionais para
+                Projeto de machine learning voltado à priorização de
+                inconsistências e sinais de risco em dados transacionais para
                 apoiar auditoria, análise e tomada de decisão.
               </p>
               <ul>
-                <li>Contexto: case público construído para representar um tipo de raciocínio analítico próximo ao que usei no FNDE em auditoria e priorização de inconsistências.</li>
+                <li>Contexto: case público construído para representar um tipo de raciocínio analítico voltado à auditoria e priorização de inconsistências.</li>
                 <li>Entrega: classificação supervisionada de transações suspeitas com preparação de dados tabulares, atributos derivados e leitura orientada a risco.</li>
                 <li>Stack: Python, pandas, scikit-learn, matplotlib, pyarrow, joblib e unittest.</li>
                 <li>Destaque técnico: classificação supervisionada em base tabular, explicabilidade e adaptação de case sintético para um contexto de auditoria.</li>
@@ -137,11 +136,11 @@
                 Desenvolvimento de uma aplicação em Python para responder
                 perguntas em linguagem natural sobre uma base SQL, combinando
                 recuperação de contexto semântico do schema com geração e
-                execução de SQL por agent. Usei esse tipo de raciocínio como
-                apoio ao contexto de dados e exploração analítica no FNDE.
+                execução de SQL por agent, combinando contexto semântico e
+                navegação analítica sobre base relacional.
               </p>
               <ul>
-                <li>Contexto: projeto alinhado ao tipo de apoio analítico e exploração de dados que fez sentido no FNDE.</li>
+                <li>Contexto: projeto voltado a apoio analítico e exploração de dados com interface em linguagem natural.</li>
                 <li>Entrega: interface para perguntas em linguagem natural sobre base relacional, combinando contexto semântico e geração assistida de SQL.</li>
                 <li>Stack: Python, LangChain, langchain-openai, langchain-community, SQLAlchemy, SQLite, Streamlit e BM25Retriever.</li>
                 <li>Destaque técnico: uso de RAG fora do cenário clássico de documentos, reduzindo ambiguidade na geração de consultas e melhorando a navegação analítica.</li>
@@ -157,13 +156,12 @@
               <h3>Outlier Detection Lab para inconsistências e anomalias</h3>
               <p>
                 Laboratório de detecção de outliers e anomalias em bases
-                grandes, usado aqui como reprodução técnica muito próxima do
-                tipo de análise que fiz no FNDE: identificar extremos,
+                grandes, usado aqui como reprodução técnica para identificar extremos,
                 combinações improváveis e sinais que merecem revisão manual em
                 contexto de auditoria.
               </p>
               <ul>
-                <li>Contexto: laboratório público que representa um tipo de análise de inconsistências e extremos que também fez parte do meu trabalho no FNDE.</li>
+                <li>Contexto: laboratório público que representa um tipo de análise de inconsistências e extremos em contexto de auditoria.</li>
                 <li>Entrega: comparação entre abordagens estatísticas e modelos não supervisionados para priorização de revisão em bases operacionais.</li>
                 <li>Stack: Python, pandas, scikit-learn, análise estatística robusta e machine learning não supervisionado.</li>
                 <li>Destaque técnico: combinação de métodos estatísticos e modelos não supervisionados para auditoria e priorização de análise.</li>
@@ -193,8 +191,8 @@
                 Desenvolvimento de uma solução para leitura de contratos em PDF
                 com layouts diferentes, extração de cláusulas financeiras,
                 construção do calendário esperado de pagamentos, monitoramento
-                de divergências e apoio à auditoria em um fluxo muito próximo
-                do que desenvolvi no contexto da BBTS.
+                de divergências e apoio à auditoria em um fluxo orientado à
+                conciliação financeira.
               </p>
               <ul>
                 <li>Contexto: fluxo orientado a conciliação e acompanhamento financeiro a partir de documentos não estruturados.</li>
@@ -277,13 +275,13 @@
               <h3>LLM Tag Extraction Lab para extração técnica com validação humana</h3>
               <p>
                 Projeto em Python criado para reproduzir um tipo de problema que
-                desenvolvi na EVCOMX para a Petrobras: extrair tags técnicas a
-                partir de textos ruidosos, comparando uma baseline rígida com
+                voltado a extrair tags técnicas a partir de textos ruidosos,
+                comparando uma baseline rígida com
                 abordagens mais robustas baseadas em fuzzy matching, LangChain,
                 few-shot prompting e revisão humana.
               </p>
               <ul>
-                <li>Contexto: reprodução pública de um tipo de extração técnica que trabalhei no contexto da EVCOMX para a Petrobras.</li>
+                <li>Contexto: reprodução pública de um tipo de extração técnica em documentos e descrições ruidosas.</li>
                 <li>Entrega: comparação entre abordagens baseadas em regras, fuzzy matching e LLMs com validação humana em interface.</li>
                 <li>Stack: Python, pandas, scikit-learn, RapidFuzz, BeautifulSoup, LangChain, Streamlit, Plotly e CrewAI opcional.</li>
                 <li>Destaque técnico: evolução de regex para LLMs com segurança, papel do fuzzy matching e desenho de validação humana.</li>
@@ -305,8 +303,7 @@
               <p>
                 Projeto supervisionado de classificação para rotear
                 solicitações de manutenção a partir de texto curto e contexto
-                operacional, reproduzindo um tipo de raciocínio muito próximo
-                do que trabalhei na EVCOMX: entender descrições técnicas e
+                operacional, reproduzindo um tipo de raciocínio voltado a entender descrições técnicas e
                 decidir qual fluxo ou tipo de intervenção deve ser acionado.
               </p>
               <ul>
@@ -333,8 +330,8 @@
                 Projeto inspirado nos microdados amostrais desidentificados do
                 CadÚnico para analisar renda, situação cadastral,
                 vulnerabilidade familiar e priorização territorial. Ele
-                representa bem o tipo de leitura analítica que desenvolvi no
-                MDS para apoiar gestão social e ação cadastral.
+                representa bem um tipo de leitura analítica voltada a gestão
+                social e ação cadastral.
               </p>
               <ul>
                 <li>Contexto: leitura analítica de microdados sociais para apoiar priorização territorial e ação cadastral.</li>
@@ -360,8 +357,7 @@
                 Comparação territorial entre Bolsa Família e BPC para entender
                 composição do gasto social, dependência relativa entre programas
                 e sinais de judicialização. O case reproduz uma leitura de
-                gestão e controle bastante coerente com o tipo de análise que eu
-                desenvolvi no MDS.
+                gestão e controle de programas sociais em leitura territorial.
               </p>
               <ul>
                 <li>Contexto: comparação territorial entre programas sociais para apoiar leitura gerencial e monitoramento.</li>
@@ -387,7 +383,7 @@
                 Análise territorial do BPC com foco em concentração do gasto,
                 distribuição municipal e judicialização. O projeto reflete um
                 tipo de raciocínio de monitoramento e controle social muito
-                conectado ao que desenvolvi no MDS.
+                conectado a monitoramento territorial e controle social.
               </p>
               <ul>
                 <li>Contexto: análise territorial do BPC com foco em concentração e sinais de judicialização.</li>
@@ -412,9 +408,8 @@
               <p>
                 Projeto para analisar a evolução territorial do Bolsa Família
                 com base em dados públicos, complementando a visão social com
-                uma camada operacional de pagamento versus saque. Ele traduz bem
-                o tipo de análise territorial e operacional que fez sentido no
-                contexto do MDS.
+                uma camada operacional de pagamento versus saque, combinando
+                leitura territorial e acompanhamento operacional.
               </p>
               <ul>
                 <li>Contexto: acompanhamento territorial do Bolsa Família com leitura social e operacional.</li>
@@ -445,7 +440,7 @@
                 engenharia de atributos temporais.
               </p>
               <ul>
-                <li>Contexto: projeto conectado ao meu estágio na Presidência, reunindo dados públicos, saúde e modelagem quantitativa aplicada.</li>
+                <li>Contexto: projeto com dados públicos, saúde e modelagem quantitativa aplicada.</li>
                 <li>Entrega: transformação de microdados oficiais em série temporal diária para modelagem de tendência.</li>
                 <li>Stack: Python, pandas, numpy, scikit-learn, matplotlib, joblib, unittest e reconstrução da base a partir da fonte oficial.</li>
                 <li>Destaque técnico: transformação de microdados públicos em série temporal utilizável e uso de baseline interpretável.</li>
@@ -495,12 +490,11 @@
             </article>
 
             <article class="summary-card">
-              <h3>Projeto desenvolvido no contexto da Presidência</h3>
+              <h3>Aplicação em monitoramento e análise de conteúdo</h3>
               <p>
-                Esse projeto representa um tipo de trabalho que desenvolvi na
-                Presidência da República: monitoramento de notícias, coleta
+                Esse projeto reúne monitoramento de notícias, coleta
                 automatizada de conteúdo, enriquecimento com NLP e organização
-                da informação para leitura analítica e suporte institucional.
+                da informação para leitura analítica e suporte à decisão.
               </p>
             </article>
 
