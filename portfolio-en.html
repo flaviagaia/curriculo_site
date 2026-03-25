@@ -45,340 +45,610 @@
       <main>
         <section class="portfolio-hero reveal">
           <div class="portfolio-intro">
-            <p class="eyebrow">Detailed Portfolio</p>
-            <h1>An expanded view of my technical background</h1>
+            <p class="eyebrow">Technical Portfolio</p>
+            <h1>Projects I have developed and the technical details behind each one</h1>
             <p class="lead">
-              This page brings together projects I developed throughout my
-              career.
+              This page brings together projects I developed throughout my career.
             </p>
           </div>
 
           <div class="portfolio-statboard">
             <div>
-              <strong>LLMs</strong>
-              <span>RAG, agents, LangChain, CrewAI, LangGraph and MLflow</span>
+              <strong>Applied AI</strong>
+              <span>LLMs, RAG, agents, evaluation and automation</span>
             </div>
             <div>
-              <strong>Experience</strong>
-              <span>6 years in data, AI, analytics and automation</span>
+              <strong>Data</strong>
+              <span>Python, Databricks, pipelines, search and retrieval</span>
             </div>
             <div>
-              <strong>Academic Background</strong>
-              <span>UnB, USP, IESB and strong Data Engineering tracks</span>
+              <strong>Projects</strong>
+              <span>Corporate and authorial work</span>
             </div>
           </div>
         </section>
 
         <section id="frentes" class="section reveal">
           <div class="section-heading">
-            <p class="eyebrow">Frentes principais</p>
-            <h2>Casos reais para lembrar o que fiz</h2>
+            <p class="eyebrow">Professional Experience</p>
+            <h2>Projects organized by my professional journey, from the most recent role to the beginning of my career</h2>
           </div>
 
           <div class="case-grid">
             <article class="case-card">
-              <span class="card-index">FNDE</span>
-              <h3>Estruturação de ecossistema de dados em Azure e Databricks</h3>
+              <div class="proof-grid">
+                <img
+                  class="project-proof"
+                  src="fnde-dashboard-gemini.png"
+                  alt="Fictional dashboard interface for invoice audit at FNDE"
+                />
+                <img
+                  class="project-proof"
+                  src="fnde-dashboard-gemini-2.png"
+                  alt="Second fictional dashboard interface for invoice audit at FNDE"
+                />
+              </div>
+              <span class="card-index">FNDE · National Fund for Education Development · G4F</span>
+              <h3>Invoice auditing with PySpark, Databricks, Genie and Power BI</h3>
               <p>
-                Atuação na coordenação e estruturação de ambiente analítico com
-                Arquitetura Medallion, pipelines escaláveis, rotinas de
-                qualidade e governança, além da consolidação de um ecossistema
-                de ciência de dados voltado à padronização e à colaboração.
+                At FNDE, I structured tables and PySpark queries in Databricks
+                notebooks to investigate transaction issues that affected
+                invoice analysis. Later, I used Genie to speed up the path from
+                analytical output to a Power BI dashboard with automated
+                refresh and direct support for management and audit.
               </p>
               <ul>
-                <li>Desafio: sair do dado fragmentado para uma base confiável e reutilizável.</li>
-                <li>Stack: Azure, Databricks, Python, Jupyter, CI/CD, governança de dados.</li>
-                <li>Technical highlight: architecture, analytical foundation and systems thinking.</li>
+                <li>Challenge: turn big data into an auditable view with many rules, filters and comparisons between transactions and invoices.</li>
+                <li>Solution structure: the dashboard was organized into multiple tabs, each explaining a specific inconsistency and its impact on the analysis.</li>
+                <li>Stack: PySpark, Databricks notebooks, analytical table modeling, Genie and Power BI.</li>
+                <li>Important point: it was not a pure BI role, but it required taking structured data all the way to the consumption layer to support management.</li>
+                <li>Automation: Genie also helped create the job to refresh and publish the dashboard automatically.</li>
+                <li>Technical highlight: analytical engineering in big data, data quality, auditing and integration between technical and executive visualization layers.</li>
               </ul>
             </article>
 
             <article class="case-card">
-              <span class="card-index">BBTS</span>
-              <h3>Calendário inteligente de pagamentos com contratos em PDF</h3>
+              <span class="card-index">FNDE · complementary case</span>
+              <h3>Bank transaction auditing with Random Forest</h3>
               <p>
-                Criação de sistema automatizado para extrair cláusulas
-                financeiras de contratos, gerar calendário de pagamentos e
-                apoiar auditoria com LLMs, LangChain, CrewAI e Databricks.
+                A machine learning project built as a close technical example of
+                the kind of problem I faced at FNDE: prioritizing
+                inconsistencies and risk signals in transactional data to
+                support audit, analysis and decision-making.
               </p>
               <ul>
-                <li>Desafio: transformar documento não estruturado em fluxo operacional confiável.</li>
-                <li>Stack: LangChain, CrewAI, Databricks Workflows, Delta Lake, LLMs.</li>
-                <li>Technical highlight: AI applied to audit workflows, extraction and decision automation.</li>
+                <li>Goal: classify suspicious transactions in an audit scenario using a synthetic public dataset while preserving the problem logic without exposing real data.</li>
+                <li>Pipeline: Parquet reading, temporal parsing, derived features, preprocessing with ColumnTransformer, imputation, OneHotEncoder and RandomForestClassifier training.</li>
+                <li>Features: transaction amount, type, location, device, time window, international transaction and derived attributes such as day_of_week, month, sender_prefix and receiver_prefix.</li>
+                <li>Metrics: F1-score = 0.9620, ROC-AUC = 0.9996 and PR-AUC = 0.9967 on the current split.</li>
+                <li>Interpretability: feature importance used to rank relevant audit signals such as amount, transaction type, location and device.</li>
+                <li>Technical highlight: supervised classification on tabular data, imbalanced-data handling, feature-importance explainability and adaptation of a synthetic case to a real context.</li>
               </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/bank-transaction-audit-random-forest" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
             </article>
 
             <article class="case-card">
-              <span class="card-index">Compass UOL</span>
-              <h3>RAG e agentes para conformidade normativa na Petrobras</h3>
+              <img
+                class="project-proof"
+                src="./rag-nlp-sql.jpg"
+                alt="Image of the RAG NLP SQL project"
+              />
+              <span class="card-index">FNDE · complementary case</span>
+              <h3>RAG NLP SQL with LangChain, OpenAI and SQLite</h3>
               <p>
-                Construção de soluções com LLMs para extração de informações
-                técnicas em PDFs, RAG de normativos, validação humana em
-                Streamlit e versionamento de prompts e métricas com MLflow.
+                A Python application built to answer natural-language questions
+                over a SQL database, combining semantic schema context
+                retrieval with SQL generation and execution by an agent. I used
+                this kind of reasoning to support data context and analytical
+                exploration in the FNDE environment.
               </p>
               <ul>
-                <li>Desafio: melhorar recuperação de contexto e confiabilidade das respostas.</li>
-                <li>Stack: Python, LLMs, RAG, Streamlit, MLflow, CrewAI, FAISS.</li>
-                <li>Technical highlight: prompt evaluation, retrieval and LLMOps.</li>
+                <li>Problem: enable analytical querying on a relational database without requiring users to write SQL manually.</li>
+                <li>Architecture: example SQLite database, semantic documents about schema and business rules, BM25Retriever for context retrieval and LangChain create_sql_agent for SQL generation and execution.</li>
+                <li>Stack: Python, LangChain, langchain-openai, langchain-community, SQLAlchemy, SQLite, Streamlit and BM25Retriever.</li>
+                <li>Technical highlight: using RAG outside the classic PDF scenario, reducing ambiguity in SQL generation and designing a more reliable NL2SQL interface.</li>
               </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/RAG_NLP_SQL" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
             </article>
 
             <article class="case-card">
-              <span class="card-index">EVCOMX</span>
-              <h3>Evolução de regex para LLMs em extração técnica</h3>
+              <span class="card-index">FNDE · complementary case</span>
+              <h3>Outlier Detection Lab for inconsistencies and anomalies</h3>
               <p>
-                Evolução de pipelines de extração a partir de regex para uma
-                abordagem com LLMs, prompts few-shot, interface de validação e
-                Human-in-the-Loop para melhoria contínua.
+                An outlier and anomaly detection lab used here as a technical
+                reproduction very close to the kind of work I did at FNDE:
+                identifying extremes, unlikely combinations and signals that
+                deserve manual review in audit contexts.
               </p>
               <ul>
-                <li>Desafio: sair de regras rígidas para extração mais robusta e adaptável.</li>
-                <li>Stack: Python, regex, LangChain, Streamlit, CrewAI, avaliação iterativa.</li>
-                <li>Technical highlight: transition between heuristics, NLP and generative AI.</li>
+                <li>Problem: distinguish operational noise from truly relevant signals in large and messy datasets.</li>
+                <li>Main case: NYC TLC Trip Outliers, comparing IQR, Modified Z-score, Isolation Forest and Local Outlier Factor on operational trip data.</li>
+                <li>Pipeline: reproducible 200,000-row sample, robust scaling, statistical detection and consensus between detectors to reduce false positives.</li>
+                <li>Technical highlight: combining statistical methods and unsupervised models for auditing, prioritization and human review.</li>
               </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/outlier-detection-lab" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <div class="proof-grid">
+                <img
+                  class="project-proof"
+                  src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario1.jpg"
+                  alt="Payment calendar and monitoring screen"
+                />
+                <img
+                  class="project-proof"
+                  src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario2.jpg"
+                  alt="Alerts and audit screen"
+                />
+              </div>
+              <span class="card-index">BBTS · Banco do Brasil Technologies and Services</span>
+              <h3>Contract reading, payment calendar and AI-based escalation</h3>
+              <p>
+                Development of a solution for reading contracts in PDF with
+                different layouts, extracting financial clauses, building the
+                expected payment calendar, monitoring divergences and supporting
+                audit in a flow very close to what I developed at BBTS.
+              </p>
+              <ul>
+                <li>Challenge: transform unstructured contracts into a reliable operational flow for reconciliation and financial monitoring.</li>
+                <li>Pipeline: PDF reading, payment-rule extraction, clause normalization, expected calendar building, expected-versus-actual comparison and identification of cases that require managerial or audit attention.</li>
+                <li>Architecture: bronze/silver/gold-inspired logic separating document ingestion, rule treatment and analytical consumption.</li>
+                <li>Technical highlight: contract extraction, financial reconciliation, operational-flow automation and the use of AI for prioritization and escalation.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/calendario_pagamentos" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <img
+                class="project-proof project-proof-contain"
+                src="./tech-request-assistant.jpg"
+                alt="Image of the Technical Request Document Assistant project"
+              />
+              <span class="card-index">Compass UOL - Petrobras</span>
+              <h3>Technical Request Document Assistant</h3>
+              <p>
+                Python project that reproduces an integrated workflow for
+                reading technical requests, extracting structured PDF fields and
+                retrieving related reference documents in a single Streamlit
+                front-end.
+              </p>
+              <ul>
+                <li>Problem: transform technical requests into structured data and connect each request to the most relevant documents for operational consultation.</li>
+                <li>Architecture: ingestion of synthetic PDFs, rule-based field extraction, textual base of references and semantic matching between request and documentation.</li>
+                <li>Retrieval: TF-IDF plus cosine similarity to locate the most relevant support documents.</li>
+                <li>Technical highlight: structured PDF extraction, semantic retrieval, document-assistant design and integration of consultation with operational navigation.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/technical-request-document-assistant" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <img
+                class="project-proof"
+                src="./engineering-doc-consistency.jpg"
+                alt="Image of the Engineering Document Consistency AI project"
+              />
+              <span class="card-index">Compass UOL - Petrobras</span>
+              <h3>Engineering Document Consistency AI</h3>
+              <p>
+                Python project that reproduces a document-governance solution
+                for engineering documents, with clause extraction, semantic
+                search, inconsistency detection and human review in a
+                dashboard.
+              </p>
+              <ul>
+                <li>Problem: compare memorials, appendices and technical guidelines to find conflicts before they become rework, delays or operational errors.</li>
+                <li>Pipeline: PDF ingestion, numbered-clause extraction, retrieval of semantically similar clauses and rule-based inconsistency detection.</li>
+                <li>Inconsistency types: deadlines, responsibilities, measurement criteria and technical standards.</li>
+                <li>Technical highlight: document governance, document-to-document comparison, semantic retrieval and Human-in-the-Loop review.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/engineering-document-consistency-ai" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <div class="proof-grid">
+                <img
+                  class="project-proof"
+                  src="./llm-tag-extraction-metrics.svg"
+                  alt="Metrics panel for the LLM Tag Extraction Lab project"
+                />
+                <img
+                  class="project-proof"
+                  src="./llm-tag-extraction-flow.svg"
+                  alt="Technical flow diagram for the LLM Tag Extraction Lab project"
+                />
+              </div>
+              <span class="card-index">EVCOMX - Petrobras · technical reproduction</span>
+              <h3>LLM Tag Extraction Lab for technical extraction with human validation</h3>
+              <p>
+                Python project created to reproduce a type of problem I worked
+                on at EVCOMX for Petrobras: extracting technical tags from
+                noisy texts by comparing a rigid baseline with more robust
+                approaches based on fuzzy matching, LangChain, few-shot
+                prompting and human review.
+              </p>
+              <ul>
+                <li>Business problem: technical texts arrive with abbreviations, spelling noise and naming variations, but the system still needs to recover the canonical tag correctly.</li>
+                <li>Approaches compared: regex/dictionary, RapidFuzz for lexical retrieval and LangChain few-shot with TF-IDF plus cosine similarity and an optional external-LLM path.</li>
+                <li>Benchmark: 300 evaluated examples, with a clear gain when moving from rigid rules to contextual approaches.</li>
+                <li>Results: regex with F1 = 0.4628, fuzzy with F1 = 0.7465 and langchain_llm with F1 = 0.9639 and exact match = 0.9083.</li>
+                <li>Technical highlight: safe evolution from regex to LLMs, the role of fuzzy matching and the design of human validation for continuous improvement.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/llm-tag-extraction-lab" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">MDS · Ministry of Social Development, Family and Fight Against Hunger</span>
+              <img
+                class="project-proof"
+                src="./perfil-cadunico.jpg"
+                alt="Dashboard of the CadÚnico profile project"
+              />
+              <h3>CadÚnico household profile analysis</h3>
+              <p>
+                Project inspired by de-identified CadÚnico sample microdata to
+                analyze income, registration status, household vulnerability
+                and territorial prioritization. It represents well the kind of
+                analytical reading I developed at MDS to support social
+                management and registration actions.
+              </p>
+              <ul>
+                <li>Problem: understand where there is a higher concentration of extreme poverty, outdated registrations and more vulnerable households.</li>
+                <li>Data: municipality-level synthetic sample calibrated around the public analytical variables of CadÚnico.</li>
+                <li>Technique: vulnerability score combining income, update status, informal work, sanitation, disability and household composition.</li>
+                <li>Technical highlight: social-indicator construction, territorial prioritization and transformation of microdata into managerial insight.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/perfil-cadastral-CadUnico" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">MDS · Ministry of Social Development, Family and Fight Against Hunger</span>
+              <img
+                class="project-proof project-proof-contain"
+                src="./bolsa-vs-bpc.jpg"
+                alt="Dashboard comparing Bolsa Família and BPC by territory"
+              />
+              <h3>Bolsa Família vs BPC by territory</h3>
+              <p>
+                Territorial comparison between Bolsa Família and BPC to
+                understand social-spending composition, relative program
+                dependence and judicialization signals. The case reproduces a
+                management-and-control reading that is very close to the type
+                of analysis I developed at MDS.
+              </p>
+              <ul>
+                <li>Problem: identify municipalities with higher relative dependence on each program and stronger managerial sensitivity.</li>
+                <li>Data: real Bolsa Família municipal data for Alagoas in 2023 and a synthetic BPC layer calibrated to the official Portal da Transparência schema.</li>
+                <li>Indicators: relative participation of each program, Bolsa Família/BPC ratio, BPC judicialization rate and social-pressure index.</li>
+                <li>Technical highlight: comparison of public policies, territorial-indicator design and rule-based logic in managerial dashboards.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/bolsa_familia_vs_BPC" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">MDS · Ministry of Social Development, Family and Fight Against Hunger</span>
+              <img
+                class="project-proof"
+                src="./judicializacao-bpc.jpg"
+                alt="Dashboard of the BPC judicialization and concentration map"
+              />
+              <h3>BPC judicialization and concentration map</h3>
+              <p>
+                Territorial analysis of BPC focused on spending concentration,
+                municipal distribution and judicialization. The project reflects
+                a type of monitoring and social-control reasoning strongly
+                connected to what I developed at MDS.
+              </p>
+              <ul>
+                <li>Problem: identify municipalities combining higher benefit weight with a higher share of court-granted benefits.</li>
+                <li>Data: synthetic base calibrated to the official BPC data dictionary and municipal territorial support from Alagoas.</li>
+                <li>Indicators: total BPC value, total benefits, judicialization rate, share in total value and concentration index.</li>
+                <li>Technical highlight: territorial analysis, schema-aligned synthetic datasets and prioritization for management and audit.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/mapa-de-judicializacao-e-concentracao-do-BPC" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">MDS · Ministry of Social Development, Family and Fight Against Hunger</span>
+              <img
+                class="project-proof"
+                src="./bolsafamilia-territorial.jpg"
+                alt="Territorial evolution dashboard for Bolsa Família"
+              />
+              <h3>Bolsa Família territorial evolution dashboard</h3>
+              <p>
+                Project to analyze the territorial evolution of Bolsa Família
+                using public data, complementing the social view with an
+                operational payment-versus-withdrawal layer. It translates well
+                the type of territorial and operational analysis that made
+                sense in the MDS context.
+              </p>
+              <ul>
+                <li>Problem: track transfers, compare municipalities and detect operational gaps that may require additional monitoring.</li>
+                <li>Data: real public dataset from Alagoas between 2004 and 2023, plus a synthetic monthly layer for payment versus withdrawal.</li>
+                <li>Data engineering: subcategory pivot, annual growth calculation and generation of an analytical operational layer.</li>
+                <li>Technical highlight: combined use of analytical engineering, public-policy context, exploratory machine learning and operational monitoring.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/bolsa-familia-territorial-analytics" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">Presidency of the Republic</span>
+              <img
+                class="project-proof"
+                src="https://raw.githubusercontent.com/flaviagaia/Machine-Learning/main/covid-brazil-deaths-linear-regression/assets/actual_vs_predicted.png"
+                alt="Actual versus predicted chart for the COVID-19 deaths linear-regression project"
+              />
+              <h3>Linear regression baseline for COVID-19 deaths in Brazil</h3>
+              <p>
+                Project developed from official open data to model the trend of
+                COVID-19 deaths in Brazil using a classic, interpretable and
+                reproducible baseline. The proposal transformed government
+                microdata into a daily time series and evaluated the predictive
+                capacity of a linear model with temporal feature engineering.
+              </p>
+              <ul>
+                <li>Context: aligned with my internship at the Presidency, connecting public-data analysis, health topics and applied quantitative modeling.</li>
+                <li>Data source: official SIVEP-Gripe / SRAG microdata published in the SUS open-data portal.</li>
+                <li>Pipeline: filtering COVID-19 death cases, national daily aggregation, full 2024 calendar reindexing and target-series construction with a 7-day moving average.</li>
+                <li>Metrics: R² = 0.9420, MAE = 0.4576 and RMSE = 0.5639.</li>
+                <li>Technical highlight: transformation of public microdata into a usable time series, use of linear regression as a baseline and interpretable evaluation.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/covid-brazil-deaths-linear-regression" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
             </article>
           </div>
         </section>
 
         <section class="section reveal">
           <div class="section-heading">
-            <p class="eyebrow">Base da carreira</p>
-            <h2>Onde construí repertório antes da senioridade atual</h2>
+            <p class="eyebrow">Web Scraping</p>
+            <h2>News monitoring with automated collection, NLP and executive dashboard</h2>
           </div>
 
-          <div class="experience-grid">
-            <article class="experience-card">
-              <span class="card-index">MDS</span>
-              <h3>Análise de bases governamentais massivas</h3>
-              <p>
-                Trabalho com bases como Bolsa Família, BPC e Cadastro Único em
-                ambiente de Big Data, com processamento distribuído, SQL,
-                scripts em Python e dashboards analíticos.
-              </p>
-            </article>
-            <article class="experience-card">
-              <span class="card-index">Presidência</span>
-              <h3>NLP, scraping e monitoramento automatizado</h3>
-              <p>
-                Coleta automatizada de notícias via web scraping, uso de spaCy
-                para NER e sumarização em português, além de visualização em
-                Power BI e aplicações de CNN para COVID-19 em raio X.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section timeline-section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Sinais de profundidade</p>
-            <h2>Temas que já estudei, publiquei ou desenvolvi</h2>
+          <div class="proof-grid">
+            <img
+              class="project-proof"
+              src="https://raw.githubusercontent.com/flaviagaia/Web-Scraping/main/assets/articles_by_theme.png"
+              alt="Article distribution by theme from the web scraping project"
+            />
+            <img
+              class="project-proof"
+              src="https://raw.githubusercontent.com/flaviagaia/Web-Scraping/main/assets/top_entities.png"
+              alt="Most frequent entities chart from the web scraping project"
+            />
           </div>
 
-          <div class="timeline">
-            <article>
-              <span>IA aplicada</span>
-              <h3>RAG, agentes, LangChain, CrewAI, LangGraph, AutoGen e n8n</h3>
+          <div class="summary-panel">
+            <article class="summary-card">
+              <span class="card-index">Repository</span>
+              <h3>Political and Economic News Intelligence Dashboard</h3>
               <p>
-                Seu material profissional mostra domínio consistente na
-                construção de arquiteturas de recuperação, agentes com
-                ferramentas, avaliação de fluxo e aplicação produtiva de LLMs.
+                Web scraping project using newspaper3k to collect political and
+                economic news, structure an analytical base, apply NLP and
+                deliver an interactive Streamlit dashboard.
+              </p>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/Web-Scraping" target="_blank" rel="noreferrer">
+                  View repository
+                </a>
+              </div>
+            </article>
+
+            <article class="summary-card">
+              <span class="card-index">Connection with the Presidency</span>
+              <h3>Public reproduction of a similar workflow</h3>
+              <p>
+                This project reproduces a workflow connected to what I
+                developed in the Presidency of the Republic: news monitoring,
+                automated collection, entity extraction and organization of
+                information for analytical reading and institutional support.
+              </p>
+              <p>
+                Here it appears in a public and reproducible form, but the core
+                logic comes from that real experience of monitoring political
+                and economic topics with automation and text analysis.
               </p>
             </article>
-            <article>
-              <span>Machine Learning</span>
-              <h3>Scikit-Learn, PyTorch, TensorFlow, classificação e deep learning</h3>
+
+            <article class="summary-card">
+              <span class="card-index">Technical Pipeline</span>
+              <h3>Collection, parsing, NER and executive visualization</h3>
               <p>
-                Há base prática em modelagem, redes neurais, classificação,
-                detecção de fake news, CNNs e fundamentos sólidos de avaliação.
+                The pipeline performs URL discovery, article parsing,
+                consolidation in pandas, entity extraction with spaCy and
+                rule-based fallback when needed, along with keywords, text
+                statistics and the final dashboard.
               </p>
-            </article>
-            <article>
-              <span>Grafos</span>
-              <h3>PyTorch Geometric, GCN, GAT, GraphSAGE e GIN</h3>
               <p>
-                Conteúdo aprofundado sobre redes neurais de grafos, bibliotecas e
-                caminhos de implementação dentro do ecossistema Python.
-              </p>
-            </article>
-            <article>
-              <span>Big Data</span>
-              <h3>Spark, Airflow, BigQuery, Snowflake e processamento distribuído</h3>
-              <p>
-                Seus certificados de 2025 e materiais de trabalho reforçam
-                maturidade em engenharia de dados, orquestração e plataformas
-                modernas de analytics.
-              </p>
-            </article>
-            <article>
-              <span>Pesquisa e academia</span>
-              <h3>NER em textos jurídicos e Ciência dos Dados na UnB</h3>
-              <p>
-                A linha de pesquisa em Ciência dos Dados e as disciplinas já
-                cursadas na UnB adicionam profundidade conceitual em mineração
-                de dados, bancos massivos e gestão de projetos.
+                Current output: 24 collected Agência Brasil articles, 92
+                extracted entities and visualizations such as theme
+                distribution, top entities, top keywords and word cloud.
               </p>
             </article>
           </div>
         </section>
 
-
-        <section class="section reveal">
+        <section id="frentes-continuacao" class="section reveal">
           <div class="section-heading">
-            <p class="eyebrow">Formação validada</p>
-            <h2>Credenciais e marcos acadêmicos</h2>
-          </div>
-
-          <div class="credentials-grid">
-            <article class="credential-card">
-              <strong>UnB</strong>
-              <p>Mestrado em Computação Aplicada, linha de pesquisa em Ciência dos Dados, vínculo ativo desde março de 2024.</p>
-            </article>
-            <article class="credential-card">
-              <strong>USP</strong>
-              <p>MBA em Inteligência Artificial e Big Data concluído em 30 de setembro de 2023, com 420 horas e 100% de frequência.</p>
-            </article>
-            <article class="credential-card">
-              <strong>IESB</strong>
-              <p>Bacharelado em Ciência de Dados e Inteligência Artificial concluído em 15 de julho de 2023, carga horária integralizada de 3340 horas.</p>
-            </article>
-            <article class="credential-card">
-              <strong>Pesquisa</strong>
-              <p>Estudo em reconhecimento de entidades nomeadas em textos jurídicos e base curricular em bancos de dados massivos, mineração e ML.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">TCCs e monografias</p>
-            <h2>Academic experience and research projects</h2>
+            <p class="eyebrow">Authorial Projects</p>
+            <h2>Independent projects I built to explore architecture, applied AI and product thinking</h2>
           </div>
 
           <div class="case-grid">
             <article class="case-card">
-              <span class="card-index">Graduação</span>
-              <h3>Aplicação de técnicas de reconhecimento de entidades nomeadas em textos jurídicos</h3>
+              <span class="card-index">Personal project</span>
+              <img class="project-proof" src="./search-performance-interface.jpg" alt="Search Performance Assistant interface" />
+              <h3>Search Performance Assistant for retrieval evaluation</h3>
               <p>
-                TCC do IESB orientado a NLP jurídico em português do Brasil,
-                comparando dois modelos spaCy ajustados ao domínio legal e
-                entregando também um protótipo acessível ao usuário.
+                Python application designed to study and demonstrate document
+                retrieval with TF-IDF, vector indexing, FAISS fallback and an
+                assistant layer grounded on retrieved evidence.
               </p>
               <ul>
-                <li>Problema: documentos jurídicos são extensos, complexos e difíceis de estruturar manualmente.</li>
-                <li>Metodologia: ajuste fino dos modelos pt_core_news_sm e pt_core_news_lg com o corpus LeNER-Br.</li>
-                <li>Resultados: F1-score de 81,42% no modelo small e 83,76% no modelo large; destaque para TEMPO e LEGISLAÇÃO.</li>
-                <li>Entrega: aplicativo web em Streamlit publicado no Hugging Face para comparação dos modelos e uso prático.</li>
-                <li>Como contar: mostra domínio de NLP, spaCy, avaliação de modelos e capacidade de transformar pesquisa em produto.</li>
+                <li>Problem: evaluate retrieval in a practical and explainable way, showing how a query retrieves the right documents and how to measure that quality.</li>
+                <li>Architecture: SearchAssistant for ingestion, retrieval and response; TfidfEncoder for vectorization; SearchIndex for vector indexing; RecallEvaluator for evaluation; and app.py for the visual demo.</li>
+                <li>Technical highlight: TF-IDF before dense embeddings, optional-dependency fallback design, retrieval evaluation and traceable ranking explanation.</li>
               </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/search-performance-assistant" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
             </article>
 
             <article class="case-card">
-              <span class="card-index">MBA</span>
-              <h3>Aplicação de CNNs na classificação de imagens de raio X para COVID-19</h3>
+              <span class="card-index">Personal project</span>
+              <img class="project-proof" src="./release-notes-interface.jpg" alt="Release Notes Generation Assistant interface" />
+              <h3>Release Notes Generation Assistant with retrieval and automatic evaluation</h3>
               <p>
-                Monografia da USP focada no desenvolvimento e validação de um
-                modelo de deep learning para apoio ao diagnóstico da COVID-19 a
-                partir de imagens de tórax.
+                Python application for assisted release-notes generation from
+                release context and pull requests, combining similarity-based
+                retrieval, topic heuristics, rule-based generation and
+                evaluation metrics.
               </p>
               <ul>
-                <li>Problema: acelerar e apoiar a identificação de casos em contexto de alta demanda diagnóstica.</li>
-                <li>Metodologia: construção de base com 2.089 imagens, aumento de dados, grid search e CNN em Python/TensorFlow.</li>
-                <li>Resultados: 98,40% de acurácia no conjunto de teste e 96,88% de validação com configuração otimizada.</li>
-                <li>Entrega: código público no GitHub e comparação com trabalhos correlatos da literatura.</li>
-                <li>Como contar: reforça base em deep learning, visão experimental, métricas e aplicação em saúde.</li>
+                <li>Problem: transform release context and PRs into short, coherent and traceable notes with objective validation criteria.</li>
+                <li>Architecture: modular pipeline with JSON loading and validation, TF-IDF vectorization, cosine-similarity retriever with topic boosting, text generation and evaluation layer.</li>
+                <li>Technical highlight: NLP pipeline design for product use, explainable retrieval, domain-guided heuristics and reproducible evaluation.</li>
               </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/release-notes-generation-assistant" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
             </article>
-          </div>
-        </section>
 
-        <section class="section publications-section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Certificações e repertório</p>
-            <h2>Assuntos e trilhas que reforçam minha autoridade técnica</h2>
-          </div>
-
-          <div class="publication-list">
-            <article>
-              <strong>AWS AI Practitioner e Azure AI Fundamentals</strong>
-              <p>Base formal em conceitos de IA generativa, serviços gerenciados e arquitetura de soluções.</p>
-            </article>
-            <article>
-              <strong>Arquiteto de Dados 4.0</strong>
-              <p>Formação de 360 horas concluída em 5 de setembro de 2025, cobrindo Modern Data Stack, Spark, Airflow e Snowflake.</p>
-            </article>
-            <article>
-              <strong>Databricks</strong>
-              <p>Trilhas recentes em Data Preparation for Machine Learning e Building Retrieval Agents on Databricks, concluídas em março de 2026.</p>
-            </article>
-            <article>
-              <strong>Airflow, Spark, Snowflake e BigQuery</strong>
-              <p>Certificações concluídas em 2025 reforçando engenharia de dados, orquestração e plataformas analíticas modernas.</p>
-            </article>
-            <article>
-              <strong>LangGraph, ChatGPT e formação contínua em IA</strong>
-              <p>Inclui certificação em Introduction to LangGraph, palestra acadêmica na USP e trilhas complementares de IA e ciência de dados.</p>
-            </article>
-            <article>
-              <strong>Produção técnica pública</strong>
-              <p>103 publicações, 46 artigos, 40 repositórios públicos e conteúdo recorrente sobre IA, dados e bibliotecas Python.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Leitura ampliada dos certificados</p>
-            <h2>O que esse acervo de certificados comunica sobre meu perfil</h2>
-          </div>
-
-          <div class="interview-grid">
-            <article class="interview-card">
-              <h3>Profundidade em engenharia de dados</h3>
+            <article class="case-card">
+              <span class="card-index">Personal project</span>
+              <img class="project-proof" src="./curriculo-site-interface.png" alt="Curriculo Site interface" />
+              <h3>Curriculo Site published with Codex and vibe coding</h3>
               <p>
-                Os certificados de 2025 mostram um esforço estruturado em
-                plataforma de dados, pipelines, cloud analytics e arquitetura
-                moderna, indo além de conhecimento superficial de ferramenta.
+                Development of my personal website and professional portfolio,
+                with a technical-project page, English version and deployment
+                under a custom domain.
               </p>
+              <ul>
+                <li>Problem: transform a fragmented presence into an authorial website that presents projects and professional trajectory more clearly.</li>
+                <li>Approach: iterative build with Codex, using a vibe-coding dynamic to accelerate design, content, UX adjustments, editorial review and publishing.</li>
+                <li>Technical highlight: assistive AI used to accelerate front-end development, content structuring and the path from idea to publication.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/curriculo_site" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
             </article>
-            <article class="interview-card">
-              <h3>Atualização prática em ecossistemas modernos</h3>
-              <p>
-                As trilhas de Databricks e LangGraph reforçam acompanhamento
-                contínuo do que está mais relevante hoje em machine learning,
-                retrieval e construção de agentes.
-              </p>
-            </article>
-            <article class="interview-card">
-              <h3>Base ampla construída ao longo do tempo</h3>
-              <p>
-                Os certificados complementares indicam formação progressiva em
-                Python, NLP, Power BI, probabilidade, RStudio, Pentaho e Data
-                Science, consolidando uma base versátil.
-              </p>
-            </article>
-            <article class="interview-card">
-              <h3>Governança e responsabilidade</h3>
-              <p>
-                O conjunto Petrobras adiciona sinais importantes de atuação em
-                contexto corporativo regulado, com foco em LGPD, segurança da
-                informação, ética, direitos humanos e prevenção a riscos.
-              </p>
-            </article>
-          </div>
-        </section>
 
-        <section class="section contact-panel reveal">
-          <p class="eyebrow">Encerramento</p>
-          <h2>Este portfólio pode evoluir para uma versão ainda mais personalizada</h2>
-          <p>
-            A estrutura já está pronta para funcionar como seu site principal. O próximo
-            passo mais valioso é inserir casos reais da sua trajetória com nome
-            da empresa, objetivo, stack, impacto e aprendizados.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./index.html">Voltar para a home</a>
-            <a class="button button-secondary" href="./Cientistadedados_FlaviaGaia.pdf" target="_blank" rel="noreferrer">
-              Revisar currículo
-            </a>
+            <article class="case-card">
+              <span class="card-index">Personal project</span>
+              <img class="project-proof" src="./fakenews-project-visual.svg" alt="Fake News Detection visual cover" />
+              <h3>Fake News Detection with PyTorch and GRU</h3>
+              <p>
+                Notebook for binary classification of fake versus reliable
+                news, structured as a machine learning challenge focused on
+                text pipeline, neural network and submission-file generation.
+              </p>
+              <ul>
+                <li>Problem: automatically identify fake news from title, content and tags, with F1-oriented evaluation.</li>
+                <li>Architecture: PyTorch embedding, GRU recurrent layer, sigmoid output for binary classification and training with BCELoss and Adam.</li>
+                <li>Technical highlight: classic NLP with deep learning, bag-of-words versus embeddings, GRU choice for text sequences and small-dataset limitations.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/fakenews" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">Personal project</span>
+              <img class="project-proof" src="./mcp-docs-assistant-visual.svg" alt="MCP Docs Assistant visual cover" />
+              <h3>MCP Docs Assistant with FastMCP and BM25 search over local documentation</h3>
+              <p>
+                Read-only MCP server for querying local markdown documentation,
+                exposing resources, tools and prompts for clients compatible
+                with the Model Context Protocol.
+              </p>
+              <ul>
+                <li>Problem: make policies, runbooks and standards consultable in a structured and secure way without exposing raw file access.</li>
+                <li>Architecture: DocumentStore for markdown reading, BM25Okapi indexing and FastMCP server exposing resource, tools and prompt through stdio.</li>
+                <li>Technical highlight: MCP server structure, BM25 for internal documentation and transformation of static knowledge into an interface consumable by agents.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-docs-assistant" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <span class="card-index">Personal project</span>
+              <img class="project-proof" src="./mcp-sql-analytics-visual.svg" alt="MCP SQL Analytics Server visual cover" />
+              <h3>MCP SQL Analytics Server for structured data exploration</h3>
+              <p>
+                MCP server focused on SQL analytics, designed to expose
+                structured tools for table exploration, schema understanding and
+                analytical querying to MCP-compatible clients.
+              </p>
+              <ul>
+                <li>Problem: allow assistants and agents to consult analytics data in a controlled way without unrestricted database access.</li>
+                <li>Architecture: MCP server exposing useful SQL-analytics operations in a format consumable by MCP clients.</li>
+                <li>Technical highlight: design of analytics tools for agents, reduced access surface and governance-oriented MCP operations.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-sql-analytics-server" target="_blank" rel="noreferrer">
+                  View on GitHub
+                </a>
+              </div>
+            </article>
           </div>
         </section>
       </main>
