@@ -227,18 +227,59 @@
             </article>
 
             <article class="case-card">
+              <img
+                class="project-proof"
+                src="./tech-request-assistant.jpg"
+                alt="Imagem do projeto Technical Request Document Assistant"
+              />
               <span class="card-index">Compass UOL - Petrobras</span>
-              <h3>RAG e agentes para conformidade normativa na Petrobras</h3>
+              <h3>Technical Request Document Assistant</h3>
               <p>
-                Construção de soluções com LLMs para extração de informações
-                técnicas em PDFs, RAG de normativos, validação humana em
-                Streamlit e versionamento de prompts e métricas com MLflow.
+                Projeto em Python para reproduzir um fluxo integrado de leitura
+                de solicitações técnicas, extração estruturada de campos em PDF
+                e recuperação de documentos de referência relacionados, em um
+                único front no Streamlit.
               </p>
               <ul>
-                <li>Desafio: melhorar recuperação de contexto e confiabilidade das respostas.</li>
-                <li>Stack: Python, LLMs, RAG, Streamlit, MLflow, CrewAI, FAISS.</li>
-                <li>Gancho de entrevista: avaliação de prompts, retrieval e LLMOps.</li>
+                <li>Problema: transformar solicitações técnicas em dados estruturados e conectar cada pedido aos documentos mais relevantes para consulta operacional.</li>
+                <li>Arquitetura: ingestão de PDFs sintéticos, extração de campos com regras, base textual de referências e matching semântico entre solicitação e documentação.</li>
+                <li>Retrieval: `TF-IDF + cosine similarity` para localizar documentos de apoio mais aderentes ao contexto da solicitação.</li>
+                <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn e Streamlit.</li>
+                <li>Gancho de entrevista: extração estruturada em PDF, retrieval semântico, desenho de assistente documental e integração de consulta com navegação operacional.</li>
               </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/technical-request-document-assistant" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <img
+                class="project-proof"
+                src="./engineering-doc-consistency.jpg"
+                alt="Imagem do projeto Engineering Document Consistency AI"
+              />
+              <span class="card-index">Compass UOL - Petrobras</span>
+              <h3>Engineering Document Consistency AI</h3>
+              <p>
+                Projeto em Python para reproduzir uma solução de governança
+                documental aplicada a documentos de engenharia, com extração de
+                cláusulas, busca semântica, detecção de inconsistências e
+                revisão humana em dashboard.
+              </p>
+              <ul>
+                <li>Problema: comparar memoriais, anexos e diretrizes técnicas para encontrar conflitos antes que virem retrabalho, atraso ou erro operacional.</li>
+                <li>Pipeline: ingestão de PDFs, extração de cláusulas numeradas, recuperação de cláusulas semanticamente parecidas e detecção rule-based de inconsistências.</li>
+                <li>Tipos de inconsistência: prazo, responsabilidade, critério de medição e padrão técnico.</li>
+                <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn, Streamlit e Plotly.</li>
+                <li>Gancho de entrevista: governança documental, comparação entre documentos, retrieval semântico e Human-in-the-Loop para revisão técnica.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/engineering-document-consistency-ai" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
             </article>
 
             <article class="case-card">
