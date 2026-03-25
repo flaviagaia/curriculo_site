@@ -321,6 +321,37 @@
             </article>
 
             <article class="case-card">
+              <img
+                class="project-proof"
+                src="./maintenance-request-classification.jpg"
+                alt="Imagem do projeto Maintenance Request Classification"
+              />
+              <span class="card-index">EVCOMX - Petrobras · reprodução técnica</span>
+              <h3>Maintenance Request Classification para triagem operacional</h3>
+              <p>
+                Projeto supervisionado de classificação para rotear
+                solicitações de manutenção a partir de texto curto e contexto
+                operacional, reproduzindo um tipo de raciocínio muito próximo
+                do que trabalhei na EVCOMX: entender descrições técnicas e
+                decidir qual fluxo ou tipo de intervenção deve ser acionado.
+              </p>
+              <ul>
+                <li>Problema: classificar rapidamente o tipo de manutenção a partir de descrição, localização e status do chamado.</li>
+                <li>Dados: amostra pública real do NYC 311 Service Requests, reagrupada em classes operacionais como pavimentação, iluminação, saneamento e infraestrutura.</li>
+                <li>Pipeline: montagem de `feature_text` com descrição e contexto, vetorização com `TF-IDF`, split estratificado, benchmark entre modelos e app em `Streamlit` para validação.</li>
+                <li>Modelos comparados: `Logistic Regression`, `Linear SVC` e `Multinomial Naive Bayes`.</li>
+                <li>Resultados atuais: `11.999` solicitações processadas, `6` grupos de manutenção e melhor desempenho com `Logistic Regression`, `Accuracy = 0.9996` e `Macro F1 = 0.9993`.</li>
+                <li>Stack: Python, pandas, requests, scikit-learn, matplotlib, Streamlit e Plotly.</li>
+                <li>Destaque técnico: classificação multiclasse com texto e contexto operacional, benchmark supervisionado e roteamento automatizado de chamados.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/maintenance-request-classification" target="_blank" rel="noreferrer">
+                  Ver no GitHub
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
               <span class="card-index">MDS · Ministério do Desenvolvimento Social, Família e Combate à Fome</span>
               <img
                 class="project-proof"
