@@ -6,7 +6,7 @@
     <title>Portfólio Técnico | Flávia Gaia</title>
     <meta
       name="description"
-      content="Portfólio técnico detalhado de Flávia Gaia com projetos, contexto técnico e trajetória profissional."
+      content="Portfólio técnico de Flávia Gaia com projetos, entregas e trajetória profissional."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,9 +46,9 @@
         <section class="portfolio-hero reveal">
           <div class="portfolio-intro">
             <p class="eyebrow">Portfólio técnico</p>
-            <h1>Projetos que já desenvolvi e os detalhes técnicos de cada um</h1>
+            <h1>Projetos desenvolvidos ao longo da minha carreira</h1>
             <p class="lead">
-              Esta página reúne projetos que desenvolvi durante minha carreira.
+              Esta página reúne projetos, entregas e frentes em que atuei em contextos corporativos e autorais.
             </p>
           </div>
 
@@ -63,7 +63,7 @@
             </div>
             <div>
               <strong>Projetos</strong>
-              <span>Corporativos, acadêmicos e projetos autorais</span>
+              <span>Corporativos, públicos e autorais</span>
             </div>
           </div>
         </section>
@@ -99,12 +99,10 @@
                 apoio direto à gestão e à auditoria.
               </p>
               <ul>
-                <li>Desafio: transformar dados de big data em uma visão auditável, com muitas regras, filtros e comparações entre transações e notas fiscais.</li>
-                <li>Estrutura da solução: o dashboard foi organizado em várias abas, cada uma explicando uma inconsistência diferente e o quanto ela afetava a análise.</li>
+                <li>Contexto: apoio à gestão e à auditoria em um cenário de grande volume de dados, múltiplos filtros e necessidade de leitura confiável das inconsistências.</li>
+                <li>Entrega: estruturação de tabelas analíticas, consultas em PySpark e um dashboard com visões separadas por tipo de inconsistência.</li>
                 <li>Stack: PySpark, notebooks Databricks, modelagem de tabelas analíticas, Genie e Power BI.</li>
-                <li>Ponto importante: não era um papel de BI puro, mas foi necessário levar o dado estruturado até a camada de consumo para apoiar a gestão.</li>
-                <li>Automação: o Genie também ajudou na criação do job para atualizar e publicar o dashboard automaticamente.</li>
-                <li>Destaque técnico: engenharia analítica em big data, qualidade de dados, auditoria e integração entre camada técnica e visualização executiva.</li>
+                <li>Destaque técnico: engenharia analítica em big data, qualidade de dados, automação de atualização e integração entre camada técnica e visualização executiva.</li>
               </ul>
             </article>
 
@@ -118,14 +116,10 @@
                 apoiar auditoria, análise e tomada de decisão.
               </p>
               <ul>
-                <li>Objetivo: classificar transações suspeitas em um cenário de auditoria bancária usando uma base pública sintética, preservando a lógica do problema sem expor dados reais.</li>
-                <li>Pipeline: leitura em `Parquet`, parsing temporal, criação de atributos derivados, preprocessamento com `ColumnTransformer`, imputação, `OneHotEncoder` e treino com `RandomForestClassifier`.</li>
-                <li>Features: valor da transação, tipo, local, dispositivo, faixa horária, transação internacional e atributos derivados como `day_of_week`, `month`, `sender_prefix` e `receiver_prefix`.</li>
-                <li>Métricas: `F1-score = 0.9620`, `ROC-AUC = 0.9996` e `PR-AUC = 0.9967` no split atual da base sintética.</li>
-                <li>Interpretação: uso de `feature importance` para ranquear sinais relevantes de auditoria, como valor, tipo de transação, local e dispositivo.</li>
-                <li>Conexão com o FNDE: o projeto ajuda a explicar como estruturo raciocínio analítico para auditoria de transações, conciliação, priorização de inconsistências e apoio a investigações mais profundas.</li>
+                <li>Contexto: case público construído para representar um tipo de raciocínio analítico próximo ao que usei no FNDE em auditoria e priorização de inconsistências.</li>
+                <li>Entrega: classificação supervisionada de transações suspeitas com preparação de dados tabulares, atributos derivados e leitura orientada a risco.</li>
                 <li>Stack: Python, pandas, scikit-learn, matplotlib, pyarrow, joblib e unittest.</li>
-                <li>Destaque técnico: classificação supervisionada em base tabular, tratamento de base desbalanceada, explicabilidade com feature importance e adaptação de case sintético para cenário real.</li>
+                <li>Destaque técnico: classificação supervisionada em base tabular, explicabilidade e adaptação de case sintético para um contexto de auditoria.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/bank-transaction-audit-random-forest" target="_blank" rel="noreferrer">
@@ -150,13 +144,10 @@
                 apoio ao contexto de dados e exploração analítica no FNDE.
               </p>
               <ul>
-                <li>Problema: permitir consulta analítica em banco relacional sem exigir que o usuário escreva SQL manualmente.</li>
-                <li>Arquitetura: banco `SQLite` de exemplo, documentos semânticos sobre schema e regras de negócio, `BM25Retriever` para recuperar contexto e `create_sql_agent` do LangChain para gerar e executar consultas.</li>
+                <li>Contexto: projeto alinhado ao tipo de apoio analítico e exploração de dados que fez sentido no FNDE.</li>
+                <li>Entrega: interface para perguntas em linguagem natural sobre base relacional, combinando contexto semântico e geração assistida de SQL.</li>
                 <li>Stack: Python, LangChain, langchain-openai, langchain-community, SQLAlchemy, SQLite, Streamlit e BM25Retriever.</li>
-                <li>Diferencial técnico: separação clara entre dados estruturados e contexto de negócio, usando RAG não para documentos externos, mas para orientar melhor a geração de SQL.</li>
-                <li>Modo de uso: projeto com `modo demo` funcionando mesmo sem chave OpenAI e `modo completo` com geração dinâmica de SQL quando a API está configurada.</li>
-                <li>Segurança e adaptabilidade: o app não sobrescreve automaticamente bancos definidos pelo usuário e foi desenhado para troca simples da base e dos documentos de contexto.</li>
-                <li>Destaque técnico: aplicação de RAG fora do cenário clássico de PDFs, redução de ambiguidade na geração de SQL e desenho de uma interface NL2SQL mais confiável.</li>
+                <li>Destaque técnico: uso de RAG fora do cenário clássico de documentos, reduzindo ambiguidade na geração de consultas e melhorando a navegação analítica.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/RAG_NLP_SQL" target="_blank" rel="noreferrer">
@@ -176,12 +167,10 @@
                 contexto de auditoria.
               </p>
               <ul>
-                <li>Problema: diferenciar ruído operacional de sinais realmente relevantes em bases volumosas e confusas.</li>
-                <li>Case principal: `NYC TLC Trip Outliers`, comparando `IQR`, `Modified Z-score`, `Isolation Forest` e `Local Outlier Factor` em dados operacionais de corridas.</li>
-                <li>Pipeline: amostra reproduzível de `200.000` registros, escala robusta, detecção estatística e consenso entre detectores para reduzir falsos positivos.</li>
-                <li>Conexão com o FNDE: mesma lógica de analisar inconsistências, contextualizar extremos e priorizar investigação antes de concluir que há erro.</li>
+                <li>Contexto: laboratório público que representa um tipo de análise de inconsistências e extremos que também fez parte do meu trabalho no FNDE.</li>
+                <li>Entrega: comparação entre abordagens estatísticas e modelos não supervisionados para priorização de revisão em bases operacionais.</li>
                 <li>Stack: Python, pandas, scikit-learn, análise estatística robusta e machine learning não supervisionado.</li>
-                <li>Destaque técnico: combinação de métodos estatísticos e modelos não supervisionados para auditoria, priorização e revisão humana.</li>
+                <li>Destaque técnico: combinação de métodos estatísticos e modelos não supervisionados para auditoria e priorização de análise.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/outlier-detection-lab" target="_blank" rel="noreferrer">
@@ -213,11 +202,10 @@
                 do que desenvolvi no contexto da BBTS.
               </p>
               <ul>
-                <li>Desafio: transformar contratos não estruturados em um fluxo operacional confiável para conciliação e acompanhamento financeiro.</li>
-                <li>Pipeline: leitura de PDFs, extração de regras de pagamento, normalização das cláusulas, montagem do calendário previsto, comparação entre previsto e realizado e identificação dos casos que exigem atenção gerencial ou auditoria.</li>
-                <li>Arquitetura: lógica inspirada em camadas `bronze / silver / gold`, separando ingestão documental, tratamento das regras e consumo analítico.</li>
+                <li>Contexto: fluxo orientado a conciliação e acompanhamento financeiro a partir de documentos não estruturados.</li>
+                <li>Entrega: leitura de contratos, extração de cláusulas financeiras, construção de calendário esperado e monitoramento de divergências.</li>
                 <li>Stack: Python, regex, processamento de PDFs, arquitetura analítica, automação orientada a auditoria e camada de agentes para classificação e escalonamento.</li>
-                <li>Destaque técnico: extração contratual, conciliação financeira, automação de fluxo operacional e uso de IA para priorização e escalonamento.</li>
+                <li>Destaque técnico: extração contratual, conciliação financeira e automação de fluxo operacional com apoio de IA.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/calendario_pagamentos" target="_blank" rel="noreferrer">
@@ -241,11 +229,10 @@
                 único front no Streamlit.
               </p>
               <ul>
-                <li>Problema: transformar solicitações técnicas em dados estruturados e conectar cada pedido aos documentos mais relevantes para consulta operacional.</li>
-                <li>Arquitetura: ingestão de PDFs sintéticos, extração de campos com regras, base textual de referências e matching semântico entre solicitação e documentação.</li>
-                <li>Retrieval: `TF-IDF + cosine similarity` para localizar documentos de apoio mais aderentes ao contexto da solicitação.</li>
+                <li>Contexto: reprodução pública de um fluxo documental ligado a leitura de solicitações técnicas e consulta de referências.</li>
+                <li>Entrega: extração estruturada de PDFs e recuperação de documentos de apoio em um front único.</li>
                 <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn e Streamlit.</li>
-                <li>Destaque técnico: extração estruturada em PDF, retrieval semântico, desenho de assistente documental e integração de consulta com navegação operacional.</li>
+                <li>Destaque técnico: extração estruturada em PDF, retrieval semântico e desenho de assistente documental.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/technical-request-document-assistant" target="_blank" rel="noreferrer">
@@ -269,11 +256,10 @@
                 revisão humana em dashboard.
               </p>
               <ul>
-                <li>Problema: comparar memoriais, anexos e diretrizes técnicas para encontrar conflitos antes que virem retrabalho, atraso ou erro operacional.</li>
-                <li>Pipeline: ingestão de PDFs, extração de cláusulas numeradas, recuperação de cláusulas semanticamente parecidas e detecção rule-based de inconsistências.</li>
-                <li>Tipos de inconsistência: prazo, responsabilidade, critério de medição e padrão técnico.</li>
+                <li>Contexto: reprodução pública de um problema de governança documental em ambiente de engenharia.</li>
+                <li>Entrega: comparação entre documentos, recuperação semântica de trechos relacionados e apoio à revisão de inconsistências.</li>
                 <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn, Streamlit e Plotly.</li>
-                <li>Destaque técnico: governança documental, comparação entre documentos, retrieval semântico e Human-in-the-Loop para revisão técnica.</li>
+                <li>Destaque técnico: governança documental, comparação entre documentos e retrieval semântico com revisão humana.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/engineering-document-consistency-ai" target="_blank" rel="noreferrer">
@@ -305,13 +291,10 @@
                 few-shot prompting e revisão humana.
               </p>
               <ul>
-                <li>Problema de negócio: textos técnicos chegam com abreviações, ruído ortográfico e variações de nomenclatura, mas o sistema ainda precisa recuperar a tag canônica correta.</li>
-                <li>Abordagens comparadas: `regex / dictionary`, `RapidFuzz` para recuperação lexical e `LangChain few-shot` com `TF-IDF + cosine similarity` e caminho opcional com LLM externo.</li>
-                <li>Benchmark: `300` exemplos avaliados, com ganho claro na passagem de regras rígidas para abordagem contextual.</li>
-                <li>Resultados: `regex` com `F1 = 0.4628`, `fuzzy` com `F1 = 0.7465` e `langchain_llm` com `F1 = 0.9639` e `exact match = 0.9083`.</li>
-                <li>Human-in-the-loop: dashboard em `Streamlit` com feedback `thumbs up/down`, salvando revisão operacional e preparando uma camada de agentes estilo `CrewAI`.</li>
+                <li>Contexto: reprodução pública de um tipo de extração técnica que trabalhei no contexto da EVCOMX para a Petrobras.</li>
+                <li>Entrega: comparação entre abordagens baseadas em regras, fuzzy matching e LLMs com validação humana em interface.</li>
                 <li>Stack: Python, pandas, scikit-learn, RapidFuzz, BeautifulSoup, LangChain, Streamlit, Plotly e CrewAI opcional.</li>
-                <li>Destaque técnico: evolução de regex para LLMs com segurança, papel do fuzzy matching e desenho de validação humana para melhoria contínua.</li>
+                <li>Destaque técnico: evolução de regex para LLMs com segurança, papel do fuzzy matching e desenho de validação humana.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/llm-tag-extraction-lab" target="_blank" rel="noreferrer">
@@ -336,13 +319,10 @@
                 decidir qual fluxo ou tipo de intervenção deve ser acionado.
               </p>
               <ul>
-                <li>Problema: classificar rapidamente o tipo de manutenção a partir de descrição, localização e status do chamado.</li>
-                <li>Dados: amostra pública real do NYC 311 Service Requests, reagrupada em classes operacionais como pavimentação, iluminação, saneamento e infraestrutura.</li>
-                <li>Pipeline: montagem de `feature_text` com descrição e contexto, vetorização com `TF-IDF`, split estratificado, benchmark entre modelos e app em `Streamlit` para validação.</li>
-                <li>Modelos comparados: `Logistic Regression`, `Linear SVC` e `Multinomial Naive Bayes`.</li>
-                <li>Resultados atuais: `11.999` solicitações processadas, `6` grupos de manutenção e melhor desempenho com `Logistic Regression`, `Accuracy = 0.9996` e `Macro F1 = 0.9993`.</li>
+                <li>Contexto: reprodução pública de um tipo de triagem operacional orientada por texto e contexto de serviço.</li>
+                <li>Entrega: classificação supervisionada para apoio ao roteamento de solicitações de manutenção.</li>
                 <li>Stack: Python, pandas, requests, scikit-learn, matplotlib, Streamlit e Plotly.</li>
-                <li>Destaque técnico: classificação multiclasse com texto e contexto operacional, benchmark supervisionado e roteamento automatizado de chamados.</li>
+                <li>Destaque técnico: classificação multiclasse com texto e contexto operacional para roteamento automatizado.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/maintenance-request-classification" target="_blank" rel="noreferrer">
@@ -367,10 +347,8 @@
                 MDS para apoiar gestão social e ação cadastral.
               </p>
               <ul>
-                <li>Problema: entender onde há maior concentração de extrema pobreza, cadastros desatualizados e famílias mais vulneráveis.</li>
-                <li>Dados: amostra sintética calibrada por município, com foco em Alagoas, alinhada às variáveis analíticas públicas do CadÚnico.</li>
-                <li>Técnica: engenharia de indicadores e score de vulnerabilidade combinando renda, atualização cadastral, trabalho informal, saneamento, PCD e composição familiar.</li>
-                <li>Camada territorial: agregação municipal com índice de priorização cadastral e classificação rule-based em níveis de atenção.</li>
+                <li>Contexto: leitura analítica de microdados sociais para apoiar priorização territorial e ação cadastral.</li>
+                <li>Entrega: indicadores de vulnerabilidade, perfil cadastral e visão territorial para apoio à gestão social.</li>
                 <li>Stack: Python, pandas, numpy, Streamlit e Plotly.</li>
                 <li>Destaque técnico: construção de indicadores sociais, priorização territorial e transformação de microdados em leitura gerencial.</li>
               </ul>
@@ -397,10 +375,8 @@
                 desenvolvi no MDS.
               </p>
               <ul>
-                <li>Problema: identificar municípios com maior dependência relativa de cada programa e maior sensibilidade gerencial.</li>
-                <li>Dados: Bolsa Família real por município de Alagoas em 2023 e camada sintética calibrada do BPC, alinhada ao schema oficial do Portal da Transparência.</li>
-                <li>Indicadores: participação relativa de cada programa, razão Bolsa Família/BPC, taxa de judicialização do BPC e índice de pressão assistencial.</li>
-                <li>Classificação: regras explícitas para rotular territórios como predomínio Bolsa Família, predomínio BPC ou equilíbrio relativo, além de alerta prioritário.</li>
+                <li>Contexto: comparação territorial entre programas sociais para apoiar leitura gerencial e monitoramento.</li>
+                <li>Entrega: indicadores comparativos e visualizações para entender composição do gasto social e sensibilidade territorial.</li>
                 <li>Stack: Python, pandas, numpy, Streamlit e Plotly.</li>
                 <li>Destaque técnico: comparação de políticas públicas, construção de indicadores territoriais e uso de regra de negócio em dashboards gerenciais.</li>
               </ul>
@@ -426,10 +402,8 @@
                 conectado ao que desenvolvi no MDS.
               </p>
               <ul>
-                <li>Problema: identificar municípios que combinam maior peso do benefício com maior participação de concessões judiciais.</li>
-                <li>Dados: base sintética calibrada segundo o dicionário oficial do BPC e apoio territorial municipal de Alagoas.</li>
-                <li>Indicadores: valor total do BPC, benefícios totais, taxa de judicialização, participação no valor total e índice de concentração.</li>
-                <li>Classificação: categorização rule-based de risco de judicialização em níveis baixo, moderado e alto.</li>
+                <li>Contexto: análise territorial do BPC com foco em concentração e sinais de judicialização.</li>
+                <li>Entrega: painel para leitura municipal do benefício e apoio à priorização de acompanhamento.</li>
                 <li>Stack: Python, pandas, Streamlit e Plotly.</li>
                 <li>Destaque técnico: análise territorial, construção de bases sintéticas aderentes a schema oficial e priorização para gestão e auditoria.</li>
               </ul>
@@ -456,10 +430,8 @@
                 contexto do MDS.
               </p>
               <ul>
-                <li>Problema: acompanhar repasses, comparar municípios e detectar gaps operacionais que poderiam merecer monitoramento adicional.</li>
-                <li>Dados: base pública real de Alagoas entre 2004 e 2023, com camada mensal sintética para pagamento versus saque.</li>
-                <li>Engenharia de dados: pivot das subcategorias, cálculo de crescimento anual e geração de camada operacional analítica.</li>
-                <li>ML aplicado: `RandomForestRegressor` para benchmark de previsão, `KMeans` para segmentação territorial e `IsolationForest` para anomalias operacionais.</li>
+                <li>Contexto: acompanhamento territorial do Bolsa Família com leitura social e operacional.</li>
+                <li>Entrega: painel de evolução por município, com apoio a comparações territoriais e monitoramento de comportamento operacional.</li>
                 <li>Stack: Python, PySpark, pandas, scikit-learn, Streamlit e Plotly.</li>
                 <li>Destaque técnico: uso combinado de engenharia analítica, políticas públicas, machine learning exploratório e monitoramento operacional.</li>
               </ul>
@@ -487,14 +459,10 @@
                 engenharia de atributos temporais.
               </p>
               <ul>
-                <li>Contexto: experiência alinhada ao meu estágio na Presidência, conectando análise de dados públicos, temas de saúde e modelagem quantitativa aplicada.</li>
-                <li>Fonte de dados: microdados oficiais do SIVEP-Gripe / SRAG, publicados no Portal de Dados Abertos do SUS.</li>
-                <li>Pipeline: filtragem de casos de Covid-19 com evolução para óbito, agregação nacional por dia, reindexação completa do calendário de 2024 e construção da série alvo com média móvel de 7 dias.</li>
-                <li>Features: lags de curto prazo, médias móveis, desvio padrão móvel, tendência recente e variáveis de calendário como dia da semana, semana do ano e mês.</li>
-                <li>Modelagem: `LinearRegression` com divisão temporal treino-teste, preservando a ordem cronológica da série.</li>
-                <li>Métricas: `R² = 0.9420`, `MAE = 0.4576` e `RMSE = 0.5639`, mostrando um baseline forte para tendência epidemiológica suavizada.</li>
+                <li>Contexto: projeto conectado ao meu estágio na Presidência, reunindo dados públicos, saúde e modelagem quantitativa aplicada.</li>
+                <li>Entrega: transformação de microdados oficiais em série temporal diária para modelagem de tendência.</li>
                 <li>Stack: Python, pandas, numpy, scikit-learn, matplotlib, joblib, unittest e reconstrução da base a partir da fonte oficial.</li>
-                <li>Destaque técnico: transformação de microdados públicos em série temporal utilizável, uso de regressão linear como baseline e avaliação de modelos simples com interpretabilidade.</li>
+                <li>Destaque técnico: transformação de microdados públicos em série temporal utilizável e uso de baseline interpretável.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/covid-brazil-deaths-linear-regression" target="_blank" rel="noreferrer">
@@ -550,27 +518,15 @@
                 automatizada de conteúdo, enriquecimento com NLP e organização
                 da informação para leitura analítica e suporte institucional.
               </p>
-              <p>
-                Aqui ele aparece em uma forma pública e reprodutível, mas a
-                lógica central vem dessa experiência real de acompanhamento de
-                temas políticos e econômicos com apoio de automação e análise
-                textual.
-              </p>
             </article>
 
             <article class="summary-card">
-              <span class="card-index">Pipeline técnico</span>
-              <h3>Coleta, parsing, NER e visualização executiva</h3>
+              <span class="card-index">Estrutura</span>
+              <h3>Coleta, NLP e visualização</h3>
               <p>
-                O pipeline faz descoberta de URLs, parsing dos artigos,
+                O projeto combina descoberta de URLs, parsing dos artigos,
                 consolidação em `pandas`, extração de entidades com `spaCy` e
-                fallback rule-based quando necessário, além de keywords,
-                estatísticas textuais e dashboard final.
-              </p>
-              <p>
-                Resultado atual: `24` artigos coletados da Agência Brasil,
-                `92` entidades extraídas e visualizações como distribuição por
-                tema, top entidades, top keywords e nuvem de palavras.
+                dashboard final em `Streamlit`.
               </p>
             </article>
           </div>
@@ -595,13 +551,10 @@
                 em evidências recuperadas.
               </p>
               <ul>
-                <li>Problema: avaliar retrieval de forma prática e explicável, mostrando como uma consulta recupera os documentos certos e como medir essa qualidade.</li>
-                <li>Arquitetura: `SearchAssistant` para ingestão, retrieval e resposta; `TfidfEncoder` para vetorização; `SearchIndex` para indexação vetorial; `RecallEvaluator` para avaliação e `app.py` para demonstração visual.</li>
+                <li>Contexto: projeto criado para explorar retrieval de forma aplicada e explicável.</li>
+                <li>Entrega: aplicação de busca com ingestão, indexação, recuperação e visualização dos resultados.</li>
                 <li>Stack: Python, scikit-learn, TF-IDF, FAISS, similaridade de cosseno, Tkinter e unittest.</li>
-                <li>Diferencial técnico: uso de FAISS com normalização L2 quando a biblioteca está disponível e fallback com cosine similarity quando não está, mantendo a aplicação portátil.</li>
-                <li>Métricas: Semantic Recall@K, ID Recall@K e Hybrid Recall@K para comparar recuperação por similaridade textual, por IDs esperados e por visão combinada.</li>
-                <li>Caso de teste: o pipeline automatizado valida recuperação dos documentos `D2` e `D3` com `semantic_recall = 1.0`, `id_recall = 1.0` e `hybrid_recall = 1.0`.</li>
-                <li>Destaque técnico: uso de TF-IDF antes de embeddings densos, desenho de fallback para dependência opcional, avaliação de retrieval e explicação rastreável de ranking.</li>
+                <li>Destaque técnico: avaliação de retrieval, fallback para dependência opcional e explicação rastreável do ranking.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/search-performance-assistant" target="_blank" rel="noreferrer">
@@ -622,13 +575,10 @@
                 avaliação.
               </p>
               <ul>
-                <li>Problema: transformar contexto de release e PRs em notas curtas, coerentes e rastreáveis, com critérios objetivos para validar a saída.</li>
-                <li>Arquitetura: pipeline modular com carregamento e validação de JSON, vetorização TF-IDF, retriever com cosine similarity e topic boosting, geração textual e camada de avaliação.</li>
+                <li>Contexto: projeto de NLP aplicado a produto para organizar contexto de release e PRs.</li>
+                <li>Entrega: geração assistida de release notes com recuperação por similaridade e regras temáticas.</li>
                 <li>Stack: Python, scikit-learn, TF-IDF, similaridade de cosseno, Tkinter, JSON e unittest.</li>
-                <li>Diferencial técnico: uso de score híbrido no retriever, somando similaridade vetorial com reforço por grupos temáticos como acesso, busca e estabilidade.</li>
-                <li>Métricas: Recall@K para verificar recuperação dos PRs esperados e Exact Match para comparar a frase final gerada com a saída gold.</li>
-                <li>Teste automatizado: pipeline validado com caso em que a recuperação retorna os PRs `[1, 2, 4]` e alcança `Recall@K = 1.00` e `Exact Match = 1.00`.</li>
-                <li>Destaque técnico: desenho de pipeline de NLP aplicado a produto, retrieval explicável, heurística supervisionada por domínio e avaliação reproduzível.</li>
+                <li>Destaque técnico: pipeline de NLP aplicado a produto, retrieval explicável e avaliação reproduzível.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/release-notes-generation-assistant" target="_blank" rel="noreferrer">
@@ -647,12 +597,10 @@
                 domínio próprio.
               </p>
               <ul>
-                <li>Problema: transformar uma presença fragmentada em um site autoral, mais forte como presença profissional e mais útil para apresentar projetos e trajetória.</li>
-                <li>Abordagem: construção iterativa com Codex, usando uma dinâmica de vibe coding para acelerar design, conteúdo, ajustes de UX, revisão textual e publicação.</li>
+                <li>Contexto: projeto pessoal para consolidar minha presença profissional em domínio próprio.</li>
+                <li>Entrega: site bilíngue com home, portfólio, conteúdo autoral e publicação em produção.</li>
                 <li>Stack: HTML, CSS, JavaScript, GitHub, Vercel, domínio customizado e organização manual de conteúdo técnico.</li>
-                <li>Diferencial técnico: fluxo rápido de prototipação e refinamento orientado por prompts, com várias rodadas de ajuste em layout, navegação, bilinguismo, responsividade e curadoria de conteúdo.</li>
-                <li>Entrega: site estático publicado, com integração a domínio próprio, navegação PT/EN, portfólio de projetos e links para currículo, TCCs e perfis técnicos.</li>
-                <li>Destaque técnico: uso de IA assistiva para acelerar desenvolvimento front-end, estruturar conteúdo e reduzir tempo entre ideia, execução e publicação.</li>
+                <li>Destaque técnico: uso de IA assistiva para acelerar prototipação, estruturação de conteúdo e publicação.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/curriculo_site" target="_blank" rel="noreferrer">
@@ -672,12 +620,10 @@
                 geração de arquivo de submissão.
               </p>
               <ul>
-                <li>Problema: identificar automaticamente notícias falsas a partir de título, conteúdo e tags, com avaliação orientada por F1-score.</li>
-                <li>Pré-processamento: tratamento de nulos, unificação de múltiplas colunas textuais em uma feature única e construção manual de vocabulário com até 10 mil tokens.</li>
-                <li>Arquitetura: embedding em PyTorch, camada recorrente `GRU`, saída sigmoide para classificação binária e treinamento com `BCELoss` e `Adam`.</li>
-                <li>Pipeline: split treino-validação, `DataLoader`, encoding com `PAD` e `UNK`, inferência em lote no conjunto de teste e geração de `submissions.csv`.</li>
+                <li>Contexto: experimento de classificação textual com deep learning em um problema de fake news.</li>
+                <li>Entrega: notebook de classificação binária com pipeline textual, treino em PyTorch e geração de submissão.</li>
                 <li>Stack: Python, pandas, PyTorch, scikit-learn, train_test_split, f1_score e notebook em Colab.</li>
-                <li>Destaque técnico: NLP clássico com deep learning, diferenças entre bag-of-words e embeddings, escolha de GRU para sequência textual e limitações de datasets pequenos.</li>
+                <li>Destaque técnico: pipeline textual com deep learning e modelagem sequencial com GRU.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/fakenews" target="_blank" rel="noreferrer">
@@ -696,13 +642,10 @@
                 prompts para clientes compatíveis com Model Context Protocol.
               </p>
               <ul>
-                <li>Problema: tornar políticas, runbooks e padrões internos consultáveis de forma estruturada e segura, sem depender de acesso direto a arquivos brutos.</li>
-                <li>Arquitetura: `DocumentStore` para leitura dos markdowns com frontmatter, indexação com `BM25Okapi` e servidor `FastMCP` expondo `resource`, `tools` e `prompt` por `stdio`.</li>
+                <li>Contexto: projeto para estruturar documentação local em uma interface consumível por clientes MCP.</li>
+                <li>Entrega: servidor read-only com catálogo, busca e recuperação de documentos em markdown.</li>
                 <li>Stack: Python, FastMCP, Model Context Protocol, rank-bm25, python-frontmatter, markdown e unittest.</li>
-                <li>Diferencial técnico: abordagem read-only, com superfície pequena e controlada, útil para cenários de conhecimento interno em que segurança e rastreabilidade importam.</li>
-                <li>Ferramentas expostas: `list_docs()`, `search_docs(query, top_k)` e `get_doc(doc_id)`, além do recurso `docs://catalog` para catálogo textual da base.</li>
-                <li>Teste automatizado: valida listagem, recuperação de documento por id e busca BM25 com retorno correto para consultas sobre revisão de acessos.</li>
-                <li>Destaque técnico: estruturação de um servidor MCP, uso de BM25 para documentação interna e transformação de conhecimento estático em interface consumível por agentes.</li>
+                <li>Destaque técnico: estruturação de servidor MCP, busca BM25 e transformação de conhecimento estático em interface para agentes.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-docs-assistant" target="_blank" rel="noreferrer">
@@ -722,12 +665,10 @@
                 Context Protocol.
               </p>
               <ul>
-                <li>Problema: permitir que assistentes e agentes consultem dados analíticos de forma controlada, sem depender de acesso irrestrito ao banco ou de manipulação manual do schema.</li>
-                <li>Arquitetura: servidor MCP com foco em ferramentas para inspeção e consulta analítica, organizado para expor operações úteis de SQL analytics em formato consumível por clientes MCP.</li>
+                <li>Contexto: projeto voltado a exploração estruturada de dados por agentes em ambiente controlado.</li>
+                <li>Entrega: servidor MCP com ferramentas para inspeção e consulta analítica em SQL.</li>
                 <li>Stack: Python, MCP, SQL analytics e organização modular orientada a tools.</li>
-                <li>Diferencial técnico: estrutura pensada para uso por agentes, com interface mais segura e previsível do que dar ao modelo acesso bruto ao banco ou ao shell.</li>
-                <li>Aplicação prática: útil para cenários de exploração de tabelas, entendimento de schema, consultas orientadas a negócio e integração futura com fluxos NL2SQL.</li>
-                <li>Destaque técnico: desenho de tools de analytics para agentes, limitação da superfície de acesso a dados e estruturação de operações MCP para exploração analítica com mais governança.</li>
+                <li>Destaque técnico: desenho de tools de analytics para agentes e estruturação de acesso mais governado a dados.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-sql-analytics-server" target="_blank" rel="noreferrer">

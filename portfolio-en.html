@@ -6,7 +6,7 @@
     <title>Technical Portfolio | Flávia Gaia</title>
     <meta
       name="description"
-      content="Detailed technical portfolio of Flávia Gaia with projects, technical context and professional trajectory."
+      content="Technical portfolio of Flávia Gaia with projects, deliveries and professional trajectory."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,9 +46,9 @@
         <section class="portfolio-hero reveal">
           <div class="portfolio-intro">
             <p class="eyebrow">Technical Portfolio</p>
-            <h1>Projects I have developed and the technical details behind each one</h1>
+            <h1>Projects developed throughout my career</h1>
             <p class="lead">
-              This page brings together projects I developed throughout my career.
+              This page brings together projects, deliveries and workstreams from both corporate and authorial contexts.
             </p>
           </div>
 
@@ -63,7 +63,7 @@
             </div>
             <div>
               <strong>Projects</strong>
-              <span>Corporate and authorial work</span>
+              <span>Corporate, public and authorial work</span>
             </div>
           </div>
         </section>
@@ -98,12 +98,10 @@
                 refresh and direct support for management and audit.
               </p>
               <ul>
-                <li>Challenge: turn big data into an auditable view with many rules, filters and comparisons between transactions and invoices.</li>
-                <li>Solution structure: the dashboard was organized into multiple tabs, each explaining a specific inconsistency and its impact on the analysis.</li>
+                <li>Context: support for management and audit in a large-scale data environment with many filters and reconciliation checks.</li>
+                <li>Delivery: analytical tables, PySpark queries and a dashboard organized by inconsistency type.</li>
                 <li>Stack: PySpark, Databricks notebooks, analytical table modeling, Genie and Power BI.</li>
-                <li>Important point: it was not a pure BI role, but it required taking structured data all the way to the consumption layer to support management.</li>
-                <li>Automation: Genie also helped create the job to refresh and publish the dashboard automatically.</li>
-                <li>Technical highlight: analytical engineering in big data, data quality, auditing and integration between technical and executive visualization layers.</li>
+                <li>Technical highlight: analytical engineering in big data, data quality, automation and integration between technical and executive visualization layers.</li>
               </ul>
             </article>
 
@@ -117,12 +115,10 @@
                 support audit, analysis and decision-making.
               </p>
               <ul>
-                <li>Goal: classify suspicious transactions in an audit scenario using a synthetic public dataset while preserving the problem logic without exposing real data.</li>
-                <li>Pipeline: Parquet reading, temporal parsing, derived features, preprocessing with ColumnTransformer, imputation, OneHotEncoder and RandomForestClassifier training.</li>
-                <li>Features: transaction amount, type, location, device, time window, international transaction and derived attributes such as day_of_week, month, sender_prefix and receiver_prefix.</li>
-                <li>Metrics: F1-score = 0.9620, ROC-AUC = 0.9996 and PR-AUC = 0.9967 on the current split.</li>
-                <li>Interpretability: feature importance used to rank relevant audit signals such as amount, transaction type, location and device.</li>
-                <li>Technical highlight: supervised classification on tabular data, imbalanced-data handling, feature-importance explainability and adaptation of a synthetic case to a real context.</li>
+                <li>Context: public case built to represent a type of analytical reasoning close to what I used at FNDE in audit and inconsistency prioritization.</li>
+                <li>Delivery: supervised classification of suspicious transactions with tabular preprocessing and risk-oriented analysis.</li>
+                <li>Stack: Python, pandas, scikit-learn, matplotlib, pyarrow, joblib and unittest.</li>
+                <li>Technical highlight: supervised classification on tabular data, explainability and adaptation of a synthetic case to an audit context.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/bank-transaction-audit-random-forest" target="_blank" rel="noreferrer">
@@ -147,8 +143,8 @@
                 exploration in the FNDE environment.
               </p>
               <ul>
-                <li>Problem: enable analytical querying on a relational database without requiring users to write SQL manually.</li>
-                <li>Architecture: example SQLite database, semantic documents about schema and business rules, BM25Retriever for context retrieval and LangChain create_sql_agent for SQL generation and execution.</li>
+                <li>Context: project aligned with the kind of analytical support and data exploration that made sense in the FNDE context.</li>
+                <li>Delivery: natural-language interface over a relational database, combining semantic context and assisted SQL generation.</li>
                 <li>Stack: Python, LangChain, langchain-openai, langchain-community, SQLAlchemy, SQLite, Streamlit and BM25Retriever.</li>
                 <li>Technical highlight: using RAG outside the classic PDF scenario, reducing ambiguity in SQL generation and designing a more reliable NL2SQL interface.</li>
               </ul>
@@ -169,9 +165,9 @@
                 deserve manual review in audit contexts.
               </p>
               <ul>
-                <li>Problem: distinguish operational noise from truly relevant signals in large and messy datasets.</li>
-                <li>Main case: NYC TLC Trip Outliers, comparing IQR, Modified Z-score, Isolation Forest and Local Outlier Factor on operational trip data.</li>
-                <li>Pipeline: reproducible 200,000-row sample, robust scaling, statistical detection and consensus between detectors to reduce false positives.</li>
+                <li>Context: public lab representing the kind of inconsistency and anomaly analysis that also existed in my FNDE work.</li>
+                <li>Delivery: comparison of statistical and unsupervised approaches for prioritizing review in operational data.</li>
+                <li>Stack: Python, pandas, scikit-learn and robust statistical analysis.</li>
                 <li>Technical highlight: combining statistical methods and unsupervised models for auditing, prioritization and human review.</li>
               </ul>
               <div class="card-actions">
@@ -203,9 +199,9 @@
                 audit in a flow very close to what I developed at BBTS.
               </p>
               <ul>
-                <li>Challenge: transform unstructured contracts into a reliable operational flow for reconciliation and financial monitoring.</li>
-                <li>Pipeline: PDF reading, payment-rule extraction, clause normalization, expected calendar building, expected-versus-actual comparison and identification of cases that require managerial or audit attention.</li>
-                <li>Architecture: bronze/silver/gold-inspired logic separating document ingestion, rule treatment and analytical consumption.</li>
+                <li>Context: operational flow oriented to reconciliation and financial monitoring from unstructured documents.</li>
+                <li>Delivery: contract reading, financial-clause extraction, expected payment calendar and divergence monitoring.</li>
+                <li>Stack: Python, regex, PDF processing, analytical architecture and audit-oriented automation.</li>
                 <li>Technical highlight: contract extraction, financial reconciliation, operational-flow automation and the use of AI for prioritization and escalation.</li>
               </ul>
               <div class="card-actions">
@@ -230,9 +226,9 @@
                 front-end.
               </p>
               <ul>
-                <li>Problem: transform technical requests into structured data and connect each request to the most relevant documents for operational consultation.</li>
-                <li>Architecture: ingestion of synthetic PDFs, rule-based field extraction, textual base of references and semantic matching between request and documentation.</li>
-                <li>Retrieval: TF-IDF plus cosine similarity to locate the most relevant support documents.</li>
+                <li>Context: public reproduction of a document workflow connected to technical requests and reference consultation.</li>
+                <li>Delivery: structured PDF extraction and retrieval of support documents in a single front-end.</li>
+                <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn and Streamlit.</li>
                 <li>Technical highlight: structured PDF extraction, semantic retrieval, document-assistant design and integration of consultation with operational navigation.</li>
               </ul>
               <div class="card-actions">
@@ -257,9 +253,9 @@
                 dashboard.
               </p>
               <ul>
-                <li>Problem: compare memorials, appendices and technical guidelines to find conflicts before they become rework, delays or operational errors.</li>
-                <li>Pipeline: PDF ingestion, numbered-clause extraction, retrieval of semantically similar clauses and rule-based inconsistency detection.</li>
-                <li>Inconsistency types: deadlines, responsibilities, measurement criteria and technical standards.</li>
+                <li>Context: public reproduction of a document-governance problem in an engineering environment.</li>
+                <li>Delivery: document comparison, semantic retrieval of related clauses and support for inconsistency review.</li>
+                <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn, Streamlit and Plotly.</li>
                 <li>Technical highlight: document governance, document-to-document comparison, semantic retrieval and Human-in-the-Loop review.</li>
               </ul>
               <div class="card-actions">
@@ -292,10 +288,9 @@
                 prompting and human review.
               </p>
               <ul>
-                <li>Business problem: technical texts arrive with abbreviations, spelling noise and naming variations, but the system still needs to recover the canonical tag correctly.</li>
-                <li>Approaches compared: regex/dictionary, RapidFuzz for lexical retrieval and LangChain few-shot with TF-IDF plus cosine similarity and an optional external-LLM path.</li>
-                <li>Benchmark: 300 evaluated examples, with a clear gain when moving from rigid rules to contextual approaches.</li>
-                <li>Results: regex with F1 = 0.4628, fuzzy with F1 = 0.7465 and langchain_llm with F1 = 0.9639 and exact match = 0.9083.</li>
+                <li>Context: public reproduction of a technical extraction problem similar to work I developed at EVCOMX for Petrobras.</li>
+                <li>Delivery: comparison between rule-based, fuzzy-matching and LLM-based approaches with human validation.</li>
+                <li>Stack: Python, pandas, scikit-learn, RapidFuzz, LangChain, Streamlit and Plotly.</li>
                 <li>Technical highlight: safe evolution from regex to LLMs, the role of fuzzy matching and the design of human validation for continuous improvement.</li>
               </ul>
               <div class="card-actions">
@@ -321,9 +316,9 @@
                 management and registration actions.
               </p>
               <ul>
-                <li>Problem: understand where there is a higher concentration of extreme poverty, outdated registrations and more vulnerable households.</li>
-                <li>Data: municipality-level synthetic sample calibrated around the public analytical variables of CadÚnico.</li>
-                <li>Technique: vulnerability score combining income, update status, informal work, sanitation, disability and household composition.</li>
+                <li>Context: analytical reading of social microdata to support territorial prioritization and registration actions.</li>
+                <li>Delivery: vulnerability indicators, household profile views and territorial support for social management.</li>
+                <li>Stack: Python, pandas, numpy, Streamlit and Plotly.</li>
                 <li>Technical highlight: social-indicator construction, territorial prioritization and transformation of microdata into managerial insight.</li>
               </ul>
               <div class="card-actions">
@@ -349,9 +344,9 @@
                 of analysis I developed at MDS.
               </p>
               <ul>
-                <li>Problem: identify municipalities with higher relative dependence on each program and stronger managerial sensitivity.</li>
-                <li>Data: real Bolsa Família municipal data for Alagoas in 2023 and a synthetic BPC layer calibrated to the official Portal da Transparência schema.</li>
-                <li>Indicators: relative participation of each program, Bolsa Família/BPC ratio, BPC judicialization rate and social-pressure index.</li>
+                <li>Context: territorial comparison between social programs to support managerial reading and monitoring.</li>
+                <li>Delivery: comparative indicators and views for understanding social-spending composition and territorial sensitivity.</li>
+                <li>Stack: Python, pandas, numpy, Streamlit and Plotly.</li>
                 <li>Technical highlight: comparison of public policies, territorial-indicator design and rule-based logic in managerial dashboards.</li>
               </ul>
               <div class="card-actions">
@@ -376,9 +371,9 @@
                 connected to what I developed at MDS.
               </p>
               <ul>
-                <li>Problem: identify municipalities combining higher benefit weight with a higher share of court-granted benefits.</li>
-                <li>Data: synthetic base calibrated to the official BPC data dictionary and municipal territorial support from Alagoas.</li>
-                <li>Indicators: total BPC value, total benefits, judicialization rate, share in total value and concentration index.</li>
+                <li>Context: territorial BPC analysis focused on concentration and judicialization signals.</li>
+                <li>Delivery: dashboard for municipal reading of the benefit and prioritization of follow-up.</li>
+                <li>Stack: Python, pandas, Streamlit and Plotly.</li>
                 <li>Technical highlight: territorial analysis, schema-aligned synthetic datasets and prioritization for management and audit.</li>
               </ul>
               <div class="card-actions">
@@ -404,9 +399,9 @@
                 sense in the MDS context.
               </p>
               <ul>
-                <li>Problem: track transfers, compare municipalities and detect operational gaps that may require additional monitoring.</li>
-                <li>Data: real public dataset from Alagoas between 2004 and 2023, plus a synthetic monthly layer for payment versus withdrawal.</li>
-                <li>Data engineering: subcategory pivot, annual growth calculation and generation of an analytical operational layer.</li>
+                <li>Context: territorial monitoring of Bolsa Família with both social and operational views.</li>
+                <li>Delivery: municipal evolution dashboard supporting territorial comparison and operational monitoring.</li>
+                <li>Stack: Python, PySpark, pandas, scikit-learn, Streamlit and Plotly.</li>
                 <li>Technical highlight: combined use of analytical engineering, public-policy context, exploratory machine learning and operational monitoring.</li>
               </ul>
               <div class="card-actions">
@@ -432,10 +427,9 @@
                 capacity of a linear model with temporal feature engineering.
               </p>
               <ul>
-                <li>Context: aligned with my internship at the Presidency, connecting public-data analysis, health topics and applied quantitative modeling.</li>
-                <li>Data source: official SIVEP-Gripe / SRAG microdata published in the SUS open-data portal.</li>
-                <li>Pipeline: filtering COVID-19 death cases, national daily aggregation, full 2024 calendar reindexing and target-series construction with a 7-day moving average.</li>
-                <li>Metrics: R² = 0.9420, MAE = 0.4576 and RMSE = 0.5639.</li>
+                <li>Context: project connected to my internship at the Presidency, combining public data, health and applied quantitative modeling.</li>
+                <li>Delivery: transformation of official microdata into a daily time series for trend modeling.</li>
+                <li>Stack: Python, pandas, numpy, scikit-learn, matplotlib and joblib.</li>
                 <li>Technical highlight: transformation of public microdata into a usable time series, use of linear regression as a baseline and interpretable evaluation.</li>
               </ul>
               <div class="card-actions">
@@ -533,8 +527,9 @@
                 assistant layer grounded on retrieved evidence.
               </p>
               <ul>
-                <li>Problem: evaluate retrieval in a practical and explainable way, showing how a query retrieves the right documents and how to measure that quality.</li>
-                <li>Architecture: SearchAssistant for ingestion, retrieval and response; TfidfEncoder for vectorization; SearchIndex for vector indexing; RecallEvaluator for evaluation; and app.py for the visual demo.</li>
+                <li>Context: project created to explore retrieval in a practical and explainable way.</li>
+                <li>Delivery: search application with ingestion, indexing, retrieval and result visualization.</li>
+                <li>Stack: Python, scikit-learn, TF-IDF, FAISS, cosine similarity, Tkinter and unittest.</li>
                 <li>Technical highlight: TF-IDF before dense embeddings, optional-dependency fallback design, retrieval evaluation and traceable ranking explanation.</li>
               </ul>
               <div class="card-actions">
@@ -555,8 +550,9 @@
                 evaluation metrics.
               </p>
               <ul>
-                <li>Problem: transform release context and PRs into short, coherent and traceable notes with objective validation criteria.</li>
-                <li>Architecture: modular pipeline with JSON loading and validation, TF-IDF vectorization, cosine-similarity retriever with topic boosting, text generation and evaluation layer.</li>
+                <li>Context: NLP project for organizing release context and pull requests into a product-oriented flow.</li>
+                <li>Delivery: assisted release-note generation with similarity-based retrieval and topic heuristics.</li>
+                <li>Stack: Python, scikit-learn, TF-IDF, cosine similarity, Tkinter, JSON and unittest.</li>
                 <li>Technical highlight: NLP pipeline design for product use, explainable retrieval, domain-guided heuristics and reproducible evaluation.</li>
               </ul>
               <div class="card-actions">
@@ -576,8 +572,9 @@
                 under a custom domain.
               </p>
               <ul>
-                <li>Problem: transform a fragmented presence into an authorial website that presents projects and professional trajectory more clearly.</li>
-                <li>Approach: iterative build with Codex, using a vibe-coding dynamic to accelerate design, content, UX adjustments, editorial review and publishing.</li>
+                <li>Context: personal project to consolidate my professional presence under a custom domain.</li>
+                <li>Delivery: bilingual website with home, portfolio, curated content and production deployment.</li>
+                <li>Stack: HTML, CSS, JavaScript, GitHub, Vercel and custom domain.</li>
                 <li>Technical highlight: assistive AI used to accelerate front-end development, content structuring and the path from idea to publication.</li>
               </ul>
               <div class="card-actions">
@@ -597,8 +594,9 @@
                 text pipeline, neural network and submission-file generation.
               </p>
               <ul>
-                <li>Problem: automatically identify fake news from title, content and tags, with F1-oriented evaluation.</li>
-                <li>Architecture: PyTorch embedding, GRU recurrent layer, sigmoid output for binary classification and training with BCELoss and Adam.</li>
+                <li>Context: text-classification experiment with deep learning in a fake-news scenario.</li>
+                <li>Delivery: binary classification notebook with text pipeline, PyTorch training and submission generation.</li>
+                <li>Stack: Python, pandas, PyTorch, scikit-learn and Colab.</li>
                 <li>Technical highlight: classic NLP with deep learning, bag-of-words versus embeddings, GRU choice for text sequences and small-dataset limitations.</li>
               </ul>
               <div class="card-actions">
@@ -618,8 +616,9 @@
                 with the Model Context Protocol.
               </p>
               <ul>
-                <li>Problem: make policies, runbooks and standards consultable in a structured and secure way without exposing raw file access.</li>
-                <li>Architecture: DocumentStore for markdown reading, BM25Okapi indexing and FastMCP server exposing resource, tools and prompt through stdio.</li>
+                <li>Context: project designed to turn local documentation into an interface consumable by MCP clients.</li>
+                <li>Delivery: read-only server with catalog, search and document retrieval over markdown files.</li>
+                <li>Stack: Python, FastMCP, Model Context Protocol, rank-bm25 and markdown.</li>
                 <li>Technical highlight: MCP server structure, BM25 for internal documentation and transformation of static knowledge into an interface consumable by agents.</li>
               </ul>
               <div class="card-actions">
@@ -639,8 +638,9 @@
                 analytical querying to MCP-compatible clients.
               </p>
               <ul>
-                <li>Problem: allow assistants and agents to consult analytics data in a controlled way without unrestricted database access.</li>
-                <li>Architecture: MCP server exposing useful SQL-analytics operations in a format consumable by MCP clients.</li>
+                <li>Context: project focused on structured data exploration by agents in a controlled environment.</li>
+                <li>Delivery: MCP server exposing SQL analytics tools for table and schema exploration.</li>
+                <li>Stack: Python, MCP and SQL analytics tooling.</li>
                 <li>Technical highlight: design of analytics tools for agents, reduced access surface and governance-oriented MCP operations.</li>
               </ul>
               <div class="card-actions">
