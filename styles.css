@@ -298,6 +298,18 @@ a {
   color: #8bc6ff;
 }
 
+.brand-crewai {
+  color: #ffe08a;
+}
+
+.brand-n8n {
+  color: #ff9b7a;
+}
+
+.brand-mcp {
+  color: #d3d8ff;
+}
+
 .brand-anthropic {
   color: #f2c89a;
 }
@@ -310,12 +322,32 @@ a {
   color: #ffb780;
 }
 
+.brand-gemini {
+  color: #9dc0ff;
+}
+
+.brand-pydanticai {
+  color: #b0ffd2;
+}
+
 .brand-kiro {
   color: #b592ff;
 }
 
 .brand-antigravity {
   color: #ffd36d;
+}
+
+.brand-gcp {
+  color: #87b9ff;
+}
+
+.brand-vertexai {
+  color: #9cb6ff;
+}
+
+.brand-kubeflow {
+  color: #80ccff;
 }
 
 .brand-azure {
@@ -340,6 +372,46 @@ a {
 
 .brand-oracle {
   color: #ff5f5f;
+}
+
+.brand-fastapi {
+  color: #85f0d0;
+}
+
+.brand-flask {
+  color: #e8e2d8;
+}
+
+.brand-streamlit {
+  color: #ff7a70;
+}
+
+.brand-pytorch {
+  color: #ff8c62;
+}
+
+.brand-tensorflow {
+  color: #ffb15a;
+}
+
+.brand-xgboost {
+  color: #9de296;
+}
+
+.brand-ocr {
+  color: #f5d28b;
+}
+
+.brand-prometheus {
+  color: #ff9a63;
+}
+
+.brand-grafana {
+  color: #ffb86b;
+}
+
+.brand-uipath {
+  color: #f7c86f;
 }
 
 @keyframes marquee-scroll {
