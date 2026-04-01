@@ -326,6 +326,10 @@ a {
   color: #ff6b57;
 }
 
+.brand-metaflow {
+  color: #90f0b6;
+}
+
 .brand-spark {
   color: #ffa155;
 }
@@ -567,6 +571,75 @@ h3 {
   object-position: center;
   padding: 10px;
   background: rgba(255, 255, 255, 0.015);
+}
+
+.section-note {
+  max-width: 720px;
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.compact-heading {
+  margin-top: 44px;
+}
+
+.cluster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 18px;
+}
+
+.cluster-card {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: var(--shadow);
+}
+
+.cluster-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.cluster-card > p {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.mini-project-list {
+  display: grid;
+  gap: 16px;
+}
+
+.mini-project {
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mini-project:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.mini-project h5 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.mini-project p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.94rem;
+}
+
+.mini-project a {
+  color: var(--text);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .proof-grid {
@@ -848,6 +921,7 @@ h3 {
   .capability-grid,
   .links-grid,
   .case-grid,
+  .cluster-grid,
   .interview-grid,
   .publication-list,
   .experience-grid,
