@@ -49,29 +49,48 @@
             <p class="eyebrow">Agendamento</p>
             <h1>Agende uma conversa comigo</h1>
             <p class="lead">
-              Escolha o tipo de reunião que faz mais sentido para o seu contexto.
+              Escolha o formato da conversa e marque um horário na agenda.
             </p>
           </div>
 
           <div class="portfolio-statboard">
             <div>
-              <strong>15 minutos</strong>
-              <span>Contato inicial, triagem e alinhamento rápido</span>
+              <strong>Conversa rápida</strong>
+              <span>Primeiros contatos, alinhamento inicial e conversas objetivas</span>
             </div>
             <div>
-              <strong>30 minutos</strong>
-              <span>Conversa mais completa sobre oportunidades e projetos</span>
+              <strong>Conversa longa</strong>
+              <span>Entrevistas técnicas, discussões aprofundadas e etapas com mais detalhe</span>
             </div>
             <div>
-              <strong>Google Meet</strong>
-              <span>Reuniões online com agenda organizada pelo Cal.com</span>
+              <strong>Formato flexível</strong>
+              <span>Ligação, Teams, Google Meet ou outra plataforma combinada</span>
             </div>
           </div>
         </section>
 
         <section class="section reveal">
-          <div class="case-grid agenda-grid">
-            <article class="case-card">
+          <div class="booking-switch" role="tablist" aria-label="Tipo de conversa">
+            <button
+              class="booking-tab is-active"
+              type="button"
+              data-booking-target="quick"
+              aria-selected="true"
+            >
+              Conversa rápida
+            </button>
+            <button
+              class="booking-tab"
+              type="button"
+              data-booking-target="long"
+              aria-selected="false"
+            >
+              Conversa longa
+            </button>
+          </div>
+
+          <div class="booking-panel is-active" id="booking-quick">
+            <article class="case-card booking-card">
               <h3>Conversa rápida</h3>
               <p>
                 Opção para um primeiro contato, alinhamento inicial e conversa
@@ -82,19 +101,29 @@
                 <li>Formato: ligação, Teams, Google Meet ou outra plataforma combinada</li>
                 <li>Indicado para: primeiros contatos, alinhamento inicial e conversas objetivas</li>
               </ul>
+              <div class="booking-embed">
+                <iframe
+                  title="Agendamento de conversa rápida"
+                  src="https://cal.com/flavia-gaia/15min?embed=true"
+                  loading="lazy"
+                  frameborder="0"
+                ></iframe>
+              </div>
               <div class="card-actions">
                 <a
-                  class="button button-primary"
+                  class="button button-secondary"
                   href="https://cal.com/flavia-gaia/15min"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Agendar conversa rápida
+                  Abrir em nova aba
                 </a>
               </div>
             </article>
+          </div>
 
-            <article class="case-card">
+          <div class="booking-panel" id="booking-long">
+            <article class="case-card booking-card">
               <h3>Conversa longa</h3>
               <p>
                 Espaço para uma conversa técnica mais aprofundada sobre
@@ -105,14 +134,22 @@
                 <li>Formato: ligação, Teams, Google Meet ou outra plataforma combinada</li>
                 <li>Indicado para: entrevistas técnicas, conversas aprofundadas e etapas com mais detalhe</li>
               </ul>
+              <div class="booking-embed">
+                <iframe
+                  title="Agendamento de conversa longa"
+                  src="https://cal.com/flavia-gaia/conversalonga?embed=true"
+                  loading="lazy"
+                  frameborder="0"
+                ></iframe>
+              </div>
               <div class="card-actions">
                 <a
-                  class="button button-primary"
+                  class="button button-secondary"
                   href="https://cal.com/flavia-gaia/conversalonga"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Agendar conversa longa
+                  Abrir em nova aba
                 </a>
               </div>
             </article>
@@ -122,5 +159,25 @@
     </div>
 
     <script src="./script.js"></script>
+    <script>
+      const bookingTabs = document.querySelectorAll(".booking-tab");
+      const bookingPanels = document.querySelectorAll(".booking-panel");
+
+      bookingTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = tab.dataset.bookingTarget;
+
+          bookingTabs.forEach((button) => {
+            const active = button === tab;
+            button.classList.toggle("is-active", active);
+            button.setAttribute("aria-selected", active ? "true" : "false");
+          });
+
+          bookingPanels.forEach((panel) => {
+            panel.classList.toggle("is-active", panel.id === `booking-${target}`);
+          });
+        });
+      });
+    </script>
   </body>
 </html>

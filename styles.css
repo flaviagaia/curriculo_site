@@ -646,6 +646,62 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.booking-switch {
+  display: inline-flex;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  margin-bottom: 28px;
+}
+
+.booking-tab {
+  min-height: 46px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.booking-tab.is-active {
+  background: var(--accent);
+  color: #191513;
+}
+
+.booking-panel {
+  display: none;
+}
+
+.booking-panel.is-active {
+  display: block;
+}
+
+.booking-card {
+  padding-bottom: 22px;
+}
+
+.booking-embed {
+  margin-top: 26px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  min-height: 760px;
+}
+
+.booking-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 760px;
+  border: 0;
+  background: #fff;
+}
+
 .page-portfolio .project-proof {
   aspect-ratio: 16 / 8;
   margin-bottom: 26px;
@@ -1028,6 +1084,13 @@ h3 {
 
   .proof-grid {
     grid-template-columns: 1fr;
+  }
+
+  .booking-switch {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 26px;
   }
 }
 

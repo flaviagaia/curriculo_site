@@ -49,29 +49,48 @@
             <p class="eyebrow">Booking</p>
             <h1>Book a conversation with me</h1>
             <p class="lead">
-              Choose the meeting format that best matches your context.
+              Choose the conversation format and pick a time in the calendar.
             </p>
           </div>
 
           <div class="portfolio-statboard">
             <div>
-              <strong>15 minutes</strong>
-              <span>Quick first contact and initial alignment</span>
+              <strong>Quick conversation</strong>
+              <span>First touchpoints, initial alignment and focused conversations</span>
             </div>
             <div>
-              <strong>30 minutes</strong>
-              <span>Longer conversation about opportunities and projects</span>
+              <strong>Long conversation</strong>
+              <span>Technical interviews, deeper discussions and more detailed stages</span>
             </div>
             <div>
-              <strong>Google Meet</strong>
-              <span>Online meetings scheduled through Cal.com</span>
+              <strong>Flexible format</strong>
+              <span>Phone call, Teams, Google Meet or another agreed platform</span>
             </div>
           </div>
         </section>
 
         <section class="section reveal">
-          <div class="case-grid agenda-grid">
-            <article class="case-card">
+          <div class="booking-switch" role="tablist" aria-label="Conversation type">
+            <button
+              class="booking-tab is-active"
+              type="button"
+              data-booking-target="quick"
+              aria-selected="true"
+            >
+              Quick conversation
+            </button>
+            <button
+              class="booking-tab"
+              type="button"
+              data-booking-target="long"
+              aria-selected="false"
+            >
+              Long conversation
+            </button>
+          </div>
+
+          <div class="booking-panel is-active" id="booking-quick">
+            <article class="case-card booking-card">
               <h3>Quick conversation</h3>
               <p>
                 An option for a first contact, initial alignment and a focused
@@ -82,37 +101,55 @@
                 <li>Format: phone call, Teams, Google Meet or another agreed platform</li>
                 <li>Best for: first touchpoints, initial alignment and focused conversations</li>
               </ul>
+              <div class="booking-embed">
+                <iframe
+                  title="Quick conversation booking"
+                  src="https://cal.com/flavia-gaia/15min?embed=true"
+                  loading="lazy"
+                  frameborder="0"
+                ></iframe>
+              </div>
               <div class="card-actions">
                 <a
-                  class="button button-primary"
+                  class="button button-secondary"
                   href="https://cal.com/flavia-gaia/15min"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Book quick conversation
+                  Open in new tab
                 </a>
               </div>
             </article>
+          </div>
 
-            <article class="case-card">
+          <div class="booking-panel" id="booking-long">
+            <article class="case-card booking-card">
               <h3>Long conversation</h3>
               <p>
-                A longer slot for a deeper technical conversation about
-                projects, experience, architecture, decisions and role context.
+                A deeper technical conversation about projects, experience,
+                architecture, decisions and role context.
               </p>
               <ul>
                 <li>Duration: variable, depending on the interview format</li>
                 <li>Format: phone call, Teams, Google Meet or another agreed platform</li>
                 <li>Best for: technical interviews, deeper conversations and later-stage discussions</li>
               </ul>
+              <div class="booking-embed">
+                <iframe
+                  title="Long conversation booking"
+                  src="https://cal.com/flavia-gaia/conversalonga?embed=true"
+                  loading="lazy"
+                  frameborder="0"
+                ></iframe>
+              </div>
               <div class="card-actions">
                 <a
-                  class="button button-primary"
+                  class="button button-secondary"
                   href="https://cal.com/flavia-gaia/conversalonga"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Book long conversation
+                  Open in new tab
                 </a>
               </div>
             </article>
@@ -122,5 +159,25 @@
     </div>
 
     <script src="./script.js"></script>
+    <script>
+      const bookingTabs = document.querySelectorAll(".booking-tab");
+      const bookingPanels = document.querySelectorAll(".booking-panel");
+
+      bookingTabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = tab.dataset.bookingTarget;
+
+          bookingTabs.forEach((button) => {
+            const active = button === tab;
+            button.classList.toggle("is-active", active);
+            button.setAttribute("aria-selected", active ? "true" : "false");
+          });
+
+          bookingPanels.forEach((panel) => {
+            panel.classList.toggle("is-active", panel.id === `booking-${target}`);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
