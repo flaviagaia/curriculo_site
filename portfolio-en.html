@@ -34,6 +34,7 @@
           <nav id="site-nav" class="site-nav">
             <a href="./index-en.html">Home</a>
             <a href="./portfolio-en.html">Portfolio</a>
+            <a href="./agenda-en.html">Book</a>
           </nav>
           <div class="lang-switch" aria-label="Language switcher">
             <a class="lang-link" href="./portfolio.html">PT</a>
@@ -65,6 +66,9 @@
               <strong>Projects</strong>
               <span>Corporate, public and authorial work</span>
             </div>
+          </div>
+          <div class="portfolio-cta">
+            <a class="button button-primary" href="./agenda-en.html">Book a conversation</a>
           </div>
         </section>
 
@@ -487,13 +491,16 @@
 
         <section id="frentes-continuacao" class="section reveal">
           <div class="section-heading">
-            <p class="eyebrow">Authorial Projects</p>
-            <h2>Independent projects I built to explore architecture, applied AI and product thinking</h2>
+            <p class="eyebrow">More projects</p>
+            <h2>Explorations in architecture, applied AI and product thinking</h2>
+            <p class="section-note">
+              Some projects stay in full-detail cards, while the rest are
+              grouped by theme to keep the portfolio easier to scan.
+            </p>
           </div>
 
           <div class="case-grid">
             <article class="case-card">
-              <span class="card-index">Personal project</span>
               <img class="project-proof" src="./search-performance-interface.jpg" alt="Search Performance Assistant interface" />
               <h3>Search Performance Assistant for retrieval evaluation</h3>
               <p>
@@ -515,7 +522,6 @@
             </article>
 
             <article class="case-card">
-              <span class="card-index">Personal project</span>
               <img class="project-proof" src="./release-notes-interface.jpg" alt="Release Notes Generation Assistant interface" />
               <h3>Release Notes Generation Assistant with retrieval and automatic evaluation</h3>
               <p>
@@ -538,7 +544,6 @@
             </article>
 
             <article class="case-card">
-              <span class="card-index">Personal project</span>
               <img class="project-proof" src="./curriculo-site-interface.png" alt="Curriculo Site interface" />
               <h3>Curriculo Site published with Codex and vibe coding</h3>
               <p>
@@ -560,7 +565,6 @@
             </article>
 
             <article class="case-card">
-              <span class="card-index">Personal project</span>
               <img class="project-proof" src="./fakenews-project-visual.svg" alt="Fake News Detection visual cover" />
               <h3>Fake News Detection with PyTorch and GRU</h3>
               <p>
@@ -582,7 +586,6 @@
             </article>
 
             <article class="case-card">
-              <span class="card-index">Personal project</span>
               <img class="project-proof" src="./mcp-docs-assistant-visual.svg" alt="MCP Docs Assistant visual cover" />
               <h3>MCP Docs Assistant with FastMCP and BM25 search over local documentation</h3>
               <p>
@@ -604,7 +607,6 @@
             </article>
 
             <article class="case-card">
-              <span class="card-index">Personal project</span>
               <img class="project-proof" src="./mcp-sql-analytics-visual.svg" alt="MCP SQL Analytics Server visual cover" />
               <h3>MCP SQL Analytics Server for structured data exploration</h3>
               <p>
@@ -622,6 +624,103 @@
                 <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-sql-analytics-server" target="_blank" rel="noreferrer">
                   View on GitHub
                 </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-heading compact-heading">
+            <p class="eyebrow">Selected catalog</p>
+            <h3>Additional GitHub projects grouped by theme</h3>
+          </div>
+
+          <div class="cluster-grid">
+            <article class="cluster-card">
+              <h4>Agents, automation and workflows</h4>
+              <p>
+                Projects centered on agents, task routing, automation and
+                workflow orchestration with AI.
+              </p>
+              <div class="mini-project-list">
+                <div class="mini-project">
+                  <h5>AI Support Triage with HITL</h5>
+                  <p>Support triage workflow with human-in-the-loop approval, knowledge retrieval and automated routing.</p>
+                  <a href="https://github.com/flaviagaia/ai-support-triage-with-hitl" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Candidate Screening Workflow n8n</h5>
+                  <p>Candidate-screening workflow combining automation steps, integrations and evaluation logic.</p>
+                  <a href="https://github.com/flaviagaia/candidate-screening-workflow-n8n" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Learning Path Agents</h5>
+                  <p>Agents designed to structure and recommend learning paths based on goals and context.</p>
+                  <a href="https://github.com/flaviagaia/learning-path-agents" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Market Intelligence CrewAI</h5>
+                  <p>Multi-agent structure for collection, synthesis and support in market-intelligence scenarios.</p>
+                  <a href="https://github.com/flaviagaia/market-intelligence-crewai" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Credit Contestation Agent</h5>
+                  <p>Agent focused on supporting credit-information contestation with structured answer generation.</p>
+                  <a href="https://github.com/flaviagaia/agente_contestacao_credito" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Credit Monitoring Agent</h5>
+                  <p>Workflow for monitoring, alerts and follow-up around credit-related signals.</p>
+                  <a href="https://github.com/flaviagaia/agente_monitorimento_credito" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cluster-card">
+              <h4>OCR, documents and legal flows</h4>
+              <p>
+                Solutions focused on document reading, structured extraction
+                and workflows built around unstructured information.
+              </p>
+              <div class="mini-project-list">
+                <div class="mini-project">
+                  <h5>Document Auto Fill OCR</h5>
+                  <p>Pipeline for OCR-based field extraction and document auto-fill support.</p>
+                  <a href="https://github.com/flaviagaia/document-auto-fill-ocr" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Processo Judicial OCR</h5>
+                  <p>OCR exploration over legal documents for more structured and operational reading.</p>
+                  <a href="https://github.com/flaviagaia/processo-judicial-ocr" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Judicial Settlement MVP</h5>
+                  <p>MVP aimed at supporting decisions in legal contexts through structured information flow.</p>
+                  <a href="https://github.com/flaviagaia/judicial-settlement-mvp" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cluster-card">
+              <h4>Observability, incidents and graphs</h4>
+              <p>
+                Projects focused on operational reliability, monitoring and
+                more specialized analytical scenarios.
+              </p>
+              <div class="mini-project-list">
+                <div class="mini-project">
+                  <h5>ML Model Serving Observability</h5>
+                  <p>Stack for monitoring model serving with metrics, dashboards and operational visibility.</p>
+                  <a href="https://github.com/flaviagaia/ml-model-serving-observability" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>LLM Severidade de Incidentes</h5>
+                  <p>Incident-severity classification flow supported by LLM-based analysis.</p>
+                  <a href="https://github.com/flaviagaia/LLM-severidade-de-incidentes" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Deep Graph Matching Consensus</h5>
+                  <p>Graph matching and consensus experiment with a more research-oriented analytical angle.</p>
+                  <a href="https://github.com/flaviagaia/deep-graph-matching-consensus" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
               </div>
             </article>
           </div>

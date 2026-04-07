@@ -488,6 +488,7 @@ h3 {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 30px;
+  align-items: center;
 }
 
 .card-actions {
@@ -635,6 +636,14 @@ h3 {
 
 .page-portfolio .case-card {
   padding: 34px 36px;
+}
+
+.portfolio-cta {
+  margin-top: 22px;
+}
+
+.page-portfolio .agenda-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .page-portfolio .project-proof {
@@ -997,6 +1006,7 @@ h3 {
   .capability-grid,
   .links-grid,
   .case-grid,
+  .agenda-grid,
   .cluster-grid,
   .interview-grid,
   .publication-list,

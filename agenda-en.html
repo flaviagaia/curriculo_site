@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a conversation | Flávia Gaia</title>
+    <meta
+      name="description"
+      content="Meeting booking page for conversations with Flávia Gaia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="page-portfolio">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index-en.html">
+          <span class="brand-mark"></span>
+          <span>Flávia Gaia</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="header-actions">
+          <nav id="site-nav" class="site-nav">
+            <a href="./index-en.html">Home</a>
+            <a href="./portfolio-en.html">Portfolio</a>
+            <a href="./agenda-en.html">Book</a>
+          </nav>
+          <div class="lang-switch" aria-label="Language switcher">
+            <a class="lang-link" href="./agenda.html">PT</a>
+            <a class="lang-link is-active" href="./agenda-en.html">EN</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="portfolio-hero reveal">
+          <div class="portfolio-intro">
+            <p class="eyebrow">Booking</p>
+            <h1>Book a conversation with me</h1>
+            <p class="lead">
+              Choose the meeting format that best matches your context.
+            </p>
+          </div>
+
+          <div class="portfolio-statboard">
+            <div>
+              <strong>15 minutes</strong>
+              <span>Quick first contact and initial alignment</span>
+            </div>
+            <div>
+              <strong>30 minutes</strong>
+              <span>Longer conversation about opportunities and projects</span>
+            </div>
+            <div>
+              <strong>Google Meet</strong>
+              <span>Online meetings scheduled through Cal.com</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="case-grid agenda-grid">
+            <article class="case-card">
+              <h3>Quick conversation</h3>
+              <p>
+                A 15-minute slot for a first contact, quick alignment and
+                initial context sharing.
+              </p>
+              <ul>
+                <li>Duration: 15 minutes</li>
+                <li>Format: Google Meet</li>
+                <li>Best for: screening, networking and first touchpoints</li>
+              </ul>
+              <div class="card-actions">
+                <a
+                  class="button button-primary"
+                  href="https://cal.com/flavia-gaia/15min"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Book 15 min
+                </a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <h3>Long conversation</h3>
+              <p>
+                A 30-minute slot for a deeper conversation about opportunities,
+                projects and professional context.
+              </p>
+              <ul>
+                <li>Duration: 30 minutes</li>
+                <li>Format: Google Meet</li>
+                <li>Best for: recruiting, interviews and more complete conversations</li>
+              </ul>
+              <div class="card-actions">
+                <a
+                  class="button button-primary"
+                  href="https://cal.com/flavia-gaia/conversalonga"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Book 30 min
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
