@@ -6,7 +6,7 @@
     <title>Technical Portfolio | Flávia Gaia</title>
     <meta
       name="description"
-      content="Technical portfolio of Flávia Gaia with projects, deliveries and professional trajectory."
+      content="Technical portfolio of Flávia Gaia with projects, deliveries and applied solutions."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,7 +36,7 @@
             <a href="./portfolio-en.html">Portfolio</a>
             <a href="./agenda-en.html">Book</a>
           </nav>
-          <div class="lang-switch" aria-label="Language switcher">
+          <div class="lang-switch" aria-label="Language switch">
             <a class="lang-link" href="./portfolio.html">PT</a>
             <a class="lang-link is-active" href="./portfolio-en.html">EN</a>
           </div>
@@ -46,680 +46,563 @@
       <main>
         <section class="portfolio-hero reveal">
           <div class="portfolio-intro">
-            <p class="eyebrow">Technical Portfolio</p>
-            <h1>Projects developed throughout my career</h1>
+            <p class="eyebrow">Technical portfolio</p>
+            <h1>Projects organized by solution type, stack and technical focus</h1>
             <p class="lead">
-              This page brings together projects, deliveries and workstreams from both corporate and authorial contexts.
+              Instead of stacking everything at the same level, this page is organized
+              into four main fronts with highlighted cases and a supporting catalog.
             </p>
           </div>
 
           <div class="portfolio-statboard">
             <div>
-              <strong>Applied AI</strong>
-              <span>LLMs, RAG, agents, evaluation and automation</span>
+              <strong>Data and analytics</strong>
+              <span>PySpark, Databricks, quality, tabular ML and dashboards</span>
             </div>
             <div>
-              <strong>Data</strong>
-              <span>Python, Databricks, pipelines, search and retrieval</span>
+              <strong>Documents and NLP</strong>
+              <span>OCR, PDFs, text classification and document consistency</span>
             </div>
             <div>
-              <strong>Projects</strong>
-              <span>Corporate, public and authorial work</span>
+              <strong>RAG, agents and platform</strong>
+              <span>Search, assistants, MCP, automation and observability</span>
             </div>
           </div>
+
           <div class="portfolio-cta">
-            <a class="button button-primary" href="./agenda-en.html">Book a conversation</a>
+            <a class="button button-primary" href="./agenda-en.html">Schedule a conversation</a>
           </div>
         </section>
 
-        <section id="frentes" class="section reveal">
+        <section class="section reveal portfolio-map">
           <div class="section-heading">
-            <p class="eyebrow">Portfolio</p>
-            <h2>Projects organized by themes and solution types</h2>
+            <p class="eyebrow">Portfolio map</p>
+            <h2>Choose the area that best fits the conversation</h2>
+          </div>
+
+          <div class="portfolio-map-grid">
+            <a class="map-chip" href="#analytics">Data, audit and analytics</a>
+            <a class="map-chip" href="#documents">Documents, NLP and OCR</a>
+            <a class="map-chip" href="#rag">Search, RAG and assistants</a>
+            <a class="map-chip" href="#agents">Agents, automation and platform</a>
+          </div>
+        </section>
+
+        <section id="analytics" class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Data, audit and analytics</p>
+            <h2>Quality, operational analytics, tabular machine learning and analytical indicators</h2>
+            <p class="section-note">
+              This front groups PySpark, Databricks, operational analytics, inconsistency detection,
+              territorial analysis and tabular ML work.
+            </p>
           </div>
 
           <div class="case-grid">
             <article class="case-card">
               <div class="proof-grid">
-                <img
-                  class="project-proof"
-                  src="fnde-dashboard-gemini.png"
-                  alt="Fictional dashboard interface for invoice audit"
-                />
-                <img
-                  class="project-proof"
-                  src="fnde-dashboard-gemini-2.png"
-                  alt="Second fictional dashboard interface for invoice audit"
-                />
+                <img class="project-proof" src="invoice-dashboard-redacted-1.png" alt="Synthetic invoice audit dashboard screen" />
+                <img class="project-proof" src="invoice-dashboard-redacted-2.png" alt="Synthetic invoice audit dashboard screen" />
               </div>
-              <h3>Invoice auditing with PySpark, Databricks, Genie and Power BI</h3>
+              <h3>Invoice audit with PySpark, Databricks and Genie</h3>
               <p>
-                Structured tables and PySpark queries in Databricks notebooks
-                to investigate transaction issues that affected invoice
-                analysis. Later, I used Genie to speed up the path from
-                analytical output to a Power BI dashboard with automated
-                refresh and support for operational reading.
+                Analytical tables and PySpark queries built in Databricks notebooks to investigate
+                transaction issues affecting invoice analysis.
               </p>
               <ul>
-                <li>Context: large-scale data environment with many filters and reconciliation checks.</li>
-                <li>Delivery: analytical tables, PySpark queries and a dashboard organized by inconsistency type.</li>
-                <li>Stack: PySpark, Databricks notebooks, analytical table modeling, Genie and Power BI.</li>
-                <li>Technical highlight: analytical engineering in big data, data quality, automation and integration between technical and executive visualization layers.</li>
+                <li>Goal: structure a reliable view of inconsistencies in high-volume data.</li>
+                <li>Delivery: analytical tables, PySpark queries and views by inconsistency type.</li>
+                <li>Stack: PySpark, Databricks notebooks, analytical modeling, Genie and dashboard layer.</li>
+                <li>Technical highlight: big data analytics engineering, data quality and automated refresh.</li>
               </ul>
             </article>
 
             <article class="case-card">
-              <h3>Bank transaction auditing with Random Forest</h3>
+              <h3>Bank transaction audit with Random Forest</h3>
               <p>
-                A machine learning project focused on prioritizing
-                inconsistencies and risk signals in transactional data to
-                support audit, analysis and decision-making.
+                Machine learning project focused on prioritizing inconsistencies and risk signals in
+                transactional data to support audit and analysis.
               </p>
               <ul>
-                <li>Context: public case built to represent analytical reasoning for audit and inconsistency prioritization.</li>
-                <li>Delivery: supervised classification of suspicious transactions with tabular preprocessing and risk-oriented analysis.</li>
+                <li>Goal: classify risk signals and prioritize transactions for review.</li>
+                <li>Delivery: supervised classification with tabular preparation and derived features.</li>
                 <li>Stack: Python, pandas, scikit-learn, matplotlib, pyarrow, joblib and unittest.</li>
-                <li>Technical highlight: supervised classification on tabular data, explainability and adaptation of a synthetic case to an audit context.</li>
+                <li>Technical highlight: supervised tabular ML and explainability for analytical support.</li>
               </ul>
               <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/bank-transaction-audit-random-forest" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <img
-                class="project-proof"
-                src="./rag-nlp-sql.jpg"
-                alt="Image of the RAG NLP SQL project"
-              />
-              <h3>RAG NLP SQL with LangChain, OpenAI and SQLite</h3>
-              <p>
-                A Python application built to answer natural-language questions
-                over a SQL database, combining semantic schema context
-                retrieval with SQL generation and execution by an agent.
-              </p>
-              <ul>
-                <li>Context: project aimed at analytical support and data exploration through a natural-language interface.</li>
-                <li>Delivery: natural-language interface over a relational database, combining semantic context and assisted SQL generation.</li>
-                <li>Stack: Python, LangChain, langchain-openai, langchain-community, SQLAlchemy, SQLite, Streamlit and BM25Retriever.</li>
-                <li>Technical highlight: using RAG outside the classic PDF scenario, reducing ambiguity in SQL generation and designing a more reliable NL2SQL interface.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/RAG_NLP_SQL" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+                <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/bank-transaction-audit-random-forest" target="_blank" rel="noreferrer">View on GitHub</a>
               </div>
             </article>
 
             <article class="case-card">
               <h3>Outlier Detection Lab for inconsistencies and anomalies</h3>
               <p>
-                An outlier and anomaly detection lab used here as a technical
-                reproduction for identifying extremes, unlikely combinations and signals that
-                deserve manual review in audit contexts.
+                Outlier and anomaly detection lab on large datasets to identify extremes, unlikely combinations
+                and cases worth manual review.
               </p>
               <ul>
-                <li>Context: public lab representing inconsistency and anomaly analysis in audit contexts.</li>
-                <li>Delivery: comparison of statistical and unsupervised approaches for prioritizing review in operational data.</li>
-                <li>Stack: Python, pandas, scikit-learn and robust statistical analysis.</li>
-                <li>Technical highlight: combining statistical methods and unsupervised models for auditing, prioritization and human review.</li>
+                <li>Goal: identify anomalies and extreme cases for review.</li>
+                <li>Delivery: comparison of statistical and unsupervised approaches.</li>
+                <li>Stack: Python, pandas, scikit-learn, robust statistics and unsupervised ML.</li>
+                <li>Technical highlight: combining statistical methods and unsupervised models for audit support.</li>
               </ul>
               <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/outlier-detection-lab" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+                <a class="button button-secondary" href="https://github.com/flaviagaia/outlier-detection-lab" target="_blank" rel="noreferrer">View on GitHub</a>
               </div>
             </article>
 
             <article class="case-card">
-              <div class="proof-grid">
-                <img
-                  class="project-proof"
-                  src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario1.jpg"
-                  alt="Payment calendar and monitoring screen"
-                />
-                <img
-                  class="project-proof"
-                  src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario2.jpg"
-                  alt="Alerts and audit screen"
-                />
-              </div>
-              <h3>Contract reading, payment calendar and AI-based escalation</h3>
+              <img class="project-proof" src="./perfil-cadunico.jpg" alt="CadUnico dashboard" />
+              <h3>CadÚnico profile analytics</h3>
               <p>
-                Development of a solution for reading contracts in PDF with
-                different layouts, extracting financial clauses, building the
-                expected payment calendar, monitoring divergences and supporting
-                audit in a flow oriented to financial reconciliation.
+                Project inspired by sampled public microdata to analyze income, registration status,
+                family vulnerability and territorial prioritization.
               </p>
               <ul>
-                <li>Context: operational flow oriented to reconciliation and financial monitoring from unstructured documents.</li>
-                <li>Delivery: contract reading, financial-clause extraction, expected payment calendar and divergence monitoring.</li>
-                <li>Stack: Python, regex, PDF processing, analytical architecture and audit-oriented automation.</li>
-                <li>Technical highlight: contract extraction, financial reconciliation, operational-flow automation and the use of AI for prioritization and escalation.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/calendario_pagamentos" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <img
-                class="project-proof project-proof-contain"
-                src="./tech-request-assistant.jpg"
-                alt="Image of the Technical Request Document Assistant project"
-              />
-              <h3>Technical Request Document Assistant</h3>
-              <p>
-                Python project that reproduces an integrated workflow for
-                reading technical requests, extracting structured PDF fields and
-                retrieving related reference documents in a single Streamlit
-                front-end.
-              </p>
-              <ul>
-                <li>Context: public reproduction of a document workflow connected to technical requests and reference consultation.</li>
-                <li>Delivery: structured PDF extraction and retrieval of support documents in a single front-end.</li>
-                <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn and Streamlit.</li>
-                <li>Technical highlight: structured PDF extraction, semantic retrieval, document-assistant design and integration of consultation with operational navigation.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/technical-request-document-assistant" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <img
-                class="project-proof"
-                src="./engineering-doc-consistency.jpg"
-                alt="Image of the Engineering Document Consistency AI project"
-              />
-              <h3>Engineering Document Consistency AI</h3>
-              <p>
-                Python project that reproduces a document-governance solution
-                for engineering documents, with clause extraction, semantic
-                search, inconsistency detection and human review in a
-                dashboard.
-              </p>
-              <ul>
-                <li>Context: public reproduction of a document-governance problem in an engineering environment.</li>
-                <li>Delivery: document comparison, semantic retrieval of related clauses and support for inconsistency review.</li>
-                <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn, Streamlit and Plotly.</li>
-                <li>Technical highlight: document governance, document-to-document comparison, semantic retrieval and Human-in-the-Loop review.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/engineering-document-consistency-ai" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <div class="proof-grid">
-                <img
-                  class="project-proof"
-                  src="./llm-tag-extraction-metrics.svg"
-                  alt="Metrics panel for the LLM Tag Extraction Lab project"
-                />
-                <img
-                  class="project-proof"
-                  src="./llm-tag-extraction-flow.svg"
-                  alt="Technical flow diagram for the LLM Tag Extraction Lab project"
-                />
-              </div>
-              <h3>LLM Tag Extraction Lab for technical extraction with human validation</h3>
-              <p>
-                Python project created to reproduce a type of technical-tag extraction problem from
-                noisy texts by comparing a rigid baseline with more robust
-                approaches based on fuzzy matching, LangChain, few-shot
-                prompting and human review.
-              </p>
-              <ul>
-                <li>Context: public reproduction of a technical extraction problem in noisy texts and documents.</li>
-                <li>Delivery: comparison between rule-based, fuzzy-matching and LLM-based approaches with human validation.</li>
-                <li>Stack: Python, pandas, scikit-learn, RapidFuzz, LangChain, Streamlit and Plotly.</li>
-                <li>Technical highlight: safe evolution from regex to LLMs, the role of fuzzy matching and the design of human validation for continuous improvement.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/llm-tag-extraction-lab" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <img
-                class="project-proof"
-                src="./perfil-cadunico.jpg"
-                alt="Dashboard of the CadÚnico profile project"
-              />
-              <h3>CadÚnico household profile analysis</h3>
-              <p>
-                Project inspired by de-identified CadÚnico sample microdata to
-                analyze income, registration status, household vulnerability
-                and territorial prioritization. It represents a strong example
-                of analytical reading for social management and registration actions.
-              </p>
-              <ul>
-                <li>Context: analytical reading of social microdata to support territorial prioritization and registration actions.</li>
-                <li>Delivery: vulnerability indicators, household profile views and territorial support for social management.</li>
+                <li>Goal: transform social microdata into territorial and managerial analysis.</li>
+                <li>Delivery: vulnerability indicators, profile views and territorial analytics.</li>
                 <li>Stack: Python, pandas, numpy, Streamlit and Plotly.</li>
-                <li>Technical highlight: social-indicator construction, territorial prioritization and transformation of microdata into managerial insight.</li>
+                <li>Technical highlight: social indicators and territorial prioritization.</li>
               </ul>
               <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/perfil-cadastral-CadUnico" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+                <a class="button button-secondary" href="https://github.com/flaviagaia/perfil-cadastral-CadUnico" target="_blank" rel="noreferrer">View on GitHub</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="cluster-grid">
+            <article class="cluster-card">
+              <h4>Social indicators and territorial analysis</h4>
+              <p>Dashboards and analyses built from public data for territorial reading and program comparison.</p>
+              <div class="mini-project-list">
+                <div class="mini-project">
+                  <h5>Bolsa Família vs BPC by territory</h5>
+                  <p>Territorial comparison to understand social spending composition and program dependency.</p>
+                  <a href="https://github.com/flaviagaia/bolsa_familia_vs_BPC" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>BPC judicialization and concentration map</h5>
+                  <p>Municipal view of benefit concentration and judicialization signals.</p>
+                  <a href="https://github.com/flaviagaia/mapa-de-judicializacao-e-concentracao-do-BPC" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Bolsa Família territorial evolution</h5>
+                  <p>Territorial follow-up combining social and operational views.</p>
+                  <a href="https://github.com/flaviagaia/bolsa-familia-territorial-analytics" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
               </div>
             </article>
 
-            <article class="case-card">
-              <img
-                class="project-proof project-proof-contain"
-                src="./bolsa-vs-bpc.jpg"
-                alt="Dashboard comparing Bolsa Família and BPC by territory"
-              />
-              <h3>Bolsa Família vs BPC by territory</h3>
-              <p>
-                Territorial comparison between Bolsa Família and BPC to
-                understand social-spending composition, relative program
-                dependence and judicialization signals, reproducing a
-                management-and-control reading for social programs.
-              </p>
-              <ul>
-                <li>Context: territorial comparison between social programs to support managerial reading and monitoring.</li>
-                <li>Delivery: comparative indicators and views for understanding social-spending composition and territorial sensitivity.</li>
-                <li>Stack: Python, pandas, numpy, Streamlit and Plotly.</li>
-                <li>Technical highlight: comparison of public policies, territorial-indicator design and rule-based logic in managerial dashboards.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/bolsa_familia_vs_BPC" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <img
-                class="project-proof"
-                src="./judicializacao-bpc.jpg"
-                alt="Dashboard of the BPC judicialization and concentration map"
-              />
-              <h3>BPC judicialization and concentration map</h3>
-              <p>
-                Territorial analysis of BPC focused on spending concentration,
-                municipal distribution and judicialization. The project reflects
-                a type of monitoring and social-control reasoning.
-              </p>
-              <ul>
-                <li>Context: territorial BPC analysis focused on concentration and judicialization signals.</li>
-                <li>Delivery: dashboard for municipal reading of the benefit and prioritization of follow-up.</li>
-                <li>Stack: Python, pandas, Streamlit and Plotly.</li>
-                <li>Technical highlight: territorial analysis, schema-aligned synthetic datasets and prioritization for management and audit.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/mapa-de-judicializacao-e-concentracao-do-BPC" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <img
-                class="project-proof"
-                src="./bolsafamilia-territorial.jpg"
-                alt="Territorial evolution dashboard for Bolsa Família"
-              />
-              <h3>Bolsa Família territorial evolution dashboard</h3>
-              <p>
-                Project to analyze the territorial evolution of Bolsa Família
-                using public data, complementing the social view with an
-                operational payment-versus-withdrawal layer.
-              </p>
-              <ul>
-                <li>Context: territorial monitoring of Bolsa Família with both social and operational views.</li>
-                <li>Delivery: municipal evolution dashboard supporting territorial comparison and operational monitoring.</li>
-                <li>Stack: Python, PySpark, pandas, scikit-learn, Streamlit and Plotly.</li>
-                <li>Technical highlight: combined use of analytical engineering, public-policy context, exploratory machine learning and operational monitoring.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/bolsa-familia-territorial-analytics" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <img
-                class="project-proof"
-                src="https://raw.githubusercontent.com/flaviagaia/Machine-Learning/main/covid-brazil-deaths-linear-regression/assets/actual_vs_predicted.png"
-                alt="Actual versus predicted chart for the COVID-19 deaths linear-regression project"
-              />
-              <h3>Linear regression baseline for COVID-19 deaths in Brazil</h3>
-              <p>
-                Project developed from official open data to model the trend of
-                COVID-19 deaths in Brazil using a classic, interpretable and
-                reproducible baseline. The proposal transformed government
-                microdata into a daily time series and evaluated the predictive
-                capacity of a linear model with temporal feature engineering.
-              </p>
-              <ul>
-                <li>Context: project combining public data, health and applied quantitative modeling.</li>
-                <li>Delivery: transformation of official microdata into a daily time series for trend modeling.</li>
-                <li>Stack: Python, pandas, numpy, scikit-learn, matplotlib and joblib.</li>
-                <li>Technical highlight: transformation of public microdata into a usable time series, use of linear regression as a baseline and interpretable evaluation.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/Machine-Learning/tree/main/covid-brazil-deaths-linear-regression" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+            <article class="cluster-card">
+              <h4>Classical ML, time series and tabular experiments</h4>
+              <p>Cases with regression, classification, forecasting and anomaly labs on structured datasets.</p>
+              <div class="mini-project-list">
+                <div class="mini-project">
+                  <h5>Covid-19 deaths linear regression baseline</h5>
+                  <p>Daily time series built from public data for an interpretable baseline model.</p>
+                  <a href="https://github.com/flaviagaia/Machine-Learning/tree/main/covid-brazil-deaths-linear-regression" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Loan Default XGBoost</h5>
+                  <p>Default prediction on tabular data with a risk-oriented classification approach.</p>
+                  <a href="https://github.com/flaviagaia/loan-default-xgboost" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Anomaly Detection Lab sklearn</h5>
+                  <p>Complementary anomaly lab with statistical techniques and unsupervised algorithms.</p>
+                  <a href="https://github.com/flaviagaia/anomaly-detection-lab-sklearn" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Sales Forecasting GRU</h5>
+                  <p>Sales forecasting experiment comparing sequence architectures.</p>
+                  <a href="https://github.com/flaviagaia/sales-forecasting-gru" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
               </div>
             </article>
           </div>
         </section>
 
-        <section class="section reveal">
+        <section id="documents" class="section reveal">
           <div class="section-heading">
-            <p class="eyebrow">Web Scraping</p>
-            <h2>News monitoring with automated collection, NLP and executive dashboard</h2>
-          </div>
-
-          <div class="proof-grid">
-            <img
-              class="project-proof"
-              src="https://raw.githubusercontent.com/flaviagaia/Web-Scraping/main/assets/articles_by_theme.png"
-              alt="Article distribution by theme from the web scraping project"
-            />
-            <img
-              class="project-proof"
-              src="https://raw.githubusercontent.com/flaviagaia/Web-Scraping/main/assets/top_entities.png"
-              alt="Most frequent entities chart from the web scraping project"
-            />
-          </div>
-
-          <div class="summary-panel">
-            <article class="summary-card">
-              <span class="card-index">Repository</span>
-              <h3>Political and Economic News Intelligence Dashboard</h3>
-              <p>
-                Web scraping project using newspaper3k to collect political and
-                economic news, structure an analytical base, apply NLP and
-                deliver an interactive Streamlit dashboard.
-              </p>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/Web-Scraping" target="_blank" rel="noreferrer">
-                  View repository
-                </a>
-              </div>
-            </article>
-
-            <article class="summary-card">
-              <span class="card-index">Application</span>
-              <h3>Public workflow for monitoring and content analysis</h3>
-              <p>
-                This project brings together news monitoring, automated
-                collection, entity extraction and information organization for
-                analytical reading and decision support.
-              </p>
-              <p>
-                It appears here in a public and reproducible form, focused on
-                automation, text analysis and structured monitoring.
-              </p>
-            </article>
-
-            <article class="summary-card">
-              <span class="card-index">Technical Pipeline</span>
-              <h3>Collection, parsing, NER and executive visualization</h3>
-              <p>
-                The pipeline performs URL discovery, article parsing,
-                consolidation in pandas, entity extraction with spaCy and
-                rule-based fallback when needed, along with keywords, text
-                statistics and the final dashboard.
-              </p>
-              <p>
-                Current output: 24 collected Agência Brasil articles, 92
-                extracted entities and visualizations such as theme
-                distribution, top entities, top keywords and word cloud.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section id="frentes-continuacao" class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">More projects</p>
-            <h2>Explorations in architecture, applied AI and product thinking</h2>
+            <p class="eyebrow">Documents, NLP and OCR</p>
+            <h2>Document reading, text classification, scraping and information extraction</h2>
             <p class="section-note">
-              Some projects stay in full-detail cards, while the rest are
-              grouped by theme to keep the portfolio easier to scan.
+              This front brings together PDFs, OCR, classification, document consistency, NLP and text monitoring.
             </p>
           </div>
 
           <div class="case-grid">
             <article class="case-card">
-              <img class="project-proof" src="./search-performance-interface.jpg" alt="Search Performance Assistant interface" />
-              <h3>Search Performance Assistant for retrieval evaluation</h3>
-              <p>
-                Python application designed to study and demonstrate document
-                retrieval with TF-IDF, vector indexing, FAISS fallback and an
-                assistant layer grounded on retrieved evidence.
-              </p>
+              <div class="proof-grid">
+                <img class="project-proof" src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario1.jpg" alt="Payment calendar screen" />
+                <img class="project-proof" src="https://raw.githubusercontent.com/flaviagaia/calendario_pagamentos/main/assets/calendario2.jpg" alt="Payment alerts screen" />
+              </div>
+              <h3>Contract reading, payment calendar and escalation with AI</h3>
+              <p>Solution for reading contract PDFs, extracting financial clauses, building expected payment calendars and tracking divergences.</p>
               <ul>
-                <li>Context: project created to explore retrieval in a practical and explainable way.</li>
-                <li>Delivery: search application with ingestion, indexing, retrieval and result visualization.</li>
-                <li>Stack: Python, scikit-learn, TF-IDF, FAISS, cosine similarity, Tkinter and unittest.</li>
-                <li>Technical highlight: TF-IDF before dense embeddings, optional-dependency fallback design, retrieval evaluation and traceable ranking explanation.</li>
+                <li>Goal: transform unstructured documents into a monitorable financial flow.</li>
+                <li>Delivery: contract reading, clause extraction and expected payment calendar generation.</li>
+                <li>Stack: Python, regex, PDF processing, analytical architecture and agent layer.</li>
+                <li>Technical highlight: contract extraction, financial reconciliation and workflow automation.</li>
               </ul>
               <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/search-performance-assistant" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+                <a class="button button-secondary" href="https://github.com/flaviagaia/calendario_pagamentos" target="_blank" rel="noreferrer">View on GitHub</a>
               </div>
             </article>
 
             <article class="case-card">
-              <img class="project-proof" src="./release-notes-interface.jpg" alt="Release Notes Generation Assistant interface" />
-              <h3>Release Notes Generation Assistant with retrieval and automatic evaluation</h3>
-              <p>
-                Python application for assisted release-notes generation from
-                release context and pull requests, combining similarity-based
-                retrieval, topic heuristics, rule-based generation and
-                evaluation metrics.
-              </p>
+              <img class="project-proof project-proof-contain" src="./tech-request-assistant.jpg" alt="Technical Request Document Assistant" />
+              <h3>Technical Request Document Assistant</h3>
+              <p>Integrated flow for technical request reading, structured PDF field extraction and related reference retrieval.</p>
               <ul>
-                <li>Context: NLP project for organizing release context and pull requests into a product-oriented flow.</li>
-                <li>Delivery: assisted release-note generation with similarity-based retrieval and topic heuristics.</li>
-                <li>Stack: Python, scikit-learn, TF-IDF, cosine similarity, Tkinter, JSON and unittest.</li>
-                <li>Technical highlight: NLP pipeline design for product use, explainable retrieval, domain-guided heuristics and reproducible evaluation.</li>
+                <li>Goal: structure document reading and reference lookup in a single interface.</li>
+                <li>Delivery: structured PDF extraction and reference retrieval in one app.</li>
+                <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn and Streamlit.</li>
+                <li>Technical highlight: structured extraction, semantic retrieval and document assistant design.</li>
               </ul>
               <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/release-notes-generation-assistant" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+                <a class="button button-secondary" href="https://github.com/flaviagaia/technical-request-document-assistant" target="_blank" rel="noreferrer">View on GitHub</a>
               </div>
             </article>
 
             <article class="case-card">
-              <img class="project-proof" src="./curriculo-site-interface.png" alt="Curriculo Site interface" />
-              <h3>Curriculo Site published with Codex and vibe coding</h3>
-              <p>
-                Development of my personal website and professional portfolio,
-                with a technical-project page, English version and deployment
-                under a custom domain.
-              </p>
+              <img class="project-proof" src="./engineering-doc-consistency.jpg" alt="Engineering Document Consistency AI" />
+              <h3>Engineering Document Consistency AI</h3>
+              <p>Pipeline for clause extraction, semantic search, inconsistency detection and human review in a dashboard.</p>
               <ul>
-                <li>Context: personal project to consolidate my professional presence under a custom domain.</li>
-                <li>Delivery: bilingual website with home, portfolio, curated content and production deployment.</li>
-                <li>Stack: HTML, CSS, JavaScript, GitHub, Vercel and custom domain.</li>
-                <li>Technical highlight: assistive AI used to accelerate front-end development, content structuring and the path from idea to publication.</li>
+                <li>Goal: compare documents, retrieve relevant passages and support inconsistency review.</li>
+                <li>Delivery: document comparison and semantic retrieval of related passages.</li>
+                <li>Stack: Python, reportlab, pypdf, pandas, scikit-learn, Streamlit and Plotly.</li>
+                <li>Technical highlight: document governance, semantic comparison and review workflow.</li>
               </ul>
               <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/curriculo_site" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+                <a class="button button-secondary" href="https://github.com/flaviagaia/engineering-document-consistency-ai" target="_blank" rel="noreferrer">View on GitHub</a>
               </div>
             </article>
 
             <article class="case-card">
-              <img class="project-proof" src="./fakenews-project-visual.svg" alt="Fake News Detection visual cover" />
-              <h3>Fake News Detection with PyTorch and GRU</h3>
-              <p>
-                Notebook for binary classification of fake versus reliable
-                news, structured as a machine learning challenge focused on
-                text pipeline, neural network and submission-file generation.
-              </p>
-              <ul>
-                <li>Context: text-classification experiment with deep learning in a fake-news scenario.</li>
-                <li>Delivery: binary classification notebook with text pipeline, PyTorch training and submission generation.</li>
-                <li>Stack: Python, pandas, PyTorch, scikit-learn and Colab.</li>
-                <li>Technical highlight: classic NLP with deep learning, bag-of-words versus embeddings, GRU choice for text sequences and small-dataset limitations.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/fakenews" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+              <div class="proof-grid">
+                <img class="project-proof" src="https://raw.githubusercontent.com/flaviagaia/Web-Scraping/main/assets/articles_by_theme.png" alt="Articles by theme" />
+                <img class="project-proof" src="https://raw.githubusercontent.com/flaviagaia/Web-Scraping/main/assets/top_entities.png" alt="Top entities" />
               </div>
-            </article>
-
-            <article class="case-card">
-              <img class="project-proof" src="./mcp-docs-assistant-visual.svg" alt="MCP Docs Assistant visual cover" />
-              <h3>MCP Docs Assistant with FastMCP and BM25 search over local documentation</h3>
-              <p>
-                Read-only MCP server for querying local markdown documentation,
-                exposing resources, tools and prompts for clients compatible
-                with the Model Context Protocol.
-              </p>
+              <h3>Political and Economic News Intelligence Dashboard</h3>
+              <p>Web scraping project using `newspaper3k` to collect news, structure an analytical dataset, apply NLP and publish an interactive dashboard.</p>
               <ul>
-                <li>Context: project designed to turn local documentation into an interface consumable by MCP clients.</li>
-                <li>Delivery: read-only server with catalog, search and document retrieval over markdown files.</li>
-                <li>Stack: Python, FastMCP, Model Context Protocol, rank-bm25 and markdown.</li>
-                <li>Technical highlight: MCP server structure, BM25 for internal documentation and transformation of static knowledge into an interface consumable by agents.</li>
+                <li>Goal: collect, enrich and visualize news content in an analytical structure.</li>
+                <li>Delivery: scraping, NLP and dashboard with thematic and entity views.</li>
+                <li>Stack: Python, newspaper3k, pandas, spaCy, Streamlit and Plotly.</li>
+                <li>Technical highlight: automated collection, NLP over news and executive visualization.</li>
               </ul>
               <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-docs-assistant" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <img class="project-proof" src="./mcp-sql-analytics-visual.svg" alt="MCP SQL Analytics Server visual cover" />
-              <h3>MCP SQL Analytics Server for structured data exploration</h3>
-              <p>
-                MCP server focused on SQL analytics, designed to expose
-                structured tools for table exploration, schema understanding and
-                analytical querying to MCP-compatible clients.
-              </p>
-              <ul>
-                <li>Context: project focused on structured data exploration by agents in a controlled environment.</li>
-                <li>Delivery: MCP server exposing SQL analytics tools for table and schema exploration.</li>
-                <li>Stack: Python, MCP and SQL analytics tooling.</li>
-                <li>Technical highlight: design of analytics tools for agents, reduced access surface and governance-oriented MCP operations.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-sql-analytics-server" target="_blank" rel="noreferrer">
-                  View on GitHub
-                </a>
+                <a class="button button-secondary" href="https://github.com/flaviagaia/Web-Scraping" target="_blank" rel="noreferrer">View on GitHub</a>
               </div>
             </article>
           </div>
 
-          <div class="section-heading compact-heading">
-            <p class="eyebrow">Selected catalog</p>
-            <h3>Additional GitHub projects grouped by theme</h3>
+          <div class="cluster-grid">
+            <article class="cluster-card">
+              <h4>Extraction, classification and text understanding</h4>
+              <p>Cases built around tags, text classification, routing and operational reading of requests and documents.</p>
+              <div class="mini-project-list">
+                <div class="mini-project">
+                  <h5>LLM Tag Extraction Lab</h5>
+                  <p>Comparison between rigid baselines, fuzzy matching, few-shot prompting and human validation.</p>
+                  <a href="https://github.com/flaviagaia/llm-tag-extraction-lab" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Maintenance Request Classification</h5>
+                  <p>Supervised classification for routing maintenance requests based on text and operational attributes.</p>
+                  <a href="https://github.com/flaviagaia/maintenance-request-classification" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Ticket Classification Pipeline</h5>
+                  <p>Classification pipeline for tickets and queue organization by category and priority.</p>
+                  <a href="https://github.com/flaviagaia/ticket_classification_pipeline" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Fake News Detection</h5>
+                  <p>Binary text classification with PyTorch and a sequence-based model.</p>
+                  <a href="https://github.com/flaviagaia/fakenews" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cluster-card">
+              <h4>OCR, legal and document automation</h4>
+              <p>Projects oriented to OCR, structured extraction, automatic filling and legal workflows.</p>
+              <div class="mini-project-list">
+                <div class="mini-project">
+                  <h5>Document Auto Fill OCR</h5>
+                  <p>OCR pipeline for field extraction and automatic pre-filling from photos and scans.</p>
+                  <a href="https://github.com/flaviagaia/document-auto-fill-ocr" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Processo Judicial OCR</h5>
+                  <p>OCR over legal documents with structured output for more operational analysis.</p>
+                  <a href="https://github.com/flaviagaia/processo-judicial-ocr" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Judicial Settlement MVP</h5>
+                  <p>MVP for settlement evaluation with OCR, enrichment and explainable structuring.</p>
+                  <a href="https://github.com/flaviagaia/judicial-settlement-mvp" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Invoice Processing UiPath</h5>
+                  <p>Document automation for accounts payable with OCR and operational routines.</p>
+                  <a href="https://github.com/flaviagaia/invoice-processing-uipath" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="rag" class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Search, RAG and assistants</p>
+            <h2>Context retrieval, ranking and evidence-grounded answer systems</h2>
+            <p class="section-note">
+              This front concentrates retrieval experiments, assisted generation, document Q&amp;A and hybrid search pipelines.
+            </p>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card">
+              <img class="project-proof" src="./rag-nlp-sql.jpg" alt="RAG NLP SQL" />
+              <h3>RAG NLP SQL with LangChain, OpenAI and SQLite</h3>
+              <p>Python application that answers natural language questions over a SQL database by combining schema-aware retrieval and SQL generation.</p>
+              <ul>
+                <li>Goal: allow natural language analytics over relational data.</li>
+                <li>Delivery: app for question answering over SQL with semantic context and assisted query generation.</li>
+                <li>Stack: Python, LangChain, SQLAlchemy, SQLite, Streamlit and BM25Retriever.</li>
+                <li>Technical highlight: RAG applied beyond documents, improving structured navigation.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/RAG_NLP_SQL" target="_blank" rel="noreferrer">View on GitHub</a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <img class="project-proof" src="./search-performance-interface.jpg" alt="Search Performance Assistant" />
+              <h3>Search Performance Assistant for retrieval evaluation</h3>
+              <p>Python application to study document retrieval with TF-IDF, vector indexing, fallback behavior and evidence-based assistant responses.</p>
+              <ul>
+                <li>Goal: explore retrieval in a transparent and comparable way.</li>
+                <li>Delivery: ingestion, indexing, retrieval and visual explanation of search results.</li>
+                <li>Stack: Python, scikit-learn, TF-IDF, FAISS, cosine similarity, Tkinter and unittest.</li>
+                <li>Technical highlight: retrieval evaluation and traceable ranking explanation.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/search-performance-assistant" target="_blank" rel="noreferrer">View on GitHub</a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <img class="project-proof" src="./release-notes-interface.jpg" alt="Release Notes Generation Assistant" />
+              <h3>Release Notes Generation Assistant</h3>
+              <p>Python app for assisted release note generation based on release context, pull requests, similarity retrieval and evaluation metrics.</p>
+              <ul>
+                <li>Goal: organize release context and PRs for assisted note generation.</li>
+                <li>Delivery: release note generation with retrieval and thematic rules.</li>
+                <li>Stack: Python, scikit-learn, TF-IDF, cosine similarity, Tkinter and unittest.</li>
+                <li>Technical highlight: product-oriented retrieval pipeline with reproducible evaluation.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/release-notes-generation-assistant" target="_blank" rel="noreferrer">View on GitHub</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="cluster-grid">
+            <article class="cluster-card">
+              <h4>Educational and document assistants</h4>
+              <p>Repositories focused on Q&amp;A, study material organization and internal-knowledge style assistance.</p>
+              <div class="mini-project-list">
+                <div class="mini-project">
+                  <h5>Academic Paper RAG Search</h5>
+                  <p>Question answering over academic papers and technical chapters with evidence-based retrieval.</p>
+                  <a href="https://github.com/flaviagaia/-academic-paper-rag-search" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Educational RAG Assistant</h5>
+                  <p>Educational assistant answering questions over chapters, articles, notes and FAQs.</p>
+                  <a href="https://github.com/flaviagaia/educational-rag-assistant" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Syllabus to Study Guide RAG</h5>
+                  <p>Pipeline that turns course material into study guides, summaries and review questions with citations.</p>
+                  <a href="https://github.com/flaviagaia/syllabus-to-study-guide-rag" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Student Support Copilot</h5>
+                  <p>Copilot for academic rules, administrative questions and next-step guidance.</p>
+                  <a href="https://github.com/flaviagaia/-student-support-copilot" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cluster-card">
+              <h4>Retrieval, ranking and search experiments</h4>
+              <p>Experiments around hybrid search, ranking and retrieval pipelines across different domains.</p>
+              <div class="mini-project-list">
+                <div class="mini-project">
+                  <h5>Visual Product Complaint Retrieval</h5>
+                  <p>Complaint-oriented retrieval and multimodal search in a product context.</p>
+                  <a href="https://github.com/flaviagaia/visual-product-complaint-retrieval" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Hybrid Ranking Product Search</h5>
+                  <p>Product search combining different ranking strategies in the same pipeline.</p>
+                  <a href="https://github.com/flaviagaia/hybrid-ranking-product-search" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Hybrid Ranking Support Search</h5>
+                  <p>Hybrid ranking system for support tickets and knowledge bases.</p>
+                  <a href="https://github.com/flaviagaia/hybrid-ranking-support-search" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>PDF to RAG Rechunking</h5>
+                  <p>Chunking and rechunking experiments to improve retrieval quality in document pipelines.</p>
+                  <a href="https://github.com/flaviagaia/pdf-to-rag-rechunking" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="agents" class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Agents, automation and platform</p>
+            <h2>Tooling for agents, workflows, MCP, MLOps and product delivery</h2>
+            <p class="section-note">
+              This front combines MCP servers, agent-driven automations, observability and product/platform work.
+            </p>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card">
+              <img class="project-proof" src="./mcp-docs-assistant-visual.svg" alt="MCP Docs Assistant" />
+              <h3>MCP Docs Assistant</h3>
+              <p>Read-only MCP server for local markdown documentation with resources, tools and prompt support.</p>
+              <ul>
+                <li>Goal: expose local documentation in a format consumable by MCP clients.</li>
+                <li>Delivery: read-only MCP server with catalog, search and retrieval.</li>
+                <li>Stack: Python, FastMCP, rank-bm25, frontmatter parsing and markdown.</li>
+                <li>Technical highlight: MCP design, BM25 retrieval and agent-ready documentation access.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-docs-assistant" target="_blank" rel="noreferrer">View on GitHub</a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <img class="project-proof" src="./mcp-sql-analytics-visual.svg" alt="MCP SQL Analytics Server" />
+              <h3>MCP SQL Analytics Server</h3>
+              <p>MCP server for SQL analytics exposing structured tools for schema inspection and analytical querying.</p>
+              <ul>
+                <li>Goal: enable structured data exploration by agents in a controlled environment.</li>
+                <li>Delivery: MCP tools for inspection and SQL analytics.</li>
+                <li>Stack: Python, MCP, SQL analytics and modular tool design.</li>
+                <li>Technical highlight: agent-oriented data access and tool-based analytics.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/MCP/tree/main/mcp-sql-analytics-server" target="_blank" rel="noreferrer">View on GitHub</a>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <img class="project-proof" src="./curriculo-site-interface.png" alt="Curriculo Site" />
+              <h3>Curriculo Site built with Codex and vibe coding</h3>
+              <p>Personal website and technical portfolio with bilingual pages, booking pages and production publishing on a custom domain.</p>
+              <ul>
+                <li>Goal: consolidate a professional presence in a custom domain.</li>
+                <li>Delivery: bilingual site with home, portfolio, booking flow and production deployment.</li>
+                <li>Stack: HTML, CSS, JavaScript, GitHub, Vercel and manual technical content curation.</li>
+                <li>Technical highlight: AI-assisted prototyping, content structuring and shipping.</li>
+              </ul>
+              <div class="card-actions">
+                <a class="button button-secondary" href="https://github.com/flaviagaia/curriculo_site" target="_blank" rel="noreferrer">View on GitHub</a>
+              </div>
+            </article>
           </div>
 
           <div class="cluster-grid">
             <article class="cluster-card">
               <h4>Agents, automation and workflows</h4>
-              <p>
-                Projects centered on agents, task routing, automation and
-                workflow orchestration with AI.
-              </p>
+              <p>Multi-agent setups, agent-driven automation, routing and HITL workflows.</p>
               <div class="mini-project-list">
                 <div class="mini-project">
                   <h5>AI Support Triage with HITL</h5>
-                  <p>Support triage workflow with human-in-the-loop approval, knowledge retrieval and automated routing.</p>
+                  <p>Support triage workflow with human approval, retrieval and automated routing.</p>
                   <a href="https://github.com/flaviagaia/ai-support-triage-with-hitl" target="_blank" rel="noreferrer">View on GitHub</a>
                 </div>
                 <div class="mini-project">
                   <h5>Candidate Screening Workflow n8n</h5>
-                  <p>Candidate-screening workflow combining automation steps, integrations and evaluation logic.</p>
+                  <p>Candidate screening flow with automation and staged evaluation logic.</p>
                   <a href="https://github.com/flaviagaia/candidate-screening-workflow-n8n" target="_blank" rel="noreferrer">View on GitHub</a>
                 </div>
                 <div class="mini-project">
                   <h5>Learning Path Agents</h5>
-                  <p>Agents designed to structure and recommend learning paths based on goals and context.</p>
+                  <p>Agents for learning-path organization and recommendation.</p>
                   <a href="https://github.com/flaviagaia/learning-path-agents" target="_blank" rel="noreferrer">View on GitHub</a>
                 </div>
                 <div class="mini-project">
                   <h5>Market Intelligence CrewAI</h5>
-                  <p>Multi-agent structure for collection, synthesis and support in market-intelligence scenarios.</p>
+                  <p>Agent structure for market briefing, synthesis and intelligence workflows.</p>
                   <a href="https://github.com/flaviagaia/market-intelligence-crewai" target="_blank" rel="noreferrer">View on GitHub</a>
                 </div>
-                <div class="mini-project">
-                  <h5>Credit Contestation Agent</h5>
-                  <p>Agent focused on supporting credit-information contestation with structured answer generation.</p>
-                  <a href="https://github.com/flaviagaia/agente_contestacao_credito" target="_blank" rel="noreferrer">View on GitHub</a>
-                </div>
-                <div class="mini-project">
-                  <h5>Credit Monitoring Agent</h5>
-                  <p>Workflow for monitoring, alerts and follow-up around credit-related signals.</p>
-                  <a href="https://github.com/flaviagaia/agente_monitorimento_credito" target="_blank" rel="noreferrer">View on GitHub</a>
-                </div>
               </div>
             </article>
 
             <article class="cluster-card">
-              <h4>OCR, documents and legal flows</h4>
-              <p>
-                Solutions focused on document reading, structured extraction
-                and workflows built around unstructured information.
-              </p>
+              <h4>Credit and domain-specific agents</h4>
+              <p>Repositories focused on credit, service, fraud prevention and business insights.</p>
               <div class="mini-project-list">
                 <div class="mini-project">
-                  <h5>Document Auto Fill OCR</h5>
-                  <p>Pipeline for OCR-based field extraction and document auto-fill support.</p>
-                  <a href="https://github.com/flaviagaia/document-auto-fill-ocr" target="_blank" rel="noreferrer">View on GitHub</a>
+                  <h5>Credit Analysis Agent</h5>
+                  <p>Support for profile, risk and decision reading in credit workflows.</p>
+                  <a href="https://github.com/flaviagaia/agente_analisedecredito" target="_blank" rel="noreferrer">View on GitHub</a>
                 </div>
                 <div class="mini-project">
-                  <h5>Processo Judicial OCR</h5>
-                  <p>OCR exploration over legal documents for more structured and operational reading.</p>
-                  <a href="https://github.com/flaviagaia/processo-judicial-ocr" target="_blank" rel="noreferrer">View on GitHub</a>
+                  <h5>Customer Service Agent</h5>
+                  <p>Structured service workflow built with PydanticAI.</p>
+                  <a href="https://github.com/flaviagaia/agente_atendimento" target="_blank" rel="noreferrer">View on GitHub</a>
                 </div>
                 <div class="mini-project">
-                  <h5>Judicial Settlement MVP</h5>
-                  <p>MVP aimed at supporting decisions in legal contexts through structured information flow.</p>
-                  <a href="https://github.com/flaviagaia/judicial-settlement-mvp" target="_blank" rel="noreferrer">View on GitHub</a>
+                  <h5>Fraud Prevention Agent</h5>
+                  <p>Fraud signal monitoring and support for prevention-oriented workflows.</p>
+                  <a href="https://github.com/flaviagaia/agente_prevencao_fraudes" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Portfolio Risk Agent</h5>
+                  <p>Risk monitoring, alerting and portfolio-oriented analysis.</p>
+                  <a href="https://github.com/flaviagaia/agente_risco_carteira" target="_blank" rel="noreferrer">View on GitHub</a>
                 </div>
               </div>
             </article>
 
             <article class="cluster-card">
-              <h4>Observability, incidents and graphs</h4>
-              <p>
-                Projects focused on operational reliability, monitoring and
-                more specialized analytical scenarios.
-              </p>
+              <h4>MLOps, observability and cloud labs</h4>
+              <p>Repos for serving, monitoring, feature pipelines, Vertex AI, Kubeflow and cloud experimentation.</p>
               <div class="mini-project-list">
                 <div class="mini-project">
                   <h5>ML Model Serving Observability</h5>
-                  <p>Stack for monitoring model serving with metrics, dashboards and operational visibility.</p>
+                  <p>Model observability with metrics, Prometheus, Grafana and operational monitoring.</p>
                   <a href="https://github.com/flaviagaia/ml-model-serving-observability" target="_blank" rel="noreferrer">View on GitHub</a>
                 </div>
                 <div class="mini-project">
-                  <h5>LLM Severidade de Incidentes</h5>
-                  <p>Incident-severity classification flow supported by LLM-based analysis.</p>
-                  <a href="https://github.com/flaviagaia/LLM-severidade-de-incidentes" target="_blank" rel="noreferrer">View on GitHub</a>
+                  <h5>Feature Store Pipeline Metaflow</h5>
+                  <p>Versioned and reproducible feature pipeline for training and scoring with Metaflow.</p>
+                  <a href="https://github.com/flaviagaia/feature-store-pipeline-metaflow" target="_blank" rel="noreferrer">View on GitHub</a>
                 </div>
                 <div class="mini-project">
-                  <h5>Deep Graph Matching Consensus</h5>
-                  <p>Graph matching and consensus experiment with a more research-oriented analytical angle.</p>
-                  <a href="https://github.com/flaviagaia/deep-graph-matching-consensus" target="_blank" rel="noreferrer">View on GitHub</a>
+                  <h5>Vertex AI and Kubeflow Labs</h5>
+                  <p>Training pipelines and benchmarks with Vertex AI, Kubeflow and recommendation/computer vision workloads.</p>
+                  <a href="https://github.com/flaviagaia/churn-training-vertex-pipeline" target="_blank" rel="noreferrer">View on GitHub</a>
+                </div>
+                <div class="mini-project">
+                  <h5>Cloud repositories</h5>
+                  <p>Umbrella repositories for GCP, AWS and Azure experiments organized by platform.</p>
+                  <a href="https://github.com/flaviagaia/GCP" target="_blank" rel="noreferrer">GCP</a>
                 </div>
               </div>
             </article>

@@ -724,6 +724,36 @@ h3 {
   margin-top: 44px;
 }
 
+.portfolio-map-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.map-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.35;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.map-chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
 .cluster-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1062,6 +1092,7 @@ h3 {
   .capability-grid,
   .links-grid,
   .case-grid,
+  .portfolio-map-grid,
   .agenda-grid,
   .cluster-grid,
   .interview-grid,
