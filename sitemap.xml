@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://flaviaga.ia.br/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://flaviaga.ia.br/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaviaga.ia.br/index-en.html" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://flaviaga.ia.br/index-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://flaviaga.ia.br/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaviaga.ia.br/index-en.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flaviaga.ia.br/portfolio.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://flaviaga.ia.br/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaviaga.ia.br/portfolio-en.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flaviaga.ia.br/portfolio-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://flaviaga.ia.br/portfolio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaviaga.ia.br/portfolio-en.html" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flaviaga.ia.br/agenda.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://flaviaga.ia.br/agenda.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaviaga.ia.br/agenda-en.html" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flaviaga.ia.br/agenda-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://flaviaga.ia.br/agenda.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaviaga.ia.br/agenda-en.html" />
+    <priority>0.7</priority>
+  </url>
+</urlset>
