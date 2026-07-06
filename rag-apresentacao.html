@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Assistente RAG · Flávia Gaia</title>
+<style>
+  :root{
+    --bg:#161311; --bg2:#1b1815; --card:#26221e; --line:#3c352d;
+    --tx:#efe9df; --sub:#b6ab9b; --acc:#cdb389; --acc2:#e2cfa6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--tx);font-family:"Space Grotesk",-apple-system,Segoe UI,Arial,sans-serif;
+       height:100vh;overflow-y:scroll;scroll-snap-type:y mandatory;}
+  section{min-height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;
+          padding:6vh 8vw;position:relative;overflow:hidden;border-bottom:1px solid rgba(60,53,45,.4)}
+  .ey{color:var(--acc);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+  h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.02em;font-weight:700}
+  h2{font-size:clamp(1.8rem,4vw,3rem);line-height:1.08;letter-spacing:-.01em;font-weight:700;margin-bottom:26px}
+  .lead{color:var(--sub);font-size:clamp(1rem,1.6vw,1.3rem);line-height:1.7;max-width:820px}
+  .acc{color:var(--acc)}
+  /* reveal */
+  .r{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+  .in .r{opacity:1;transform:none}
+  .in .r:nth-child(2){transition-delay:.1s}.in .r:nth-child(3){transition-delay:.2s}
+  .in .r:nth-child(4){transition-delay:.3s}.in .r:nth-child(5){transition-delay:.4s}
+  /* cover */
+  .cover{background:radial-gradient(1200px 600px at 70% 30%,#241f1a 0%,var(--bg) 60%)}
+  .halo{position:absolute;width:520px;height:520px;border-radius:50%;border:1px solid rgba(205,177,137,.18);
+        right:-120px;top:50%;transform:translateY(-50%);animation:spin 26s linear infinite}
+  .halo::after{content:"";position:absolute;inset:60px;border-radius:50%;border:1px solid rgba(205,177,137,.12)}
+  @keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+  .name-row{display:flex;align-items:center;gap:16px;margin-top:34px}
+  .name-row img{width:56px;height:56px;border-radius:50%;border:2px solid var(--acc);object-fit:cover}
+  /* pipeline */
+  .pipe{display:flex;flex-direction:column;gap:12px;max-width:820px;margin-top:8px}
+  .step{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);
+        border-radius:14px;padding:16px 20px;position:relative}
+  .step.key{border-color:var(--acc);box-shadow:0 0 0 1px rgba(205,177,137,.25)}
+  .step .n{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#1b1815;border:1px solid var(--acc);
+           color:var(--acc);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+  .step b{font-weight:700}.step small{display:block;color:var(--sub);font-size:13px;margin-top:2px}
+  .dot{position:absolute;left:50%;top:-10px;width:9px;height:9px;border-radius:50%;background:var(--acc);
+       transform:translateX(-50%);animation:down 3.4s ease-in-out infinite;opacity:0}
+  @keyframes down{0%{top:-10px;opacity:0}10%{opacity:1}90%{opacity:1}100%{top:100%;opacity:0}}
+  /* grid cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;max-width:960px}
+  .glass{background:rgba(255,255,255,.04);border:1px solid rgba(205,177,137,.18);border-radius:16px;
+         padding:22px 22px;backdrop-filter:blur(6px)}
+  .glass h3{font-size:1.15rem;margin-bottom:8px}.glass p{color:var(--sub);font-size:.95rem;line-height:1.6}
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;max-width:960px}
+  .metric{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .metric .v{font-size:2.4rem;font-weight:700;color:var(--acc);line-height:1}
+  .metric .l{color:var(--sub);font-size:.9rem;margin-top:8px}
+  .pills{display:flex;flex-wrap:wrap;gap:10px;max-width:900px}
+  .pill{border:1px solid var(--line);border-radius:999px;padding:9px 16px;color:var(--tx);font-size:.9rem;background:var(--card)}
+  /* closing */
+  .links{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .links a{color:#161311;background:var(--acc);text-decoration:none;font-weight:700;padding:12px 22px;border-radius:999px;font-size:.95rem}
+  .links a.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc)}
+  .nav{position:fixed;right:22px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:9}
+  .nav a{width:9px;height:9px;border-radius:50%;background:rgba(205,177,137,.3);display:block}
+  .nav a:hover{background:var(--acc)}
+  .foot{color:var(--sub);font-size:12px;margin-top:24px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#s1" aria-label="Capa"></a><a href="#s2" aria-label="Desafio"></a><a href="#s3" aria-label="Arquitetura"></a>
+  <a href="#s4" aria-label="Diferenciais"></a><a href="#s5" aria-label="Escopo"></a><a href="#s6" aria-label="Stack"></a><a href="#s7" aria-label="Contato"></a>
+</nav>
+
+<section id="s1" class="cover">
+  <div class="halo"></div>
+  <div class="ey r">Estudo de caso · IA generativa</div>
+  <h1 class="r">Assistente RAG para<br><span class="acc">atendimento ao cidadão</span></h1>
+  <p class="lead r" style="margin-top:22px">Um sistema de Retrieval-Augmented Generation em produção no setor público federal (FNDE), que responde dúvidas sobre bolsas, auxílios, valores e legislação de mais de 20 programas.</p>
+  <div class="name-row r">
+    <img src="https://flaviaga.ia.br/profile.png" alt="Flávia Gaia" />
+    <div><b>Flávia Gaia</b><br><span style="color:var(--sub);font-size:.9rem">Cientista de Dados Sênior · Engenheira de IA</span></div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="ey r">O desafio</div>
+  <h2 class="r">Muitas dúvidas, e precisão inegociável</h2>
+  <p class="lead r">Programas de bolsas e auxílios geram um volume alto de perguntas recorrentes: valores, prazos, regras e procedimentos. Nesse contexto, uma resposta errada sobre dinheiro ou legislação não é aceitável. O desafio: dar respostas <span class="acc">confiáveis e rastreáveis</span> em escala, sem alucinação.</p>
+</section>
+
+<section id="s3">
+  <div class="ey r">A arquitetura</div>
+  <h2 class="r">Da pergunta à resposta, com controle</h2>
+  <div class="pipe">
+    <div class="dot"></div>
+    <div class="step r"><span class="n">1</span><div><b>Pergunta do cidadão</b><small>Linguagem natural · interface Streamlit</small></div></div>
+    <div class="step r"><span class="n">2</span><div><b>Roteamento automático</b><small>Encaminhamento para a área responsável</small></div></div>
+    <div class="step key r"><span class="n">3</span><div><b>Camada de respostas curadas</b><small>Anti-alucinação em valores, legislação e prazos</small></div></div>
+    <div class="step r"><span class="n">4</span><div><b>Busca vetorial híbrida</b><small>Embeddings BGE-large · densa + esparsa</small></div></div>
+    <div class="step r"><span class="n">5</span><div><b>Geração com LLM + resiliência</b><small>Fallback entre modelos · circuit breaker</small></div></div>
+    <div class="step r"><span class="n">6</span><div><b>Resposta + confidence scoring</b><small>Confiança alta / média / baixa</small></div></div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="ey r">Diferenciais</div>
+  <h2 class="r">O que faz o sistema ser confiável</h2>
+  <div class="grid">
+    <div class="glass r"><h3 class="acc">Anti-alucinação</h3><p>Uma camada de respostas curadas intercepta temas críticos antes da geração, garantindo precisão em valores, legislação e prazos.</p></div>
+    <div class="glass r"><h3 class="acc">Busca híbrida</h3><p>Recuperação densa e esparsa combinadas, capturando tanto o sentido quanto termos e siglas exatas dos programas.</p></div>
+    <div class="glass r"><h3 class="acc">Resiliência</h3><p>Fallback em cascata entre modelos com circuit breaker: falha de um provedor não derruba o atendimento.</p></div>
+    <div class="glass r"><h3 class="acc">Observabilidade</h3><p>Telemetria de todas as interações e painel de curadoria com ciclo de vida para revisar e publicar respostas.</p></div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="ey r">Escopo</div>
+  <h2 class="r">Escala e cobertura</h2>
+  <div class="metrics">
+    <div class="metric r"><div class="v">20+</div><div class="l">programas federais cobertos</div></div>
+    <div class="metric r"><div class="v">RAG</div><div class="l">em produção, com curadoria</div></div>
+    <div class="metric r"><div class="v">2</div><div class="l">modelos em cascata (com fallback)</div></div>
+    <div class="metric r"><div class="v">100%</div><div class="l">das interações com telemetria</div></div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="ey r">Stack</div>
+  <h2 class="r">Ferramentas e plataforma</h2>
+  <div class="pills">
+    <span class="pill r">Python</span><span class="pill r">Streamlit</span><span class="pill r">Databricks Apps</span>
+    <span class="pill r">Unity Catalog</span><span class="pill r">Delta Lake</span><span class="pill r">Vector Search</span>
+    <span class="pill r">SQL Warehouse</span><span class="pill r">BGE-large</span><span class="pill r">LLMs (Llama 4 · Claude Sonnet 4)</span>
+    <span class="pill r">RAG</span><span class="pill r">NLP</span>
+  </div>
+</section>
+
+<section id="s7" class="cover">
+  <div class="halo"></div>
+  <div class="ey r">Vamos conversar</div>
+  <h2 class="r">Flávia Gaia</h2>
+  <p class="lead r">Cientista de Dados Sênior e Engenheira de IA · IA generativa, RAG, NLP e MLOps.</p>
+  <div class="links r">
+    <a href="https://flaviaga.ia.br/">Portfólio</a>
+    <a class="ghost" href="https://www.linkedin.com/in/flavia-gaia/">LinkedIn</a>
+    <a class="ghost" href="https://github.com/flaviagaia">GitHub</a>
+  </div>
+  <div class="foot r">Projeto interno do setor público · conteúdo sem dados sensíveis do órgão.</div>
+</section>
+
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.35});
+  document.querySelectorAll('section').forEach(function(s){io.observe(s);});
+  document.querySelector('#s1').classList.add('in');
+</script>
+</body>
+</html>
