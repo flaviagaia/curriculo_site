@@ -1,657 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>Flávia Gaia | Senior Data Scientist & AI</title>
-    <meta
-      name="description"
-      content="Flávia Gaia, Senior Data Scientist with 6 years of experience in generative AI, RAG, NLP, machine learning and data engineering. Explore the portfolio and book a conversation."
-    />
-    <link rel="canonical" href="https://flaviaga.ia.br/index-en.html" />
-    <link rel="alternate" hreflang="pt-BR" href="https://flaviaga.ia.br/" />
-    <link rel="alternate" hreflang="en" href="https://flaviaga.ia.br/index-en.html" />
-    <link rel="alternate" hreflang="x-default" href="https://flaviaga.ia.br/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://flaviaga.ia.br/index-en.html" />
-    <meta property="og:title" content="Flávia Gaia | Senior Data Scientist & AI" />
-    <meta
-      property="og:description"
-      content="Senior Data Scientist with 6 years of experience in generative AI, RAG, NLP, machine learning and data engineering."
-    />
-    <meta property="og:image" content="https://flaviaga.ia.br/og-card.png" />
-    <meta property="og:image:alt" content="Professional portrait of Flávia Gaia" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="pt_BR" />
-    <meta property="og:site_name" content="Flávia Gaia" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Flávia Gaia | Senior Data Scientist & AI" />
-    <meta
-      name="twitter:description"
-      content="Senior Data Scientist with 6 years of experience in generative AI, RAG, NLP, machine learning and data engineering."
-    />
-    <meta name="twitter:image" content="https://flaviaga.ia.br/og-card.png" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Flávia Gaia",
-        "alternateName": "Flávia Guimarães Gaia Paula",
-        "url": "https://flaviaga.ia.br/index-en.html",
-        "image": "https://flaviaga.ia.br/profile.png",
-        "jobTitle": "Senior Data Scientist",
-        "email": "mailto:flaviaggpaula@gmail.com",
-        "knowsLanguage": ["pt-BR", "en"],
-        "knowsAbout": [
-          "Generative AI",
-          "RAG",
-          "NLP",
-          "Machine Learning",
-          "MLOps",
-          "LLMOps",
-          "Data Engineering",
-          "Python",
-          "Spark",
-          "Databricks"
-        ],
-        "alumniOf": [
-          { "@type": "CollegeOrUniversity", "name": "University of Brasília (UnB)" },
-          { "@type": "CollegeOrUniversity", "name": "University of São Paulo (USP)" },
-          { "@type": "CollegeOrUniversity", "name": "IESB University Center" }
-        ],
-        "sameAs": [
-          "https://www.linkedin.com/in/flavia-gaia/",
-          "https://github.com/flaviagaia",
-          "https://www.kaggle.com/flaviagg",
-          "https://huggingface.co/flaviaggp",
-          "https://medium.com/@flaviagaia"
-        ]
-      }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body class="page-home">
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="./index-en.html">
-          <span class="brand-mark"></span>
-          <span>Flávia Gaia</span>
-        </a>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flávia Gaia | Data Scientist & AI</title>
+<meta name="description" content="Flávia Gaia, Senior Data Scientist and AI Engineer with 6 years of experience in generative AI, RAG, NLP, MLOps and data engineering." />
+<link rel="canonical" href="https://flaviaga.ia.br/index-en.html" />
+<link rel="alternate" hreflang="pt-BR" href="https://flaviaga.ia.br/" />
+<link rel="alternate" hreflang="en" href="https://flaviaga.ia.br/index-en.html" />
+<link rel="alternate" hreflang="x-default" href="https://flaviaga.ia.br/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://flaviaga.ia.br/index-en.html" />
+<meta property="og:title" content="Flávia Gaia | Data Scientist & AI" />
+<meta property="og:description" content="Senior Data Scientist and AI Engineer. Generative AI, RAG, NLP, MLOps." />
+<meta property="og:image" content="https://flaviaga.ia.br/og-card.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Flávia Gaia | Data Scientist & AI" />
+<meta name="twitter:description" content="Senior Data Scientist and AI Engineer. Generative AI, RAG, NLP, MLOps." />
+<meta name="twitter:image" content="https://flaviaga.ia.br/og-card.png" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14100e; --bg2:#1a1510; --panel:#1b1510; --line:#3a322a;
+    --tx:#f2ece1; --sub:#c2b9a9; --acc:#e6c98a; --acc2:#d9b676; --acc3:#caa25f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--tx);font-family:"Manrope",Arial,sans-serif;overflow-x:hidden;line-height:1.6}
+  .disp{font-family:"Space Grotesk",Arial,sans-serif}
+  a{color:inherit}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 26px}
+  .ey{color:var(--acc2);font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px}
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(10px);background:rgba(20,16,14,.55);border-bottom:1px solid rgba(58,50,42,.5)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  nav b{font-family:"Space Grotesk";letter-spacing:.5px}
+  nav .lk{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--sub)}
+  nav .lk a{text-decoration:none}nav .lk a:hover{color:var(--tx)}
+  .langpill{border:1px solid var(--line);border-radius:999px;padding:4px;display:flex;gap:2px}
+  .langpill a{padding:3px 10px;border-radius:999px;font-size:12px;text-decoration:none}
+  .langpill a.act{background:var(--acc);color:#1a140d;font-weight:600}
+  .rise{opacity:1;transform:none}
+  .js .rise{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .js .on .rise{opacity:1;transform:none}
+  .js .on .rise:nth-child(2){transition-delay:.08s}.js .on .rise:nth-child(3){transition-delay:.16s}
+  .js .on .rise:nth-child(4){transition-delay:.24s}.js .on .rise:nth-child(5){transition-delay:.32s}.js .on .rise:nth-child(6){transition-delay:.4s}
+  .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+    background:radial-gradient(900px 520px at 78% 22%,#241a10 0%,var(--bg) 60%)}
+  .orb{position:absolute;width:620px;height:620px;border-radius:50%;right:-180px;top:8%;
+    background:radial-gradient(circle at 42% 42%,rgba(230,201,138,.28),rgba(230,201,138,0) 62%);animation:float 10s ease-in-out infinite;pointer-events:none}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(34px)}}
+  .hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:40px;align-items:center;width:100%;padding:110px 0 60px}
+  .giant{font-weight:700;line-height:.9;letter-spacing:-.03em;font-size:clamp(3.4rem,11vw,8.4rem);
+    background:linear-gradient(92deg,#f4ecda 0%,#e6c98a 42%,#caa25f 72%,#f4ecda 100%);
+    background-size:230% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 7s linear infinite}
+  @keyframes sh{to{background-position:-230% 0}}
+  .hero-h1{margin:0}
+  .role{display:block;font-family:"Space Grotesk";font-size:clamp(1.05rem,2vw,1.5rem);color:#efe6d6;margin-top:20px;font-weight:500}
+  .proof{color:var(--acc2);font-family:"Space Grotesk";font-size:14px;margin-top:16px;letter-spacing:.3px}
+  .proof b{color:var(--acc)}
+  .mk{margin-top:26px;overflow:hidden;white-space:nowrap;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .mk span{display:inline-block;color:var(--sub);font-size:14px;letter-spacing:1.5px;font-family:"Space Grotesk";animation:scr 22s linear infinite}
+  @keyframes scr{to{transform:translateX(-50%)}}
+  .cta{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .btn{text-decoration:none;font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;transition:transform .25s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.p{background:var(--acc);color:#1a140d}.btn.g{border:1px solid #6b5c42;color:#efe6d6}
+  .photo{justify-self:center;position:relative}
+  .photo img{width:min(340px,70vw);aspect-ratio:1;object-fit:cover;border-radius:50%;border:2px solid var(--acc);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+  .photo .ring{position:absolute;inset:-22px;border:1px solid rgba(230,201,138,.25);border-radius:50%;animation:spin 30s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .scrollhint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--sub);font-size:12px;letter-spacing:2px}
+  section{padding:96px 0;border-top:1px solid rgba(58,50,42,.5)}
+  .stitle{font-family:"Space Grotesk";font-weight:700;font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.02em;line-height:1.02}
+  .lead{color:var(--sub);font-size:clamp(1rem,1.5vw,1.2rem);max-width:820px;margin-top:18px}
+  .impact{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:10px}
+  .num{font-family:"Space Grotesk";font-weight:700;font-size:clamp(2.6rem,6vw,4.6rem);color:var(--acc);line-height:1;letter-spacing:-.02em}
+  .nl{color:var(--sub);font-size:14px;margin-top:10px}
+  .exp{display:flex;flex-direction:column;gap:2px;margin-top:24px}
+  .row{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:26px 0;border-bottom:1px solid rgba(58,50,42,.6);transition:padding-left .4s ease}
+  .row:hover{padding-left:12px}
+  .row h3{font-family:"Space Grotesk";font-weight:700;font-size:clamp(1.3rem,2.6vw,2rem);letter-spacing:-.01em}
+  .row .meta{color:var(--sub);font-size:14px;margin-top:6px}
+  .row .imp{color:var(--acc2);font-size:14px;margin-top:6px}
+  .row .cat{color:var(--acc2);font-size:12px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:24px}
+  .card{border:1px solid var(--line);border-radius:18px;padding:26px;background:linear-gradient(180deg,#1b1510,#161210);transition:transform .5s ease,border-color .5s ease;text-decoration:none;display:block}
+  .card:hover{transform:translateY(-6px);border-color:#6b5c42}
+  .card .cat{color:var(--acc2);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+  .card h3{font-family:"Space Grotesk";font-weight:700;font-size:1.45rem;margin:10px 0 8px;letter-spacing:-.01em}
+  .card p{color:var(--sub);font-size:14px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:9px 16px;font-size:13px;color:var(--tx);font-family:"Space Grotesk"}
+  .social{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px}
+  .social a{border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;transition:border-color .4s,transform .4s}
+  .social a:hover{border-color:var(--acc2);transform:translateY(-3px)}
+  .social b{font-family:"Space Grotesk"}.social span{display:block;color:var(--sub);font-size:12.5px;margin-top:4px}
+  .contact{background:radial-gradient(700px 360px at 20% 90%,#241a10 0%,var(--bg) 60%)}
+  footer{padding:40px 0;border-top:1px solid rgba(58,50,42,.5);color:var(--sub);font-size:13px}
+  @media(max-width:820px){.hero-grid{grid-template-columns:1fr}.photo{grid-row:1;margin-bottom:10px}.impact{grid-template-columns:1fr 1fr}nav .lk .hidem{display:none}}
+  #totop{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;background:var(--acc);color:#1a140d;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px;opacity:0;pointer-events:none;transition:opacity .3s ease;z-index:60}
+  #totop.show{opacity:1;pointer-events:auto}
+  @media (prefers-reduced-motion: reduce){
+    .giant{animation:none}.mk span{animation:none}.orb{animation:none}.photo .ring{animation:none}
+    .js .rise{opacity:1 !important;transform:none !important;transition:none !important}
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Flávia Gaia","url":"https://flaviaga.ia.br/","image":"https://flaviaga.ia.br/profile.png","jobTitle":"Senior Data Scientist and AI Engineer","email":"mailto:flaviaggpaula@gmail.com","knowsLanguage":["pt-BR","en"],"knowsAbout":["Artificial Intelligence","Generative AI","RAG","NLP","MLOps","Machine Learning","Python","Databricks","Data Engineering"],"alumniOf":["University of Brasília (UnB)","University of São Paulo (USP)","IESB"],"sameAs":["https://www.linkedin.com/in/flavia-gaia/","https://github.com/flaviagaia","https://www.kaggle.com/flaviagg","https://huggingface.co/flaviaggp","https://medium.com/@flaviaggpaula"]}
+</script>
+</head>
+<body>
 
-        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+<nav><div class="wrap">
+  <b>Flávia Gaia</b>
+  <div class="lk">
+    <a class="hidem" href="#start">Home</a>
+    <a href="portfolio-en.html">Portfolio</a>
+    <a href="agenda-en.html">Schedule</a>
+    <span class="langpill"><a href="index.html">PT</a><a class="act" href="index-en.html">EN</a></span>
+  </div>
+</div></nav>
 
-        <div class="header-actions">
-          <nav id="site-nav" class="site-nav">
-            <a href="./index-en.html">Home</a>
-            <a href="./portfolio-en.html">Portfolio</a>
-            <a href="./agenda-en.html">Book</a>
-          </nav>
-          <div class="lang-switch" aria-label="Language switcher">
-            <a class="lang-link" href="./index.html">PT</a>
-            <a class="lang-link is-active" href="./index-en.html">EN</a>
-          </div>
-        </div>
-      </header>
-
-      <main>
-        <section class="hero">
-          <div class="hero-media">
-            <div class="photo-frame">
-              <div class="photo-accent"></div>
-              <img src="./profile.png" alt="Professional portrait of Flávia Gaia" />
-            </div>
-            <div class="hero-tagline">
-              <span>Python</span>
-              <span>AI Engineering</span>
-              <span>NLP</span>
-              <span>MLOps</span>
-              <span>LLMOps</span>
-              <span>GenAI</span>
-            </div>
-          </div>
-
-          <div class="hero-copy">
-            <h1 style="font-size:clamp(2.6rem,5vw,4rem);">Flávia Gaia<span style="display:block;font-size:clamp(1.05rem,2.6vw,1.6rem);letter-spacing:0;color:var(--accent);font-weight:500;margin-top:0.6rem;line-height:1.35;">Senior Data Scientist · Generative AI, RAG and NLP</span></h1>
-            <p class="lead">
-              Hello!
-              I am Flávia, a Senior Data Scientist with 6 years of experience in
-              AI, data and automation. My work combines generative AI, NLP,
-              machine learning and the full data process behind data science,
-              from information structure and quality to modeling, automation and
-              real-world application.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="./portfolio-en.html">Explore portfolio</a>
-              <a class="button button-secondary" href="./agenda-en.html">Book a conversation</a>
-              <a class="button button-secondary" href="./CV_FlaviaGaia_EN.pdf" target="_blank" rel="noreferrer">
-                Open resume
-              </a>
-            </div>
-
-            <dl class="impact-grid">
-              <div>
-                <dt>Experience</dt>
-                <dd>6 years in data, AI and analytics</dd>
-              </div>
-              <div>
-                <dt>Positioning</dt>
-                <dd>Senior Data Scientist</dd>
-              </div>
-              <div>
-                <dt>Specialty</dt>
-                <dd>Generative AI, RAG and data architecture</dd>
-              </div>
-              <div>
-                <dt>Academic Background</dt>
-                <dd>UnB, USP and IESB</dd>
-              </div>
-            </dl>
-          </div>
-        </section>
-
-        <section class="section split-section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Executive Summary</p>
-            <h2>What I bring to data and product teams</h2>
-          </div>
-
-          <div class="summary-panel">
-            <article class="summary-card">
-              <span class="card-index">01</span>
-              <h3>AI applied to critical workflows</h3>
-              <p>
-                I have experience with audit automation, contract reading,
-                clause extraction, regulatory compliance and technical
-                information retrieval using LLMs and multi-agent systems.
-              </p>
-            </article>
-
-            <article class="summary-card">
-              <span class="card-index">02</span>
-              <h3>Strong science and engineering foundation</h3>
-              <p>
-                I work with Python, Spark, Databricks, Delta Lake, MLflow,
-                Streamlit, LangChain and pipelines designed for governance,
-                monitoring and production.
-              </p>
-            </article>
-
-            <article class="summary-card">
-              <span class="card-index">03</span>
-              <h3>Communication and continuous learning</h3>
-              <p>
-                Alongside professional delivery, I keep strong technical
-                production, recent Data Engineering certifications and academic
-                research in Data Science.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Frameworks and Technologies</p>
-            <h2>Tools and ecosystems I have already worked with in practice</h2>
-          </div>
-
-          <div class="logo-marquee" aria-label="Frameworks and technologies already used">
-            <div class="logo-track">
-              <div class="logo-group">
-                <span class="logo-pill logo-pill-brand brand-langchain">LangChain</span>
-                <span class="logo-pill logo-pill-brand brand-langflow">Langflow</span>
-                <span class="logo-pill logo-pill-brand brand-langgraph">LangGraph</span>
-                <span class="logo-pill logo-pill-brand brand-flowise">Flowise</span>
-                <span class="logo-pill logo-pill-brand brand-autogen">AutoGen</span>
-                <span class="logo-pill logo-pill-brand brand-crewai">CrewAI</span>
-                <span class="logo-pill logo-pill-brand brand-n8n">n8n</span>
-                <span class="logo-pill logo-pill-brand brand-mcp">MCP</span>
-                <span class="logo-pill logo-pill-brand brand-anthropic">Anthropic</span>
-                <span class="logo-pill logo-pill-brand brand-codex">Codex</span>
-                <span class="logo-pill logo-pill-brand brand-llama">Llama</span>
-                <span class="logo-pill logo-pill-brand brand-gemini">Gemini</span>
-                <span class="logo-pill logo-pill-brand brand-pydanticai">PydanticAI</span>
-                <span class="logo-pill logo-pill-brand brand-kiro">Kiro</span>
-                <span class="logo-pill logo-pill-brand brand-antigravity">Antigravity</span>
-                <span class="logo-pill logo-pill-brand brand-gcp">GCP</span>
-                <span class="logo-pill logo-pill-brand brand-vertexai">Vertex AI</span>
-                <span class="logo-pill logo-pill-brand brand-kubeflow">Kubeflow</span>
-                <span class="logo-pill logo-pill-brand brand-azure">Azure</span>
-                <span class="logo-pill logo-pill-brand brand-aws">AWS</span>
-                <span class="logo-pill logo-pill-brand brand-databricks">Databricks</span>
-                <span class="logo-pill logo-pill-brand brand-metaflow">Metaflow</span>
-                <span class="logo-pill logo-pill-brand brand-spark">Spark</span>
-                <span class="logo-pill logo-pill-brand brand-oracle">Oracle</span>
-                <span class="logo-pill logo-pill-brand brand-fastapi">FastAPI</span>
-                <span class="logo-pill logo-pill-brand brand-flask">Flask</span>
-                <span class="logo-pill logo-pill-brand brand-streamlit">Streamlit</span>
-                <span class="logo-pill logo-pill-brand brand-pytorch">PyTorch</span>
-                <span class="logo-pill logo-pill-brand brand-tensorflow">TensorFlow</span>
-                <span class="logo-pill logo-pill-brand brand-xgboost">XGBoost</span>
-                <span class="logo-pill logo-pill-brand brand-ocr">OCR</span>
-                <span class="logo-pill logo-pill-brand brand-prometheus">Prometheus</span>
-                <span class="logo-pill logo-pill-brand brand-grafana">Grafana</span>
-                <span class="logo-pill logo-pill-brand brand-uipath">UiPath</span>
-              </div>
-              <div class="logo-group" aria-hidden="true">
-                <span class="logo-pill logo-pill-brand brand-langchain">LangChain</span>
-                <span class="logo-pill logo-pill-brand brand-langflow">Langflow</span>
-                <span class="logo-pill logo-pill-brand brand-langgraph">LangGraph</span>
-                <span class="logo-pill logo-pill-brand brand-flowise">Flowise</span>
-                <span class="logo-pill logo-pill-brand brand-autogen">AutoGen</span>
-                <span class="logo-pill logo-pill-brand brand-crewai">CrewAI</span>
-                <span class="logo-pill logo-pill-brand brand-n8n">n8n</span>
-                <span class="logo-pill logo-pill-brand brand-mcp">MCP</span>
-                <span class="logo-pill logo-pill-brand brand-anthropic">Anthropic</span>
-                <span class="logo-pill logo-pill-brand brand-codex">Codex</span>
-                <span class="logo-pill logo-pill-brand brand-llama">Llama</span>
-                <span class="logo-pill logo-pill-brand brand-gemini">Gemini</span>
-                <span class="logo-pill logo-pill-brand brand-pydanticai">PydanticAI</span>
-                <span class="logo-pill logo-pill-brand brand-kiro">Kiro</span>
-                <span class="logo-pill logo-pill-brand brand-antigravity">Antigravity</span>
-                <span class="logo-pill logo-pill-brand brand-gcp">GCP</span>
-                <span class="logo-pill logo-pill-brand brand-vertexai">Vertex AI</span>
-                <span class="logo-pill logo-pill-brand brand-kubeflow">Kubeflow</span>
-                <span class="logo-pill logo-pill-brand brand-azure">Azure</span>
-                <span class="logo-pill logo-pill-brand brand-aws">AWS</span>
-                <span class="logo-pill logo-pill-brand brand-databricks">Databricks</span>
-                <span class="logo-pill logo-pill-brand brand-metaflow">Metaflow</span>
-                <span class="logo-pill logo-pill-brand brand-spark">Spark</span>
-                <span class="logo-pill logo-pill-brand brand-oracle">Oracle</span>
-                <span class="logo-pill logo-pill-brand brand-fastapi">FastAPI</span>
-                <span class="logo-pill logo-pill-brand brand-flask">Flask</span>
-                <span class="logo-pill logo-pill-brand brand-streamlit">Streamlit</span>
-                <span class="logo-pill logo-pill-brand brand-pytorch">PyTorch</span>
-                <span class="logo-pill logo-pill-brand brand-tensorflow">TensorFlow</span>
-                <span class="logo-pill logo-pill-brand brand-xgboost">XGBoost</span>
-                <span class="logo-pill logo-pill-brand brand-ocr">OCR</span>
-                <span class="logo-pill logo-pill-brand brand-prometheus">Prometheus</span>
-                <span class="logo-pill logo-pill-brand brand-grafana">Grafana</span>
-                <span class="logo-pill logo-pill-brand brand-uipath">UiPath</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
-            <h2>Areas where I have worked with data, automation and applied AI</h2>
-          </div>
-
-          <div class="experience-grid">
-            <article class="experience-card">
-              <span class="card-index">GenAI</span>
-              <h3>RAG assistant for citizen support</h3>
-              <p><strong>Role:</strong> Senior Data Scientist</p>
-              <p><strong>Where:</strong> FNDE · 2026 to present</p>
-              <p>
-                Production AI (RAG) assistant that supports citizen service for scholarship
-                and benefit programs, answering questions about values, legislation and
-                procedures across 20+ federal programs.
-              </p>
-              <p>
-                <strong>Impact:</strong> a curated-answer layer that ensures accuracy on
-                sensitive topics (values, legislation and deadlines), with automatic routing,
-                resilient model fallback and full interaction telemetry.
-              </p>
-            </article>
-            <article class="experience-card">
-              <span class="card-index">GenAI</span>
-              <h3>Email reply automation with RAG</h3>
-              <p><strong>Role:</strong> Senior Data Scientist</p>
-              <p><strong>Where:</strong> FNDE · Apr 2026 to present</p>
-              <p>
-                Development of a RAG solution to automate email replies, using
-                Databricks Apps, Microsoft Graph integration and a
-                pre-approval flow in Outlook before responses are sent.
-              </p>
-            </article>
-            <article class="experience-card">
-              <span class="card-index">Data</span>
-              <h3>Auditing and analytics at scale</h3>
-              <p><strong>Role:</strong> Senior Data Scientist</p>
-              <p><strong>Where:</strong> FNDE · Oct 2025 to Apr 2026</p>
-              <p>
-                Work with PySpark, Databricks and SQL in analytical flows,
-                data quality, inconsistency analysis, automated refresh and
-                applied AI for operational support.
-              </p>
-              <p>
-                <strong>Impact:</strong> around 20% of inconsistencies detected
-                in the audited datasets and roughly half the time needed to
-                audit the data.
-              </p>
-            </article>
-            <article class="experience-card">
-              <span class="card-index">Documents</span>
-              <h3>Document automation and financial flow</h3>
-              <p><strong>Role:</strong> Senior Data Scientist / Senior AI Engineer</p>
-              <p><strong>Where:</strong> Banco do Brasil Tecnologia e Serviços · Sep 2025 to Oct 2025</p>
-              <p>
-                Development of solutions for PDF reading, rule extraction,
-                financial-flow organization and automation with agents,
-                workflows and analytical persistence.
-              </p>
-              <p>
-                <strong>Impact:</strong> direct financial savings, with
-                contracts starting to be paid on the correct dates, and
-                tighter control for internal audit.
-              </p>
-            </article>
-            <article class="experience-card">
-              <span class="card-index">LLMs</span>
-              <h3>Document assistants with RAG and validation</h3>
-              <p><strong>Role:</strong> AI Specialist Data Scientist</p>
-              <p><strong>Where:</strong> Compass UOL, on a project for Petrobras · May 2025 to Sep 2025</p>
-              <p>
-                Creation of LLM-based solutions for structured document
-                extraction, retrieval, validation interfaces and pipeline
-                evolution with observability.
-              </p>
-              <p>
-                <strong>Impact:</strong> 70% reduction in the time needed to
-                create technical documents.
-              </p>
-            </article>
-            <article class="experience-card">
-              <span class="card-index">NLP</span>
-              <h3>Technical extraction and text classification</h3>
-              <p><strong>Role:</strong> Data Scientist / AI Specialist</p>
-              <p><strong>Where:</strong> EVCOMX · Jan 2024 to May 2025</p>
-              <p>
-                Work across machine learning, NLP, information extraction,
-                text classification, validation interfaces and the evolution
-                from heuristic pipelines to generative AI.
-              </p>
-              <p>
-                <strong>Impact:</strong> 80% improvement in the correction and
-                identification of technical tags.
-              </p>
-            </article>
-            <article class="experience-card">
-              <span class="card-index">Social</span>
-              <h3>Territorial analysis and analytical monitoring</h3>
-              <p><strong>Role:</strong> Data Analyst</p>
-              <p><strong>Where:</strong> Ministry of Social Development (Brazil) · Aug 2023 to Jan 2024</p>
-              <p>
-                Analysis of large datasets, indicator construction,
-                territorial monitoring, dashboards and analytical support for
-                operational and policy-oriented reading.
-              </p>
-              <p>
-                <strong>Impact:</strong> faster turnaround on analytical
-                requests using Python and Spark.
-              </p>
-            </article>
-            <article class="experience-card">
-              <span class="card-index">Early</span>
-              <h3>Web scraping, NLP and visualization</h3>
-              <p><strong>Role:</strong> Data Science Intern</p>
-              <p><strong>Where:</strong> Presidency of the Republic (Brazil) · Mar 2022 to May 2023</p>
-              <p>
-                Automated content collection, NLP with spaCy, data
-                visualization and experimental modeling and deep learning
-                projects.
-              </p>
-              <p>
-                <strong>Impact:</strong> improved data analysis through the
-                construction of dashboards.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Areas of Practice</p>
-            <h2>A hybrid profile combining technical depth, real-world execution and business context</h2>
-          </div>
-
-          <div class="capability-grid">
-            <article>
-              <h3>Generative AI and LLMOps</h3>
-              <p>
-                Development of solutions with LLMs, RAG, agents and structured
-                workflows for extraction, analysis, automation and decision
-                support in corporate contexts.
-              </p>
-            </article>
-            <article>
-              <h3>Machine Learning and NLP</h3>
-              <p>
-                Experience with classification, supervised models, natural
-                language processing, embeddings, deep learning and applications
-                focused on text, documents and unstructured data.
-              </p>
-            </article>
-            <article>
-              <h3>Data, Architecture and Pipelines</h3>
-              <p>
-                Design of analytics environments, scalable pipelines,
-                governance, data quality and modern architecture supporting
-                analytics, machine learning and AI.
-              </p>
-            </article>
-            <article>
-              <h3>Analytics and Decision Support</h3>
-              <p>
-                Exploratory analysis, dataset reconciliation, dashboards,
-                monitoring and translation of data into clear insights for
-                technical, operational and business teams.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section split-section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Education and Certifications</p>
-            <h2>Credentials that support my technical practice</h2>
-          </div>
-
-          <div class="summary-panel">
-            <article class="summary-card">
-              <span class="card-index">Academic</span>
-              <h3>UnB, USP and IESB</h3>
-              <p>
-                Master’s in Applied Computing at UnB, MBA in Artificial
-                Intelligence and Big Data at USP, and a Bachelor’s degree in
-                Data Science and Artificial Intelligence from IESB.
-              </p>
-            </article>
-            <article class="summary-card">
-              <span class="card-index">Research</span>
-              <h3>Data Science and legal texts</h3>
-              <p>
-                Data Science research line focused on named entity recognition
-                in legal texts, supported by a strong foundation in databases,
-                large-scale data mining and applied experimentation.
-              </p>
-            </article>
-            <article class="summary-card">
-              <span class="card-index">2025-2026</span>
-              <h3>Data Engineering and Databricks</h3>
-              <p>
-                Recent certifications in Airflow, Spark, Snowflake, BigQuery,
-                Modern Data Stack and Databricks tracks connected to machine
-                learning data preparation and retrieval agents.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section dark-panel reveal">
-          <div class="panel-header">
-            <p class="eyebrow">Highlighted Certifications</p>
-            <h2>Certifications</h2>
-          </div>
-
-          <div class="certification-showcase">
-            <div class="badge-wall">
-              <div class="badge-card">
-                <img src="./badgedatabricks1.png" alt="Databricks badge" />
-                <div class="badge-copy">
-                  <h3>Databricks</h3>
-                  <p>Badge connected to machine learning tracks and modern data ecosystems.</p>
-                </div>
-              </div>
-              <div class="badge-card">
-                <img src="./badgedatabricks2.png" alt="Databricks badge" />
-                <div class="badge-copy">
-                  <h3>Retrieval Agents</h3>
-                  <p>Building retrieval agents and applied workflows inside the Databricks ecosystem.</p>
-                </div>
-              </div>
-              <div class="badge-card">
-                <img src="./foundry1.png" alt="Palantir Foundry badge" />
-                <div class="badge-copy">
-                  <h3>Palantir Foundry</h3>
-                  <p>Training focused on building data solutions and operations on enterprise platforms.</p>
-                </div>
-              </div>
-              <div class="badge-card">
-                <img src="./foundry2.png" alt="Palantir Foundry badge" />
-                <div class="badge-copy">
-                  <h3>AIP Foundations</h3>
-                  <p>Additional foundation in AI application and workflows within the Palantir ecosystem.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="capability-grid certifications-grid">
-              <article class="certification-feature-card school-card school-card-dlai">
-                <h3>Functions, Tools and Agents with LangChain</h3>
-                <p>Specialization in OpenAI Function Calling and LangChain tools for turning LLMs into operational agents.</p>
-              </article>
-              <article>
-                <h3>Google Data Analytics Professional Certificate</h3>
-                <p>End-to-end analytics workflow using BigQuery, R, SQL and Sheets.</p>
-              </article>
-              <article>
-                <h3>Introduction to LangGraph and LangSmith</h3>
-                <p>Training in graph-based orchestration, observability, traceability and evaluation of LLM applications, strengthening AI engineering practices.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Academic Experience</p>
-            <h2>Read my thesis projects</h2>
-          </div>
-
-          <div class="case-grid">
-            <article class="case-card">
-              <span class="card-index">IESB · 2023</span>
-              <h3>NER in legal texts with spaCy and a published application</h3>
-              <p>
-                In my undergraduate capstone, I developed two spaCy models
-                fine-tuned for named entity recognition in Brazilian legal
-                texts using the LeNER-Br dataset and published a working app on
-                Hugging Face.
-              </p>
-              <ul>
-                <li>Topic: extraction of legislation, case law, people, time, location and organizations from legal texts.</li>
-                <li>Results: F1 of 81.42% for the small model and 83.76% for the large model.</li>
-                <li>Technical highlight: applied legal NLP, comparative evaluation and a usable end-user deliverable.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="./2022_1___IESB___TCC_II___Flavia.pdf" target="_blank" rel="noreferrer">
-                  Read full thesis
-                </a>
-              </div>
-            </article>
-
-            <article class="case-card">
-              <span class="card-index">USP · 2023</span>
-              <h3>CNN for COVID-19 support in chest X-ray diagnosis</h3>
-              <p>
-                In my MBA thesis, I developed and validated a convolutional
-                neural network model to classify chest X-ray images with a
-                focus on supporting COVID-19 diagnosis.
-              </p>
-              <ul>
-                <li>Dataset built with 2,089 images, including 505 COVID-19 cases and 1,580 normal cases.</li>
-                <li>Results: 98.40% test accuracy, with hyperparameter tuning and data augmentation.</li>
-                <li>Technical highlight: deep learning applied to healthcare, experimental design and public code on GitHub.</li>
-              </ul>
-              <div class="card-actions">
-                <a class="button button-secondary" href="./TCC_MBA_FLAVIA.pdf" target="_blank" rel="noreferrer">
-                  Read full monograph
-                </a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section id="presence" class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Where to Find Me</p>
-            <h2>Projects, publications and technical presence</h2>
-          </div>
-
-          <div class="links-grid">
-            <a class="link-card" href="https://www.linkedin.com/in/flavia-gaia/" target="_blank" rel="noreferrer">
-              <strong>LinkedIn</strong>
-              <span>Publications, articles and professional positioning.</span>
-            </a>
-            <a class="link-card" href="https://github.com/flaviagaia" target="_blank" rel="noreferrer">
-              <strong>GitHub</strong>
-              <span>Code, experiments and technical paths connected to my practice.</span>
-            </a>
-            <a class="link-card" href="https://www.kaggle.com/flaviagg" target="_blank" rel="noreferrer">
-              <strong>Kaggle</strong>
-              <span>Notebooks, challenges and applied data science exercises.</span>
-            </a>
-            <a class="link-card" href="https://huggingface.co/flaviaggp" target="_blank" rel="noreferrer">
-              <strong>Hugging Face</strong>
-              <span>AI exploration, models and experiments connected to the open-source ecosystem.</span>
-            </a>
-            <a class="link-card" href="https://medium.com/@flaviagaia" target="_blank" rel="noreferrer">
-              <strong>Medium</strong>
-              <span>Original content on graphs, Spark, Python, statistics and AI libraries.</span>
-            </a>
-          </div>
-        </section>
-
-        <section id="contact" class="section contact-panel reveal">
-          <p class="eyebrow">Contact</p>
-          <h2>Get in touch and let’s talk</h2>
-          <p>I am always open to new opportunities.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./agenda-en.html">
-              Book a conversation
-            </a>
-            <a class="button button-primary" href="https://wa.me/5538998987165" target="_blank" rel="noreferrer">
-              WhatsApp
-            </a>
-            <a class="button button-secondary" href="mailto:flaviaggpaula@gmail.com">
-              flaviaggpaula@gmail.com
-            </a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/flavia-gaia/" target="_blank" rel="noreferrer">
-              Connect on LinkedIn
-            </a>
-            <a class="button button-secondary" href="./portfolio-en.html">
-              View portfolio
-            </a>
-          </div>
-        </section>
-      </main>
+<header id="start" class="hero" data-s>
+  <div class="orb" id="orb"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="ey rise">Portfolio · Artificial Intelligence &amp; Data</div>
+      <h1 class="hero-h1 disp rise"><span class="giant">FLÁVIA<br>GAIA</span><span class="role">Senior Data Scientist · AI Engineer · Generative AI, RAG, NLP and MLOps</span></h1>
+      <div class="proof rise">6 years in AI and data · <b>70%</b> less time on technical documents · <b>20+</b> programs in production</div>
+      <div class="mk rise"><span>Generative AI&nbsp;·&nbsp;RAG&nbsp;·&nbsp;NLP&nbsp;·&nbsp;MLOps&nbsp;·&nbsp;Python&nbsp;·&nbsp;Databricks&nbsp;·&nbsp;LLMs&nbsp;·&nbsp;Spark&nbsp;·&nbsp;&nbsp;Generative AI&nbsp;·&nbsp;RAG&nbsp;·&nbsp;NLP&nbsp;·&nbsp;MLOps&nbsp;·&nbsp;Python&nbsp;·&nbsp;Databricks&nbsp;·&nbsp;LLMs&nbsp;·&nbsp;Spark&nbsp;·&nbsp;</span></div>
+      <div class="cta rise">
+        <a class="btn p" href="portfolio-en.html">Explore portfolio</a>
+        <a class="btn g" href="CV_FlaviaGaia_EN.pdf">Open résumé</a>
+        <a class="btn g" href="agenda-en.html">Schedule a chat</a>
+      </div>
     </div>
+    <div class="photo rise">
+      <div class="ring"></div>
+      <img src="https://flaviaga.ia.br/profile.png" alt="Flávia Gaia, Data Scientist and AI Engineer" />
+    </div>
+  </div>
+  <div class="scrollhint">SCROLL TO EXPLORE</div>
+</header>
 
-    <script src="./script.js"></script>
-  </body>
+<section data-s><div class="wrap">
+  <div class="ey rise">Impact in numbers</div>
+  <div class="impact">
+    <div class="rise"><div class="num" data-n="6" data-suf=" yrs">6 yrs</div><div class="nl">in AI, data and automation</div></div>
+    <div class="rise"><div class="num" data-n="20" data-suf="+">20+</div><div class="nl">federal programs in the FNDE RAG</div></div>
+    <div class="rise"><div class="num" data-n="70" data-suf="%">70%</div><div class="nl">less time creating technical documents</div></div>
+    <div class="rise"><div class="num" data-n="80" data-suf="%">80%</div><div class="nl">improvement in identifying technical tags</div></div>
+  </div>
+</div></section>
+
+<section data-s><div class="wrap">
+  <div class="ey rise">What I bring to data and product teams</div>
+  <h2 class="stitle disp rise">AI applied to critical workflows, on a solid engineering base</h2>
+  <p class="lead rise">I combine generative AI, NLP and machine learning with the full data process behind data science: from structuring and data quality to modeling, automation and real-world applications. Experience in automated auditing, contract reading, clause extraction, compliance and technical information retrieval with LLMs and multi-agent systems.</p>
+</div></section>
+
+<section data-s><div class="wrap">
+  <div class="ey rise">Career</div>
+  <h2 class="stitle disp rise">Where I have worked</h2>
+  <div class="exp">
+    <div class="row rise"><div><h3>RAG assistant for citizen support</h3><div class="meta">Senior Data Scientist · FNDE · 2026 to present</div><div class="imp">Curated-answer layer (anti-hallucination), automatic routing, resilient fallback and full telemetry.</div></div><div class="cat">GenAI</div></div>
+    <div class="row rise"><div><h3>Email response automation with RAG</h3><div class="meta">Senior Data Scientist · FNDE · Apr 2026 to present</div><div class="imp">RAG with Databricks Apps, Microsoft Graph integration and pre-approval in Outlook.</div></div><div class="cat">GenAI</div></div>
+    <div class="row rise"><div><h3>Data auditing at scale</h3><div class="meta">Senior Data Scientist · FNDE · Oct 2025 to Apr 2026</div><div class="imp">Around 20% of inconsistencies detected and roughly half the audit time saved.</div></div><div class="cat">Data</div></div>
+    <div class="row rise"><div><h3>Document and financial workflow automation</h3><div class="meta">Senior Data Scientist / AI Engineer · Banco do Brasil Tecnologia e Serviços</div><div class="imp">Document reading, clause extraction and payment-flow automation with agents.</div></div><div class="cat">Documents</div></div>
+    <div class="row rise"><div><h3>Document assistants with RAG and validation</h3><div class="meta">AI Data Scientist · Compass UOL (Petrobras project) · May 2025 to Sep 2025</div><div class="imp">70% reduction in technical document creation time.</div></div><div class="cat">LLMs</div></div>
+    <div class="row rise"><div><h3>Technical extraction and text classification</h3><div class="meta">Data Scientist / AI Specialist · EVCOMX · Jan 2024 to May 2025</div><div class="imp">80% improvement in correcting and identifying technical tags.</div></div><div class="cat">NLP</div></div>
+    <div class="row rise"><div><h3>Territorial analysis and analytical monitoring</h3><div class="meta">Data Analyst</div><div class="imp">Territorial reading, indicators and monitoring with public data.</div></div><div class="cat">Analytics</div></div>
+  </div>
+</div></section>
+
+<section data-s><div class="wrap">
+  <div class="ey rise">Featured projects</div>
+  <h2 class="stitle disp rise">From concept to production</h2>
+  <div class="grid">
+    <a class="card rise" href="portfolio-en.html#rag"><div class="cat">Generative AI · RAG</div><h3>RAG assistant for citizens</h3><p>Anti-hallucination with curated answers, hybrid search and model-level resilience. FNDE.</p></a>
+    <a class="card rise" href="portfolio-en.html#analytics"><div class="cat">Data &amp; analytics</div><h3>Data auditing at scale</h3><p>PySpark and Databricks to find inconsistencies and speed up auditing.</p></a>
+    <a class="card rise" href="portfolio-en.html#documents"><div class="cat">LLMs · Documents</div><h3>Document &amp; financial automation</h3><p>Contract reading, clause extraction and payment flow with AI.</p></a>
+    <a class="card rise" href="portfolio-en.html#rag"><div class="cat">RAG · NLP · SQL</div><h3>Q&amp;A over data with LangChain</h3><p>Natural-language questions over a relational base, with semantic context.</p></a>
+  </div>
+</div></section>
+
+<section data-s><div class="wrap">
+  <div class="ey rise">Stack</div>
+  <h2 class="stitle disp rise">Everyday tools</h2>
+  <div class="chips rise">
+    <span class="chip">Python</span><span class="chip">Spark</span><span class="chip">Databricks</span><span class="chip">Delta Lake</span>
+    <span class="chip">Vector Search</span><span class="chip">SQL</span><span class="chip">LangChain</span><span class="chip">LLMs</span>
+    <span class="chip">RAG</span><span class="chip">NLP</span><span class="chip">MLOps</span><span class="chip">spaCy</span>
+  </div>
+</div></section>
+
+<section data-s><div class="wrap">
+  <div class="ey rise">Academic background</div>
+  <h2 class="stitle disp rise">UnB · USP · IESB</h2>
+  <div class="grid">
+    <div class="card rise"><div class="cat">IESB · 2023</div><h3>Legal NER with spaCy</h3><p>Models fine-tuned in Portuguese for named-entity recognition in the legal domain (LeNER-Br). F1 of 83.76%, with an app published on Hugging Face.</p></div>
+    <div class="card rise"><div class="cat">USP · 2023</div><h3>CNN for diagnostic support</h3><p>Convolutional neural networks to classify chest X-rays supporting COVID-19 diagnosis. 98.4% test accuracy.</p></div>
+  </div>
+</div></section>
+
+<section data-s><div class="wrap">
+  <div class="ey rise">Where to find me</div>
+  <h2 class="stitle disp rise">Projects, publications and technical presence</h2>
+  <div class="social rise">
+    <a href="https://www.linkedin.com/in/flavia-gaia/" target="_blank" rel="noreferrer"><b>LinkedIn</b><span>Publications, articles and positioning</span></a>
+    <a href="https://github.com/flaviagaia" target="_blank" rel="noreferrer"><b>GitHub</b><span>Code, experiments and technical work</span></a>
+    <a href="https://www.kaggle.com/flaviagg" target="_blank" rel="noreferrer"><b>Kaggle</b><span>Notebooks and applied challenges</span></a>
+    <a href="https://huggingface.co/flaviaggp" target="_blank" rel="noreferrer"><b>Hugging Face</b><span>Models and open-source experiments</span></a>
+    <a href="https://medium.com/@flaviaggpaula" target="_blank" rel="noreferrer"><b>Medium</b><span>Original content on data and AI</span></a>
+  </div>
+</div></section>
+
+<section class="contact" data-s><div class="wrap">
+  <div class="ey rise">Let's talk</div>
+  <h2 class="giant disp rise" style="font-size:clamp(2.8rem,9vw,6rem)">AVAILABLE<br>FOR A CHAT</h2>
+  <div class="cta rise" style="margin-top:30px">
+    <a class="btn p" href="agenda-en.html">Schedule a chat</a>
+    <a class="btn g" href="mailto:flaviaggpaula@gmail.com">flaviaggpaula@gmail.com</a>
+    <a class="btn g" href="https://wa.me/5538998987165" target="_blank" rel="noreferrer">WhatsApp</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Flávia Gaia · Senior Data Scientist &amp; AI Engineer · flaviaga.ia.br</div></footer>
+
+<script>
+(function(){
+  try{document.body.classList.add('js');}catch(e){}
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function reveal(t){t.classList.add('on');
+    t.querySelectorAll('.num[data-n]').forEach(function(el){if(el.dataset.done)return;el.dataset.done=1;
+      var target=+el.dataset.n,suf=el.dataset.suf||'';
+      if(rm){el.textContent=target+suf;return;}
+      var s=0,step=Math.max(1,Math.round(target/30));
+      var iv=setInterval(function(){s+=step;if(s>=target){s=target;clearInterval(iv);}el.textContent=s+suf;},24);});
+  }
+  var secs=document.querySelectorAll('[data-s]');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)reveal(e.target);});},{threshold:.2});
+    secs.forEach(function(s){io.observe(s);});
+  } else { secs.forEach(reveal); }
+  setTimeout(function(){secs.forEach(function(s){if(!s.classList.contains('on'))reveal(s);});},1800);
+  var orb=document.getElementById('orb'),totop=document.getElementById('totop');
+  window.addEventListener('scroll',function(){var y=window.scrollY;if(orb&&!rm)orb.style.transform='translateY('+(y*0.18)+'px)';if(totop)totop.classList.toggle('show',y>640);});
+})();
+</script>
+<a href="#start" id="totop" aria-label="Back to top">&#8593;</a>
+</body>
 </html>
