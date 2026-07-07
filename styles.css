@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&display=swap');
 
 :root{
   --bg:#14100e; --bg2:#1a1510; --panel:#1b1510; --line:#3a322a;
   --tx:#f2ece1; --sub:#c2b9a9; --acc:#e6c98a; --acc2:#d9b676; --acc3:#caa25f;
-  --disp:"Space Grotesk",Arial,sans-serif; --body:"Manrope",Arial,sans-serif;
+  --disp:"Bricolage Grotesque",Arial,sans-serif; --body:"Manrope",Arial,sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
 }
+.em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--acc);letter-spacing:0}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--acc3),var(--acc));z-index:80;transition:width .06s linear}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--tx);font-family:var(--body);line-height:1.65;overflow-x:hidden}
