@@ -117,16 +117,12 @@
           <div class="case-grid">
             <article class="case-card">
               <span class="card-index">Generative AI and RAG</span>
-              <h3>RAG assistant for citizen support (FNDE)</h3>
+              <h3>Generative-AI (RAG) assistant for public-sector support</h3>
               <p>
-                Production RAG that supports citizen service for federal education programs,
-                answering questions about scholarships, benefits, legislation and procedures
-                across 20+ programs.
+                I designed and shipped a production generative-AI (RAG) assistant supporting 20+ scholarship, benefit and accountability programs in the federal public sector, across two channels: an assisted-consultation app and an Outlook reply-drafting assistant.
               </p>
               <p>
-                <strong>Impact:</strong> guaranteed accuracy on critical topics through a
-                curated-answer layer before generation, with hybrid search, automatic
-                routing and model-level resilience.
+                <strong>What I built:</strong> a full RAG architecture with a curated-answer layer (anti-hallucination), a curation queue, automatic routing, per-program observability and hybrid search with model fallback.
               </p>
               <div class="card-actions">
                 <a class="button button-secondary" href="#rag">View details</a>
@@ -474,18 +470,18 @@
           <div class="case-grid">
             <article class="case-card">
               <img class="project-proof" src="fnde-rag-arquitetura.svg" alt="Architecture diagram of the RAG assistant: curated-answer layer, hybrid vector search and model fallback." />
-              <h3>RAG assistant for citizen support (FNDE)</h3>
+              <h3>Generative-AI (RAG) assistant for public-sector support</h3>
               <p>
-                Production Retrieval-Augmented Generation system that supports citizen service
-                for public-sector scholarship and benefit programs, covering questions about
-                values, legislation and procedures across 20+ programs.
+                I designed and shipped, end to end, a production Retrieval-Augmented Generation system supporting 20+ scholarship, benefit and accountability programs in the federal public sector. It works across two channels: an assisted-consultation app for the team and an Outlook-integrated assistant that summarizes messages and drafts replies, always reviewed by a person before sending.
               </p>
               <ul>
-                <li><strong>Goal:</strong> deliver reliable, traceable answers to a high volume of recurring questions, prioritizing accuracy on sensitive information (values, legislation and deadlines).</li>
-                <li><strong>Architecture:</strong> a curated-answer layer (pattern matching) before generation to prevent hallucination, hybrid vector search (dense and sparse) and automatic routing to the right area.</li>
-                <li><strong>Resilience and observability:</strong> cascading model fallback with circuit breaker, and full interaction telemetry (latency, retrieved context, model and feedback).</li>
-                <li><strong>Curation:</strong> a panel to review unanswered questions and publish new curated answers, with lifecycle and versioning.</li>
-                <li><strong>Stack:</strong> Python, Streamlit, Databricks (Apps, Vector Search, Delta Lake, SQL Warehouse), BGE-large embeddings (hybrid search) and LLMs (Llama 4 and Claude Sonnet 4).</li>
+                <li><strong>What I built:</strong> the full RAG architecture, from data to interface, focused on accuracy and reliability.</li>
+                <li><strong>Anti-hallucination:</strong> a curated-answer layer before generation and a curation queue (review and publish), ensuring accuracy on amounts, deadlines and legislation.</li>
+                <li><strong>Routing and human-in-the-loop:</strong> automatic routing to the responsible area and mandatory review of drafts before sending.</li>
+                <li><strong>Observability:</strong> per-program performance dashboards, interaction telemetry and unanswered-question mapping for continuous improvement.</li>
+                <li><strong>Retrieval:</strong> hybrid vector search (dense and sparse), resilient model fallback with circuit breaker and confidence scoring.</li>
+                <li><strong>Platform:</strong> role-based access control, an internal knowledge base and a team chat.</li>
+                <li><strong>Stack:</strong> Python, Streamlit, Databricks (Apps, Vector Search, Delta Lake, SQL Warehouse), BGE-large embeddings and LLMs with fallback.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-primary" href="rag-apresentacao.html" target="_blank" rel="noreferrer">View presentation</a>

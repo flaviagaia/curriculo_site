@@ -117,16 +117,12 @@
           <div class="case-grid">
             <article class="case-card">
               <span class="card-index">IA generativa e RAG</span>
-              <h3>Assistente RAG para atendimento ao cidadão (FNDE)</h3>
+              <h3>Assistente de IA generativa (RAG) para atendimento no setor público</h3>
               <p>
-                RAG em produção para apoiar o atendimento a beneficiários de programas
-                educacionais federais, respondendo dúvidas sobre bolsas, auxílios,
-                legislação e procedimentos de mais de 20 programas.
+                Projetei e implementei um assistente de IA generativa (RAG) em produção para apoiar o atendimento sobre mais de 20 programas de bolsas, auxílios e prestação de contas no setor público federal, em dois canais: um app de consulta assistida e um assistente de redação de respostas no Outlook.
               </p>
               <p>
-                <strong>Impacto:</strong> precisão garantida em temas críticos por uma camada
-                de respostas curadas antes da geração, com busca híbrida, roteamento
-                automático e resiliência entre modelos.
+                <strong>O que desenvolvi:</strong> arquitetura RAG completa com camada de respostas curadas (anti-alucinação), fila de curadoria, roteamento automático, observabilidade por programa e busca híbrida com fallback entre modelos.
               </p>
               <div class="card-actions">
                 <a class="button button-secondary" href="#rag">Ver detalhes</a>
@@ -545,19 +541,18 @@
           <div class="case-grid">
             <article class="case-card">
               <img class="project-proof" src="fnde-rag-arquitetura.svg" alt="Diagrama de arquitetura do assistente RAG: respostas curadas, busca vetorial hibrida e fallback entre modelos." />
-              <h3>Assistente RAG para atendimento ao cidadão (FNDE)</h3>
+              <h3>Assistente de IA generativa (RAG) para atendimento no setor público</h3>
               <p>
-                Sistema de Retrieval-Augmented Generation em produção para apoiar o
-                atendimento a beneficiários de programas de bolsas e auxílios do setor
-                público federal, cobrindo dúvidas sobre valores, legislação e procedimentos
-                de mais de 20 programas.
+                Projetei e implementei, de ponta a ponta, um sistema de Retrieval-Augmented Generation em produção para apoiar o atendimento sobre mais de 20 programas de bolsas, auxílios e prestação de contas no setor público federal. A solução atua em dois canais: um aplicativo de consulta assistida para a equipe e um assistente integrado ao Outlook que resume mensagens e redige rascunhos de resposta, sempre com revisão humana antes do envio.
               </p>
               <ul>
-                <li><strong>Objetivo:</strong> dar respostas confiáveis e rastreáveis a um grande volume de dúvidas recorrentes, com prioridade para precisão em informações sensíveis (valores, legislação e prazos).</li>
-                <li><strong>Arquitetura:</strong> camada de respostas curadas (pattern matching) antes da geração para evitar alucinação, busca vetorial híbrida (densa e esparsa) e roteamento automático para a área correta.</li>
-                <li><strong>Resiliência e observabilidade:</strong> fallback em cascata entre modelos com circuit breaker e telemetria completa das interações (latência, contexto recuperado, modelo e feedback).</li>
-                <li><strong>Curadoria:</strong> painel para revisão de perguntas sem resposta e publicação de novas respostas curadas, com ciclo de vida e versionamento.</li>
-                <li><strong>Stack:</strong> Python, Streamlit, Databricks (Apps, Vector Search, Delta Lake, SQL Warehouse), embeddings BGE-large (busca híbrida) e LLMs (Llama 4 e Claude Sonnet 4).</li>
+                <li><strong>O que desenvolvi:</strong> a arquitetura RAG completa, dos dados à interface, com foco em precisão e confiabilidade.</li>
+                <li><strong>Anti-alucinação:</strong> camada de respostas curadas antes da geração e fila de curadoria (revisar e publicar), garantindo exatidão em valores, prazos e legislação.</li>
+                <li><strong>Roteamento e humano no circuito:</strong> encaminhamento automático para a área responsável e revisão obrigatória dos rascunhos antes do envio.</li>
+                <li><strong>Observabilidade:</strong> painel de desempenho por programa, telemetria das interações e mapeamento das perguntas não respondidas para melhoria contínua.</li>
+                <li><strong>Recuperação:</strong> busca vetorial híbrida (densa e esparsa), fallback resiliente entre modelos com circuit breaker e confidence scoring.</li>
+                <li><strong>Plataforma:</strong> controle de acesso por papel, base de conhecimento interna e chat de equipe.</li>
+                <li><strong>Stack:</strong> Python, Streamlit, Databricks (Apps, Vector Search, Delta Lake, SQL Warehouse), embeddings BGE-large e LLMs com fallback.</li>
               </ul>
               <div class="card-actions">
                 <a class="button button-primary" href="rag-apresentacao.html" target="_blank" rel="noreferrer">Ver apresentação</a>
